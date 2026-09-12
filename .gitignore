@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+renv/library/
+renv/staging/
+outputs/tmp/
+*.pyc
+__pycache__/
+outputs/logs/

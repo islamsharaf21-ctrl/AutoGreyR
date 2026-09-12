@@ -1,0 +1,44 @@
+{
+  "checkpoint": "STEP_5F_SCORING_IMPLEMENTATION_LOCK",
+  "chronology": [
+    "pretarget decisions/eligible forecasts must be SHA-256 frozen first",
+    "opening lock must bind pretarget SHA-256 and score-harness SHA-256",
+    "only then may target tokens be numeric-parsed",
+    "no post-target refit or decision change"
+  ],
+  "cvar90": "mean of worst ceil(0.10*N) task regrets",
+  "date": "2026-09-05",
+  "environment": {
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+    "python": "3.13.5",
+    "scipy": "1.17.0",
+    "sklearn": "1.8.0"
+  },
+  "estimand": "eligible regret = chosen structural-group MASE - eligible oracle MASE, lower-bounded at 0",
+  "exact_raw_bundle_sha256": "85aac5e92b5d6b0db2299d319d096a5a4b274369cbfeabf7c79e2dc706b0f4f9",
+  "paired_bootstrap": {
+    "ci": "percentile 2.5%/97.5%, numpy quantile linear",
+    "replicates": 4000,
+    "resample_size": "N actionable parents",
+    "rng": "numpy.random.default_rng(46073)",
+    "seed": 46073,
+    "tasks_per_parent": 1,
+    "unit": "parent"
+  },
+  "pretarget_harness_r1": {
+    "file": "autogrey_v2_realbench2_step5f_pretarget_r1.py",
+    "sha256": "a232215677d129585df4f379cb84c8c2a50f0ef76f7735a65e510c71ad7a90ae"
+  },
+  "refusals": "retained and never replaced; final eligible-regret estimands are computed on actionable parents only, with refusal count/reasons reported",
+  "score_harness": {
+    "file": "autogrey_v2_realbench2_step5f_score.py",
+    "sha256": "c5a6d8dbe0109bc8557dcfcc6333f1f254d5ef106389a43cb00fe23487732f02"
+  },
+  "status": "FROZEN_BEFORE_TARGET_NUMERIC_OPENING",
+  "success": {
+    "mean": "upper 95% CI of mean(R_v1-R_global) < 0",
+    "overall": "both required",
+    "tail": "upper 95% CI of CVaR90(R_v1)-CVaR90(R_global) <= 0"
+  }
+}

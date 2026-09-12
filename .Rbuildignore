@@ -1,0 +1,14 @@
+^AutoGreyR\.Rproj$
+^outputs$
+^reference$
+^docs$
+^renv$
+^renv\.lock$
+^scripts$
+^AUTOGREY_.*$
+^README\.md$
+^REPRODUCIBILITY\.md$
+^RELEASE_NOTES\.md$
+^\.Rproj\.user$
+^\.Rprofile$
+^THIRD_PARTY_NOTICES\.md$

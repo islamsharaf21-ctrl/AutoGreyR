@@ -1,0 +1,12 @@
+Package: AutoGreyR
+Type: Package
+Title: Reproducibility Layer for the Frozen AutoGrey Experiment
+Version: 1.0.0
+Authors@R: person("Islam Mahmoud", "Sharafeldin", email = "Islam.mah@zu.edu.eg", role = c("aut", "cre"))
+Description: Reproducibility implementation for the frozen AutoGrey experiment. It preserves the verified ten-group grey structural engine, target-free feature and eligibility layers, V1_STYLE_RF_REGRET selector, GLOBAL_RANK_V2 comparator, REALBENCH2 pretarget chronology, frozen target scoring, and exact NumPy PCG64 paired bootstrap inference. Linux/OpenBLAS is the canonical byte-exact numerical reference for sensitive SG02/SG05 forecasts; Windows is qualified under the frozen Step7E2 cross-platform numerical contract.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.6.1)
+Imports: jsonlite, digest
+Suggests: testthat, renv
+Config/testthat/edition: 3

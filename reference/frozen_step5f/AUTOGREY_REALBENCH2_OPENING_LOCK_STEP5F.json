@@ -1,0 +1,30 @@
+{
+  "actionable_parent_count": 2496,
+  "authorization": "APPROVE STEP 5F REAL_BENCH-2",
+  "bootstrap_replicates": 4000,
+  "bootstrap_seed": 46073,
+  "checkpoint": "STEP_5F_REALBENCH2_OPENING_LOCK",
+  "chronology_assertions": {
+    "all_eligible_group_forecasts_frozen": true,
+    "post_open_refit_or_choice_change_prohibited": true,
+    "refusals_not_replaced": true,
+    "target_losses_computed_before_lock": false,
+    "target_numeric_values_parsed_before_lock": false,
+    "v1_and_global_choices_frozen": true
+  },
+  "date": "2026-09-05",
+  "exact_raw_bundle_sha256": "85aac5e92b5d6b0db2299d319d096a5a4b274369cbfeabf7c79e2dc706b0f4f9",
+  "final_success_rule": "upper95(mean regret delta)<0 AND upper95(CVaR90 regret delta)<=0",
+  "pretarget_file": "AUTOGREY_REALBENCH2_PRETARGET_STEP5F.json",
+  "pretarget_sha256": "9a5c9aa2c0595225b47985e950d09f238d04fb6ba4c25f34f8ab15a01bc25d33",
+  "primary_selector": "V1_STYLE_RF_REGRET",
+  "refusal_count": 15,
+  "refusal_reasons": {
+    "NO_ELIGIBLE_STRUCTURAL_GROUP": 15
+  },
+  "reserved_parent_count": 2511,
+  "score_harness_file": "autogrey_v2_realbench2_step5f_score.py",
+  "score_harness_sha256": "c5a6d8dbe0109bc8557dcfcc6333f1f254d5ef106389a43cb00fe23487732f02",
+  "scoring_implementation_lock_sha256": "2b98cb4be40809269d37c5552a376e9e4601467156ffc0326bd3b19c10a45dea",
+  "status": "FROZEN_BEFORE_TARGET_NUMERIC_OPENING"
+}

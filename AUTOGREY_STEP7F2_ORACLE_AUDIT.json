@@ -1,0 +1,58 @@
+{
+  "bit_generator": "PCG64",
+  "bootstrap_csv_sha256": "b78899ea38552ca546746a7f80ef7c5b9b28e9f8fc31ed45a9bde9faa11bb5fa",
+  "bootstrap_type": "paired parent-cluster; one task per parent",
+  "canonical_decisions_sha256": "f62d93b49610c11bef6a16813833bfb40c9af4683db041f39212ceff0692bd80",
+  "canonical_step5f_bootstrap_sha256": "b78899ea38552ca546746a7f80ef7c5b9b28e9f8fc31ed45a9bde9faa11bb5fa",
+  "canonical_step5f_results_sha256": "8126fc00e700af4a3c26fe620810028ee2b64f543eeedfa1ce0cafba4d9554fb",
+  "checkpoint": "STEP7F2_PCG64_BOOTSTRAP_ORACLE_AUDIT",
+  "ci_method": "percentile 95%, numpy quantile linear",
+  "cvar90_delta_ci95": [
+    -3.9434134806487116,
+    -1.8567743134301962
+  ],
+  "decision_input_sha256": "f62d93b49610c11bef6a16813833bfb40c9af4683db041f39212ceff0692bd80",
+  "first12_index_i64le_sha256": [
+    "89d6a335802028462dc9d508f2b17d46668f26d67cb5d092865c470d49970dea",
+    "7d7faee0aefcccee8c48a4f3b131732a474212c3b557266bef0b8ee928ba9cf6",
+    "30ac68777235a8da9c306076f14c3d7eb95634ea2a5376e6442f089aa47f17fd",
+    "6deabda4f52c5e1b14e23b16280b7ba3487aba293a231b63111e36ad0343aacb",
+    "9380a1fcb67853d7c6cee439b14d2c9a327a7a386aa03117d6cf3237c6b48110",
+    "ed4a57e3aeb805a2dff20382c7736a5d4d19eef39bb7a71cdb10d912f644b082",
+    "08f9ec7a363040d346f5da9ba6586f28da02613e4036f20f8159e9d07abe0c4e",
+    "98826047ccc3be25bd870ca9c3f2c21ce719951c7abfb1d24c6dd501197dc398",
+    "07917d9e7f863ebaff4233a651bdc047d2416eacd9d6f0c4b153c94ef7acb10e",
+    "37c39840520bd41344d5c7af0b2a7cc9715711ebfd2ae22a44382a624ed64ae0",
+    "4eb9c41c74e926d32133997936ee0cf8f4a9ab1cacca4277b4bda0ed874f5413",
+    "1a917da221c1ac165452e723894f1824a0be565102dea034ceb5c363bc85263a"
+  ],
+  "first3_cvar90_delta": [
+    -2.396040578493567,
+    -2.9272446863707806,
+    -2.6328647879980256
+  ],
+  "first3_mean_delta": [
+    -0.5679646946150245,
+    -0.6398534623436899,
+    -0.6409561172754739
+  ],
+  "helper_sha256": "4be686fe50c17f3952c619a8e839a9de2427355a053a375a468e992e37124a93",
+  "independent_replay_1_byte_identical": true,
+  "independent_replay_2_byte_identical": true,
+  "mean_delta_ci95": [
+    -0.7414871255255626,
+    -0.49395892999206054
+  ],
+  "mean_pass": true,
+  "n_parents": 2496,
+  "numpy": "2.3.5",
+  "overall_robust_superiority": true,
+  "platform": "linux",
+  "python": "3.13.5",
+  "replicates": 4000,
+  "rng": "numpy.random.default_rng",
+  "seed": 46073,
+  "status": "PASS",
+  "tail_pass": true,
+  "version": "AG_STEP7F2_PCG64_BOOTSTRAP_1"
+}

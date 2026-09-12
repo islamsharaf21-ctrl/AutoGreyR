@@ -1,0 +1,65 @@
+{
+  "artifact": "AUTOGREY_R_DEPENDENCY_LOCK_STEP7A",
+  "status": "DECLARED_LOCK__NOT_RENV_SNAPSHOT",
+  "date": "2026-09-06",
+  "scientific_design": "FROZEN_STEP6F_STEP5F",
+  "r_runtime": {
+    "version": "4.6.1",
+    "release_name": "Happy Hop",
+    "release_date": "2026-06-24",
+    "required_exact_for_initial_parity_environment": true
+  },
+  "direct_packages": {
+    "renv": {
+      "version": "1.2.3",
+      "role": "project dependency snapshot/restore"
+    },
+    "ranger": {
+      "version": "0.18.0",
+      "role": "first native-R random-forest parity candidate; not scientifically authoritative"
+    },
+    "jsonlite": {
+      "version": "2.0.0",
+      "role": "canonical JSON read/write for locks, expected outputs and manifests"
+    },
+    "digest": {
+      "version": "0.6.39",
+      "role": "SHA-256 and digest checks"
+    },
+    "testthat": {
+      "version": "3.3.2",
+      "role": "deterministic fixture and acceptance tests"
+    }
+  },
+  "base_r_preferred_for": [
+    "csv_io",
+    "zip_io",
+    "linear_algebra",
+    "sorting",
+    "quantile_type_7",
+    "deterministic_transformations"
+  ],
+  "canonical_python_reference_environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "scikit_learn": "1.8.0"
+  },
+  "parity_constraints": {
+    "random_forest": "Must reproduce frozen V1 decisions/fixtures. ranger is an implementation candidate only. No retuning or architecture change allowed.",
+    "bootstrap_rng": "Must reproduce NumPy default_rng(46073) resampling sequence or demonstrate an exactly equivalent frozen index stream before exact CI acceptance.",
+    "quantiles": "Use NumPy linear percentile semantics; R quantile(type=7) is the mathematical counterpart for an identical replicate vector.",
+    "floating_point": "Use frozen tolerances and canonical group-index tie-breaks; do not modify scientific thresholds."
+  },
+  "renv_lock": {
+    "required": true,
+    "generated_in_step7a": false,
+    "reason": "No R executable is installed in the current execution environment. A generated renv.lock cannot be truthfully produced or verified here.",
+    "next_action": "In the first R-capable environment, install R 4.6.1 and renv 1.2.3, install the declared direct packages at locked versions, run renv::snapshot(), record sessionInfo(), and verify restore in a clean library before Step 7B execution claims."
+  },
+  "prohibitions": [
+    "Do not change any frozen model family, grid, gate, metric, split, selector architecture, bootstrap design or acceptance threshold to accommodate R package behavior.",
+    "Do not substitute the raw bundle unless a separately named reproduction study is created.",
+    "Do not claim an exact R reproduction before deterministic parity tests pass."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "checkpoint": "STEP7F2_PCG64_BOOTSTRAP",
+  "status": "PASS",
+  "replicates": 4000,
+  "seed": 46073,
+  "rng": "numpy.random.default_rng / PCG64",
+  "bootstrap_csv_sha256": "b78899ea38552ca546746a7f80ef7c5b9b28e9f8fc31ed45a9bde9faa11bb5fa",
+  "mean_delta_ci95": [-0.74148712552556262, -0.49395892999206054],
+  "cvar90_delta_ci95": [-3.9434134806487116, -1.8567743134301962],
+  "mean_pass": true,
+  "tail_pass": true,
+  "overall_robust_superiority": true,
+  "step7g_started": false
+}

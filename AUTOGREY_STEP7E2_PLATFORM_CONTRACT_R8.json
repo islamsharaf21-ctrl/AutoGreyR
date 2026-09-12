@@ -1,0 +1,73 @@
+{
+  "acceptance_invariants": [
+    "All 2511 reservations exact",
+    "2496 actionable and 15 refusals exact",
+    "All refusal reasons and target SHA commitments exact",
+    "All 2496 canonical development hashes exact",
+    "All 2496 eligibility sets exact",
+    "All 23572 selected configuration IDs exact",
+    "All V1 and GLOBAL choices/counts exact",
+    "All V1 external scores remain within frozen selector tolerance",
+    "All non-sensitive groups remain within original Step7E2 forecast tolerance",
+    "SG02/SG05 remain within the qualified Windows numerical bounds against canonical Linux float64 forecasts"
+  ],
+  "canonical_reference": {
+    "blas_lapack": "OpenBLAS 0.3.30 64-bit integer build",
+    "byte_exact_sensitive_arrays_required_on_canonical_platform": true,
+    "numpy": "2.3.5",
+    "platform": "linux",
+    "python": "3.13.5",
+    "r7_linux_exact_arrays": 4826,
+    "r7_linux_nonexact_arrays": 0,
+    "sensitive_binary_sha256": "c6e473e96971d32f4f7edb0b363558ad764359a8006ea9286ca50f4d88b6757c",
+    "sensitive_index_sha256": "b04714ba5f1d7293f0ea83d5983a227113504c3dfdf524a85394d565ae8c5af7"
+  },
+  "checkpoint": "STEP_7E2_REALBENCH2_PRETARGET_R8_CROSSPLATFORM_FINAL",
+  "chronology": {
+    "bounds_frozen_from_target_free_r7_census": true,
+    "heldout_targets_numeric_parsed": false,
+    "outcomes_opened": false,
+    "scientific_model_or_selector_tuned": false,
+    "target_losses_computed": false
+  },
+  "purpose": "Platform qualification for target-free SG02/SG05 numerical divergence while preserving the frozen Linux/OpenBLAS canonical reference.",
+  "windows_qualified_profile": {
+    "acceptance": {
+      "SG02_DISCRETE_POLY": {
+        "max_abs": 0.1,
+        "max_rel_normalized": 2e-05
+      },
+      "SG05_CONT_TIME_POLY": {
+        "max_abs": 5.0,
+        "max_rel_normalized": 0.00055
+      }
+    },
+    "byte_exact_claim": false,
+    "numpy": "2.3.5",
+    "platform": "win32",
+    "python": "3.13.5",
+    "r7_observed_full_census": {
+      "SG02_DISCRETE_POLY": {
+        "arrays": 2410,
+        "exact_arrays": 1124,
+        "max_abs": 0.07770514377261861,
+        "max_rel_normalized": 1.748891104634719e-05,
+        "max_ulp": 85437709116,
+        "nonexact_arrays": 1286,
+        "nonexact_values": 3604
+      },
+      "SG05_CONT_TIME_POLY": {
+        "arrays": 2416,
+        "exact_arrays": 1400,
+        "max_abs": 4.0,
+        "max_rel_normalized": 0.0005112474437627812,
+        "max_ulp": 4398046511104,
+        "nonexact_arrays": 1016,
+        "nonexact_values": 2238
+      },
+      "exact_arrays": 2524,
+      "nonexact_arrays": 2302,
+      "rows": 4826
+    }
+  }
+}

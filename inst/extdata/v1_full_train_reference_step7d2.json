@@ -1,0 +1,619 @@
+{
+  "acceptance": {
+    "deferred": [
+      "GLOBAL_RANK_REPRODUCTION",
+      "CAL",
+      "LOCKTEST",
+      "REALBENCH2_PRETARGET",
+      "TARGET_OPENING",
+      "BOOTSTRAP"
+    ],
+    "metric_tolerance": 5e-13,
+    "repeat_choice_identity_required": true,
+    "repeat_full_run_required": true,
+    "required_choice_matches": 2070,
+    "required_supported": 2070
+  },
+  "canonical_inputs": {
+    "action_table_sha256": "5e943ce10c601187d46dd0f77e9059aee29c7e2710d1d8ff5acf779787983a99",
+    "train_labels_sha256": "77e202112c8d3de45aeebfdbe6a4c8d1ac9b725aac598af5974d46a3f5be4631"
+  },
+  "canonical_r2_reproducibility_audit": {
+    "sha256": "18dd69d0d566e1ca7222b53a8f24d3c050f73fd11a6b73aa3835847dc8915ace",
+    "status": "PASS",
+    "v1_oof_run1_run2_identical": true
+  },
+  "canonical_selector_source": {
+    "sha256": "a5f6e6914809bcde3667c96165984a218595c92c4cbf1d98ff4b23de50be2d23",
+    "version": "AG_V2_SEARCH_5DB_R2_1"
+  },
+  "canonical_v1_oof": {
+    "metrics": {
+      "J": 0.8592782709873602,
+      "cvar90": 3.3029882749014567,
+      "global_same_tasks_cvar90": 3.8439099258336102,
+      "global_same_tasks_mean_regret": 1.004871977107336,
+      "mean_regret": 0.7050876130332044,
+      "median_regret": 0.3006626712295071,
+      "n_supported": 2070,
+      "n_tasks": 2070,
+      "p90_regret": 1.869192161417071,
+      "rho_mean": 0.7016690972544556,
+      "rho_tail": 0.8592782709873602,
+      "selection_counts": {
+        "SG01_CONT_GM": 34,
+        "SG02_DISCRETE_POLY": 38,
+        "SG03_FRAC_LINEAR": 61,
+        "SG04_BERNOULLI": 55,
+        "SG05_CONT_TIME_POLY": 3,
+        "SG06_CONFORMABLE": 145,
+        "SG07_ROLLING": 787,
+        "SG08_WBO": 487,
+        "SG09_GREY_MARKOV": 168,
+        "SG10_SEASONAL": 292
+      },
+      "support_coverage": 1.0,
+      "zero_regret_rate": 0.2560386473429952
+    },
+    "n_decisions": 2070,
+    "sha256": "510069e07fd8a28c21cd3ab5f04f473a5856fec559cde6ffceb48dc784188c5c"
+  },
+  "checkpoint": "STEP7D2_FULL_V1_TRAIN_R2_REPRODUCTION",
+  "fold_decision_counts": [
+    {
+      "fold": 0,
+      "n_parents": 421,
+      "selection_counts": {
+        "SG01_CONT_GM": 12,
+        "SG02_DISCRETE_POLY": 7,
+        "SG03_FRAC_LINEAR": 15,
+        "SG04_BERNOULLI": 10,
+        "SG05_CONT_TIME_POLY": 1,
+        "SG06_CONFORMABLE": 31,
+        "SG07_ROLLING": 153,
+        "SG08_WBO": 104,
+        "SG09_GREY_MARKOV": 24,
+        "SG10_SEASONAL": 64
+      }
+    },
+    {
+      "fold": 1,
+      "n_parents": 417,
+      "selection_counts": {
+        "SG01_CONT_GM": 7,
+        "SG02_DISCRETE_POLY": 4,
+        "SG03_FRAC_LINEAR": 5,
+        "SG04_BERNOULLI": 9,
+        "SG05_CONT_TIME_POLY": 1,
+        "SG06_CONFORMABLE": 37,
+        "SG07_ROLLING": 167,
+        "SG08_WBO": 105,
+        "SG09_GREY_MARKOV": 24,
+        "SG10_SEASONAL": 58
+      }
+    },
+    {
+      "fold": 2,
+      "n_parents": 413,
+      "selection_counts": {
+        "SG01_CONT_GM": 5,
+        "SG02_DISCRETE_POLY": 10,
+        "SG03_FRAC_LINEAR": 7,
+        "SG04_BERNOULLI": 8,
+        "SG05_CONT_TIME_POLY": 0,
+        "SG06_CONFORMABLE": 16,
+        "SG07_ROLLING": 164,
+        "SG08_WBO": 118,
+        "SG09_GREY_MARKOV": 36,
+        "SG10_SEASONAL": 49
+      }
+    },
+    {
+      "fold": 3,
+      "n_parents": 411,
+      "selection_counts": {
+        "SG01_CONT_GM": 0,
+        "SG02_DISCRETE_POLY": 5,
+        "SG03_FRAC_LINEAR": 11,
+        "SG04_BERNOULLI": 15,
+        "SG05_CONT_TIME_POLY": 0,
+        "SG06_CONFORMABLE": 33,
+        "SG07_ROLLING": 157,
+        "SG08_WBO": 77,
+        "SG09_GREY_MARKOV": 44,
+        "SG10_SEASONAL": 69
+      }
+    },
+    {
+      "fold": 4,
+      "n_parents": 408,
+      "selection_counts": {
+        "SG01_CONT_GM": 10,
+        "SG02_DISCRETE_POLY": 12,
+        "SG03_FRAC_LINEAR": 23,
+        "SG04_BERNOULLI": 13,
+        "SG05_CONT_TIME_POLY": 1,
+        "SG06_CONFORMABLE": 28,
+        "SG07_ROLLING": 146,
+        "SG08_WBO": 83,
+        "SG09_GREY_MARKOV": 40,
+        "SG10_SEASONAL": 52
+      }
+    }
+  ],
+  "fold_group_models": [
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 411,
+      "fold": 0,
+      "group": "SG01_CONT_GM",
+      "n_eval": 411,
+      "n_train": 1597,
+      "train_parent_count": 1597
+    },
+    {
+      "effective_min_samples_leaf": 15,
+      "eval_parent_count": 391,
+      "fold": 0,
+      "group": "SG02_DISCRETE_POLY",
+      "n_eval": 391,
+      "n_train": 1484,
+      "train_parent_count": 1484
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 411,
+      "fold": 0,
+      "group": "SG03_FRAC_LINEAR",
+      "n_eval": 411,
+      "n_train": 1595,
+      "train_parent_count": 1595
+    },
+    {
+      "effective_min_samples_leaf": 17,
+      "eval_parent_count": 416,
+      "fold": 0,
+      "group": "SG04_BERNOULLI",
+      "n_eval": 416,
+      "n_train": 1624,
+      "train_parent_count": 1624
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 385,
+      "fold": 0,
+      "group": "SG05_CONT_TIME_POLY",
+      "n_eval": 385,
+      "n_train": 1517,
+      "train_parent_count": 1517
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 395,
+      "fold": 0,
+      "group": "SG06_CONFORMABLE",
+      "n_eval": 395,
+      "n_train": 1551,
+      "train_parent_count": 1551
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 394,
+      "fold": 0,
+      "group": "SG07_ROLLING",
+      "n_eval": 394,
+      "n_train": 1545,
+      "train_parent_count": 1545
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 389,
+      "fold": 0,
+      "group": "SG08_WBO",
+      "n_eval": 389,
+      "n_train": 1508,
+      "train_parent_count": 1508
+    },
+    {
+      "effective_min_samples_leaf": 15,
+      "eval_parent_count": 367,
+      "fold": 0,
+      "group": "SG09_GREY_MARKOV",
+      "n_eval": 367,
+      "n_train": 1487,
+      "train_parent_count": 1487
+    },
+    {
+      "effective_min_samples_leaf": 6,
+      "eval_parent_count": 132,
+      "fold": 0,
+      "group": "SG10_SEASONAL",
+      "n_eval": 132,
+      "n_train": 508,
+      "train_parent_count": 508
+    },
+    {
+      "effective_min_samples_leaf": 17,
+      "eval_parent_count": 403,
+      "fold": 1,
+      "group": "SG01_CONT_GM",
+      "n_eval": 403,
+      "n_train": 1605,
+      "train_parent_count": 1605
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 362,
+      "fold": 1,
+      "group": "SG02_DISCRETE_POLY",
+      "n_eval": 362,
+      "n_train": 1513,
+      "train_parent_count": 1513
+    },
+    {
+      "effective_min_samples_leaf": 17,
+      "eval_parent_count": 400,
+      "fold": 1,
+      "group": "SG03_FRAC_LINEAR",
+      "n_eval": 400,
+      "n_train": 1606,
+      "train_parent_count": 1606
+    },
+    {
+      "effective_min_samples_leaf": 17,
+      "eval_parent_count": 415,
+      "fold": 1,
+      "group": "SG04_BERNOULLI",
+      "n_eval": 415,
+      "n_train": 1625,
+      "train_parent_count": 1625
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 380,
+      "fold": 1,
+      "group": "SG05_CONT_TIME_POLY",
+      "n_eval": 380,
+      "n_train": 1522,
+      "train_parent_count": 1522
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 394,
+      "fold": 1,
+      "group": "SG06_CONFORMABLE",
+      "n_eval": 394,
+      "n_train": 1552,
+      "train_parent_count": 1552
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 390,
+      "fold": 1,
+      "group": "SG07_ROLLING",
+      "n_eval": 390,
+      "n_train": 1549,
+      "train_parent_count": 1549
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 378,
+      "fold": 1,
+      "group": "SG08_WBO",
+      "n_eval": 378,
+      "n_train": 1519,
+      "train_parent_count": 1519
+    },
+    {
+      "effective_min_samples_leaf": 15,
+      "eval_parent_count": 371,
+      "fold": 1,
+      "group": "SG09_GREY_MARKOV",
+      "n_eval": 371,
+      "n_train": 1483,
+      "train_parent_count": 1483
+    },
+    {
+      "effective_min_samples_leaf": 6,
+      "eval_parent_count": 126,
+      "fold": 1,
+      "group": "SG10_SEASONAL",
+      "n_eval": 126,
+      "n_train": 514,
+      "train_parent_count": 514
+    },
+    {
+      "effective_min_samples_leaf": 17,
+      "eval_parent_count": 403,
+      "fold": 2,
+      "group": "SG01_CONT_GM",
+      "n_eval": 403,
+      "n_train": 1605,
+      "train_parent_count": 1605
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 373,
+      "fold": 2,
+      "group": "SG02_DISCRETE_POLY",
+      "n_eval": 373,
+      "n_train": 1502,
+      "train_parent_count": 1502
+    },
+    {
+      "effective_min_samples_leaf": 17,
+      "eval_parent_count": 405,
+      "fold": 2,
+      "group": "SG03_FRAC_LINEAR",
+      "n_eval": 405,
+      "n_train": 1601,
+      "train_parent_count": 1601
+    },
+    {
+      "effective_min_samples_leaf": 17,
+      "eval_parent_count": 407,
+      "fold": 2,
+      "group": "SG04_BERNOULLI",
+      "n_eval": 407,
+      "n_train": 1633,
+      "train_parent_count": 1633
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 378,
+      "fold": 2,
+      "group": "SG05_CONT_TIME_POLY",
+      "n_eval": 378,
+      "n_train": 1524,
+      "train_parent_count": 1524
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 394,
+      "fold": 2,
+      "group": "SG06_CONFORMABLE",
+      "n_eval": 394,
+      "n_train": 1552,
+      "train_parent_count": 1552
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 393,
+      "fold": 2,
+      "group": "SG07_ROLLING",
+      "n_eval": 393,
+      "n_train": 1546,
+      "train_parent_count": 1546
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 376,
+      "fold": 2,
+      "group": "SG08_WBO",
+      "n_eval": 376,
+      "n_train": 1521,
+      "train_parent_count": 1521
+    },
+    {
+      "effective_min_samples_leaf": 15,
+      "eval_parent_count": 368,
+      "fold": 2,
+      "group": "SG09_GREY_MARKOV",
+      "n_eval": 368,
+      "n_train": 1486,
+      "train_parent_count": 1486
+    },
+    {
+      "effective_min_samples_leaf": 6,
+      "eval_parent_count": 125,
+      "fold": 2,
+      "group": "SG10_SEASONAL",
+      "n_eval": 125,
+      "n_train": 515,
+      "train_parent_count": 515
+    },
+    {
+      "effective_min_samples_leaf": 17,
+      "eval_parent_count": 396,
+      "fold": 3,
+      "group": "SG01_CONT_GM",
+      "n_eval": 396,
+      "n_train": 1612,
+      "train_parent_count": 1612
+    },
+    {
+      "effective_min_samples_leaf": 15,
+      "eval_parent_count": 376,
+      "fold": 3,
+      "group": "SG02_DISCRETE_POLY",
+      "n_eval": 376,
+      "n_train": 1499,
+      "train_parent_count": 1499
+    },
+    {
+      "effective_min_samples_leaf": 17,
+      "eval_parent_count": 396,
+      "fold": 3,
+      "group": "SG03_FRAC_LINEAR",
+      "n_eval": 396,
+      "n_train": 1610,
+      "train_parent_count": 1610
+    },
+    {
+      "effective_min_samples_leaf": 17,
+      "eval_parent_count": 407,
+      "fold": 3,
+      "group": "SG04_BERNOULLI",
+      "n_eval": 407,
+      "n_train": 1633,
+      "train_parent_count": 1633
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 383,
+      "fold": 3,
+      "group": "SG05_CONT_TIME_POLY",
+      "n_eval": 383,
+      "n_train": 1519,
+      "train_parent_count": 1519
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 387,
+      "fold": 3,
+      "group": "SG06_CONFORMABLE",
+      "n_eval": 387,
+      "n_train": 1559,
+      "train_parent_count": 1559
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 382,
+      "fold": 3,
+      "group": "SG07_ROLLING",
+      "n_eval": 382,
+      "n_train": 1557,
+      "train_parent_count": 1557
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 380,
+      "fold": 3,
+      "group": "SG08_WBO",
+      "n_eval": 380,
+      "n_train": 1517,
+      "train_parent_count": 1517
+    },
+    {
+      "effective_min_samples_leaf": 15,
+      "eval_parent_count": 376,
+      "fold": 3,
+      "group": "SG09_GREY_MARKOV",
+      "n_eval": 376,
+      "n_train": 1478,
+      "train_parent_count": 1478
+    },
+    {
+      "effective_min_samples_leaf": 6,
+      "eval_parent_count": 135,
+      "fold": 3,
+      "group": "SG10_SEASONAL",
+      "n_eval": 135,
+      "n_train": 505,
+      "train_parent_count": 505
+    },
+    {
+      "effective_min_samples_leaf": 17,
+      "eval_parent_count": 395,
+      "fold": 4,
+      "group": "SG01_CONT_GM",
+      "n_eval": 395,
+      "n_train": 1613,
+      "train_parent_count": 1613
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 373,
+      "fold": 4,
+      "group": "SG02_DISCRETE_POLY",
+      "n_eval": 373,
+      "n_train": 1502,
+      "train_parent_count": 1502
+    },
+    {
+      "effective_min_samples_leaf": 17,
+      "eval_parent_count": 394,
+      "fold": 4,
+      "group": "SG03_FRAC_LINEAR",
+      "n_eval": 394,
+      "n_train": 1612,
+      "train_parent_count": 1612
+    },
+    {
+      "effective_min_samples_leaf": 17,
+      "eval_parent_count": 395,
+      "fold": 4,
+      "group": "SG04_BERNOULLI",
+      "n_eval": 395,
+      "n_train": 1645,
+      "train_parent_count": 1645
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 376,
+      "fold": 4,
+      "group": "SG05_CONT_TIME_POLY",
+      "n_eval": 376,
+      "n_train": 1526,
+      "train_parent_count": 1526
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 376,
+      "fold": 4,
+      "group": "SG06_CONFORMABLE",
+      "n_eval": 376,
+      "n_train": 1570,
+      "train_parent_count": 1570
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 380,
+      "fold": 4,
+      "group": "SG07_ROLLING",
+      "n_eval": 380,
+      "n_train": 1559,
+      "train_parent_count": 1559
+    },
+    {
+      "effective_min_samples_leaf": 16,
+      "eval_parent_count": 374,
+      "fold": 4,
+      "group": "SG08_WBO",
+      "n_eval": 374,
+      "n_train": 1523,
+      "train_parent_count": 1523
+    },
+    {
+      "effective_min_samples_leaf": 15,
+      "eval_parent_count": 372,
+      "fold": 4,
+      "group": "SG09_GREY_MARKOV",
+      "n_eval": 372,
+      "n_train": 1482,
+      "train_parent_count": 1482
+    },
+    {
+      "effective_min_samples_leaf": 6,
+      "eval_parent_count": 122,
+      "fold": 4,
+      "group": "SG10_SEASONAL",
+      "n_eval": 122,
+      "n_train": 518,
+      "train_parent_count": 518
+    }
+  ],
+  "rf_contract": {
+    "folds": 5,
+    "forest_fits_per_full_run": 50,
+    "groups": 10,
+    "input_width": 56,
+    "max_features": "sqrt",
+    "min_samples_leaf": 0.01,
+    "n_estimators": 500,
+    "random_state": 62291,
+    "support_min_parents": 20
+  },
+  "scientific_design": "FROZEN_UNCHANGED",
+  "train_counts": {
+    "action_rows": 18107,
+    "parents": 2070,
+    "parents_by_fold": {
+      "0": 421,
+      "1": 417,
+      "2": 413,
+      "3": 411,
+      "4": 408
+    }
+  }
+}

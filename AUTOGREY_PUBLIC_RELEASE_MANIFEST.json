@@ -1,0 +1,76 @@
+{
+    "schema_version":  "1.0",
+    "release":  "AutoGreyR 1.0.0",
+    "files":  [
+                  {
+                      "path":  "DESCRIPTION",
+                      "sha256":  "99be91e6bc7e58b2593baaebe812d7ef0a91d2d5b8cc1be5b6cddf353de01d38",
+                      "bytes":  886
+                  },
+                  {
+                      "path":  "CITATION.cff",
+                      "sha256":  "6c68219ef33d44cea73afaeda92a54c6d9a317a9cbd940b043105826ce1de76f",
+                      "bytes":  373
+                  },
+                  {
+                      "path":  "LICENSE",
+                      "sha256":  "90feb644c8df544d0224b181b19fadde76ee1a8a36dba08fb7494e353b1376e8",
+                      "bytes":  1081
+                  },
+                  {
+                      "path":  "THIRD_PARTY_NOTICES.md",
+                      "sha256":  "5d3f2edf34235ffae4ce2c4cb45dee2b5a01e7ffde69f5aedc6dc549a7e9a994",
+                      "bytes":  2228
+                  },
+                  {
+                      "path":  "README.md",
+                      "sha256":  "5e822f26029468601eeebfded84cef410131930997f7f24acd9f729e28d86e87",
+                      "bytes":  4109
+                  },
+                  {
+                      "path":  "REPRODUCIBILITY.md",
+                      "sha256":  "435e1f547fa8265ff84a3cc5ff9189dad7dd13ce328cdb769715ee21e668a2f8",
+                      "bytes":  3076
+                  },
+                  {
+                      "path":  "RELEASE_NOTES.md",
+                      "sha256":  "ee90f214bb1e2d0f22e2accbc414fa05b51510ce6f032d14860bf79ce655d305",
+                      "bytes":  1208
+                  },
+                  {
+                      "path":  ".Rprofile",
+                      "sha256":  "08654ee73bbfa9d016a10709f3589fea6a343a19b6539206ed2eabbac69001f6",
+                      "bytes":  27
+                  },
+                  {
+                      "path":  "renv/activate.R",
+                      "sha256":  "e45d8312de2bf1981cdadb4cb0d62b93d64bc2fcb07b710d09dd21d77cad4a69",
+                      "bytes":  41384
+                  },
+                  {
+                      "path":  "renv.lock",
+                      "sha256":  "1878fca606f6a74365baa05e7a103ee3d9f8a2a411bfc5669fadff1bc7048d59",
+                      "bytes":  54170
+                  },
+                  {
+                      "path":  "scripts/initialize_renv.R",
+                      "sha256":  "076151216128bd35c6f2df97de9df84b269583014c99a95056866d8570558ac5",
+                      "bytes":  4420
+                  },
+                  {
+                      "path":  "scripts/_release_utils.R",
+                      "sha256":  "e878d6faacaa4a814b4cd812ace4da9de05878a5362e1ccc6e132f319559eb8c",
+                      "bytes":  1553
+                  },
+                  {
+                      "path":  "scripts/reproduce_all.R",
+                      "sha256":  "dfab99a0bd27e562239463eba1da2745224750424599ca6b211ec3f1429f02e3",
+                      "bytes":  2540
+                  },
+                  {
+                      "path":  "scripts/verify_step7g_release.R",
+                      "sha256":  "ae5fc525dcc78d830d9b2d79517f886b17939782c8abd5b1e21cfb7da83ccdd4",
+                      "bytes":  15308
+                  }
+              ]
+}

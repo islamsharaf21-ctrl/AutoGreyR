@@ -1,0 +1,68 @@
+{
+  "artifact": "AUTOGREY_EXPECTED_STEP5F_RESULTS_STEP7G",
+  "reserved_parent_count": 2511,
+  "actionable_parent_count": 2496,
+  "refusal_count": 15,
+  "primary_metrics": {
+    "cvar90": 8.2976523812853,
+    "mean_regret": 1.317290834344165,
+    "median_regret": 0.36607709809306155,
+    "n_supported": 2496,
+    "n_tasks": 2496,
+    "p90_regret": 2.7947617452927105,
+    "selection_counts": {
+      "SG01_CONT_GM": 7,
+      "SG02_DISCRETE_POLY": 23,
+      "SG03_FRAC_LINEAR": 68,
+      "SG04_BERNOULLI": 69,
+      "SG06_CONFORMABLE": 107,
+      "SG07_ROLLING": 813,
+      "SG08_WBO": 411,
+      "SG09_GREY_MARKOV": 122,
+      "SG10_SEASONAL": 876
+    },
+    "support_coverage": 1.0,
+    "zero_regret_rate": 0.2704326923076923
+  },
+  "global_rank_v2_metrics": {
+    "cvar90": 11.12707883281565,
+    "mean_regret": 1.9289794121083974,
+    "median_regret": 0.738205449120459,
+    "n_supported": 2496,
+    "n_tasks": 2496,
+    "p90_regret": 3.83120985884913,
+    "selection_counts": {
+      "SG07_ROLLING": 2,
+      "SG08_WBO": 906,
+      "SG09_GREY_MARKOV": 18,
+      "SG10_SEASONAL": 1570
+    },
+    "support_coverage": 1.0,
+    "zero_regret_rate": 0.2091346153846154
+  },
+  "estimands": {
+    "cvar90_regret_delta_primary_minus_global": -2.8294264515303507,
+    "mean_regret_delta_primary_minus_global": -0.6116885777642325
+  },
+  "bootstrap": {
+    "ci_method": "percentile 95%, numpy quantile linear",
+    "cvar90_delta_ci95": [
+      -3.9434134806487116,
+      -1.8567743134301962
+    ],
+    "mean_delta_ci95": [
+      -0.7414871255255626,
+      -0.49395892999206054
+    ],
+    "replicates": 4000,
+    "seed": 46073,
+    "type": "paired parent-cluster; one task per parent"
+  },
+  "final_gate": {
+    "mean_pass": true,
+    "mean_rule": "upper 95% CI of mean-regret delta < 0",
+    "overall_robust_superiority": true,
+    "tail_pass": true,
+    "tail_rule": "upper 95% CI of CVaR90-regret delta <= 0"
+  }
+}

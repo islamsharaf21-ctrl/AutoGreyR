@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "mode": "restore_from_committed_lock",
+  "lock_regenerated": false,
+  "lock_byte_immutable": true,
+  "r_version": "4.6.1",
+  "required_packages": {
+    "renv": "1.2.3",
+    "jsonlite": "2.0.0",
+    "digest": "0.6.39",
+    "testthat": "3.3.2"
+  },
+  "lock_sha256": "1878fca606f6a74365baa05e7a103ee3d9f8a2a411bfc5669fadff1bc7048d59"
+}

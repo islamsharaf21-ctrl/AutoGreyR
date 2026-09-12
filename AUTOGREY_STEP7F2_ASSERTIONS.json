@@ -1,0 +1,39 @@
+{
+  "checkpoint": "STEP7F2_PCG64_BOOTSTRAP",
+  "contract": {
+    "bit_generator": "PCG64",
+    "ci": "percentile 95%; numpy quantile method=linear at 0.025,0.975",
+    "cvar90": "mean of worst ceil(0.10*N) regrets separately for V1 and GLOBAL",
+    "mean_delta": "mean(v1_regret-global_regret)",
+    "replicates": 4000,
+    "resampling": "paired parent-cluster; one task per parent; N=2496 sampled with replacement each replicate",
+    "rng": "numpy.random.default_rng",
+    "seed": 46073,
+    "success": "upper95(mean_delta)<0 AND upper95(cvar90_delta)<=0",
+    "tail_delta": "CVaR90(v1_regret)-CVaR90(global_regret)"
+  },
+  "frozen": {
+    "bootstrap_sha256": "b78899ea38552ca546746a7f80ef7c5b9b28e9f8fc31ed45a9bde9faa11bb5fa",
+    "bridge_sha256": "4be686fe50c17f3952c619a8e839a9de2427355a053a375a468e992e37124a93",
+    "decision_sha256": "f62d93b49610c11bef6a16813833bfb40c9af4683db041f39212ceff0692bd80",
+    "r16_sha256": "08815023bd4bacc2b5627ecb81df2c6e21b2b63253a48ccbec7edade2be9ff59",
+    "step5f_results_sha256": "8126fc00e700af4a3c26fe620810028ee2b64f543eeedfa1ce0cafba4d9554fb",
+    "step7f1_source_sha256": "de4a3bf737a874b13d184df1ad7c6dea324a059a317e7701323bb2349b013545"
+  },
+  "frozen_ci": {
+    "cvar90_delta_ci95": [
+      -3.9434134806487116,
+      -1.8567743134301962
+    ],
+    "mean_delta_ci95": [
+      -0.7414871255255626,
+      -0.49395892999206054
+    ],
+    "mean_pass": true,
+    "overall_robust_superiority": true,
+    "tail_pass": true
+  },
+  "next": "STEP7G only after external RStudio PASS",
+  "required_terminal_line": "STEP7F2_PCG64_BOOTSTRAP_PARITY: PASS",
+  "status_before_external_R_run": "PACKAGE_READY_NOT_YET_CLOSED"
+}

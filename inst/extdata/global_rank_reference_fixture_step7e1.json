@@ -1,0 +1,303 @@
+{
+  "canonical_global_oof": {
+    "filename": "AUTOGREY_V2_GLOBAL_OOF_STEP5D_B_R2.json",
+    "python_replay_exact": true,
+    "sha256": "8e2e37df62383285922fa6e887aefcd2143ac0653a7b6e39602637fec1870daa"
+  },
+  "canonical_selector_source": {
+    "sha256": "a5f6e6914809bcde3667c96165984a218595c92c4cbf1d98ff4b23de50be2d23",
+    "version": "AG_V2_SEARCH_5DB_R2_1"
+  },
+  "checkpoint": "STEP7E1_GLOBAL_RANK_V2_PARITY",
+  "fold_oracle": [
+    {
+      "fold": 0,
+      "rank": [
+        "SG10_SEASONAL",
+        "SG08_WBO",
+        "SG09_GREY_MARKOV",
+        "SG07_ROLLING",
+        "SG03_FRAC_LINEAR",
+        "SG02_DISCRETE_POLY",
+        "SG01_CONT_GM",
+        "SG04_BERNOULLI",
+        "SG05_CONT_TIME_POLY",
+        "SG06_CONFORMABLE"
+      ],
+      "train_parent_support": {
+        "SG01_CONT_GM": 1597,
+        "SG02_DISCRETE_POLY": 1484,
+        "SG03_FRAC_LINEAR": 1595,
+        "SG04_BERNOULLI": 1624,
+        "SG05_CONT_TIME_POLY": 1517,
+        "SG06_CONFORMABLE": 1551,
+        "SG07_ROLLING": 1545,
+        "SG08_WBO": 1508,
+        "SG09_GREY_MARKOV": 1487,
+        "SG10_SEASONAL": 508
+      },
+      "validation_parent_count": 421,
+      "weighted_mean_regret": {
+        "SG01_CONT_GM": 1.804961306339063,
+        "SG02_DISCRETE_POLY": 1.6022933194167575,
+        "SG03_FRAC_LINEAR": 1.5652698678453645,
+        "SG04_BERNOULLI": 2.1018093964554834,
+        "SG05_CONT_TIME_POLY": 85840600.5247619,
+        "SG06_CONFORMABLE": 189930428.66250396,
+        "SG07_ROLLING": 1.4574159455094589,
+        "SG08_WBO": 1.0227544942723712,
+        "SG09_GREY_MARKOV": 1.2827481659791304,
+        "SG10_SEASONAL": 0.9067334304788147
+      }
+    },
+    {
+      "fold": 1,
+      "rank": [
+        "SG10_SEASONAL",
+        "SG08_WBO",
+        "SG09_GREY_MARKOV",
+        "SG07_ROLLING",
+        "SG02_DISCRETE_POLY",
+        "SG03_FRAC_LINEAR",
+        "SG01_CONT_GM",
+        "SG04_BERNOULLI",
+        "SG06_CONFORMABLE",
+        "SG05_CONT_TIME_POLY"
+      ],
+      "train_parent_support": {
+        "SG01_CONT_GM": 1605,
+        "SG02_DISCRETE_POLY": 1513,
+        "SG03_FRAC_LINEAR": 1606,
+        "SG04_BERNOULLI": 1625,
+        "SG05_CONT_TIME_POLY": 1522,
+        "SG06_CONFORMABLE": 1552,
+        "SG07_ROLLING": 1549,
+        "SG08_WBO": 1519,
+        "SG09_GREY_MARKOV": 1483,
+        "SG10_SEASONAL": 514
+      },
+      "validation_parent_count": 417,
+      "weighted_mean_regret": {
+        "SG01_CONT_GM": 1.745474600492906,
+        "SG02_DISCRETE_POLY": 1.567030051072326,
+        "SG03_FRAC_LINEAR": 1.6180714224389152,
+        "SG04_BERNOULLI": 2.084145414410019,
+        "SG05_CONT_TIME_POLY": 403768897916.15686,
+        "SG06_CONFORMABLE": 191174923.5674088,
+        "SG07_ROLLING": 1.495009462194305,
+        "SG08_WBO": 1.0353870880485598,
+        "SG09_GREY_MARKOV": 1.2994129255032398,
+        "SG10_SEASONAL": 0.9060694283201024
+      }
+    },
+    {
+      "fold": 2,
+      "rank": [
+        "SG10_SEASONAL",
+        "SG08_WBO",
+        "SG09_GREY_MARKOV",
+        "SG07_ROLLING",
+        "SG02_DISCRETE_POLY",
+        "SG03_FRAC_LINEAR",
+        "SG01_CONT_GM",
+        "SG04_BERNOULLI",
+        "SG06_CONFORMABLE",
+        "SG05_CONT_TIME_POLY"
+      ],
+      "train_parent_support": {
+        "SG01_CONT_GM": 1605,
+        "SG02_DISCRETE_POLY": 1502,
+        "SG03_FRAC_LINEAR": 1601,
+        "SG04_BERNOULLI": 1633,
+        "SG05_CONT_TIME_POLY": 1524,
+        "SG06_CONFORMABLE": 1552,
+        "SG07_ROLLING": 1546,
+        "SG08_WBO": 1521,
+        "SG09_GREY_MARKOV": 1486,
+        "SG10_SEASONAL": 515
+      },
+      "validation_parent_count": 413,
+      "weighted_mean_regret": {
+        "SG01_CONT_GM": 1.8257035579082521,
+        "SG02_DISCRETE_POLY": 1.6104316764810673,
+        "SG03_FRAC_LINEAR": 1.6202497741326614,
+        "SG04_BERNOULLI": 2.035862646661379,
+        "SG05_CONT_TIME_POLY": 402890376369.2708,
+        "SG06_CONFORMABLE": 191291470.45448872,
+        "SG07_ROLLING": 1.5058219231467043,
+        "SG08_WBO": 1.0487331519930645,
+        "SG09_GREY_MARKOV": 1.2849594596991734,
+        "SG10_SEASONAL": 0.8453002062752862
+      }
+    },
+    {
+      "fold": 3,
+      "rank": [
+        "SG10_SEASONAL",
+        "SG08_WBO",
+        "SG09_GREY_MARKOV",
+        "SG07_ROLLING",
+        "SG03_FRAC_LINEAR",
+        "SG02_DISCRETE_POLY",
+        "SG06_CONFORMABLE",
+        "SG01_CONT_GM",
+        "SG04_BERNOULLI",
+        "SG05_CONT_TIME_POLY"
+      ],
+      "train_parent_support": {
+        "SG01_CONT_GM": 1612,
+        "SG02_DISCRETE_POLY": 1499,
+        "SG03_FRAC_LINEAR": 1610,
+        "SG04_BERNOULLI": 1633,
+        "SG05_CONT_TIME_POLY": 1519,
+        "SG06_CONFORMABLE": 1559,
+        "SG07_ROLLING": 1557,
+        "SG08_WBO": 1517,
+        "SG09_GREY_MARKOV": 1478,
+        "SG10_SEASONAL": 505
+      },
+      "validation_parent_count": 411,
+      "weighted_mean_regret": {
+        "SG01_CONT_GM": 1.8099946678322962,
+        "SG02_DISCRETE_POLY": 1.6188672474549668,
+        "SG03_FRAC_LINEAR": 1.6095987250350354,
+        "SG04_BERNOULLI": 2.1512235761138556,
+        "SG05_CONT_TIME_POLY": 402969637440.32495,
+        "SG06_CONFORMABLE": 1.8083389290958403,
+        "SG07_ROLLING": 1.528237818706222,
+        "SG08_WBO": 1.0557765667389696,
+        "SG09_GREY_MARKOV": 1.2993175270963193,
+        "SG10_SEASONAL": 0.9517491745910843
+      }
+    },
+    {
+      "fold": 4,
+      "rank": [
+        "SG10_SEASONAL",
+        "SG08_WBO",
+        "SG09_GREY_MARKOV",
+        "SG07_ROLLING",
+        "SG02_DISCRETE_POLY",
+        "SG03_FRAC_LINEAR",
+        "SG01_CONT_GM",
+        "SG04_BERNOULLI",
+        "SG06_CONFORMABLE",
+        "SG05_CONT_TIME_POLY"
+      ],
+      "train_parent_support": {
+        "SG01_CONT_GM": 1613,
+        "SG02_DISCRETE_POLY": 1502,
+        "SG03_FRAC_LINEAR": 1612,
+        "SG04_BERNOULLI": 1645,
+        "SG05_CONT_TIME_POLY": 1526,
+        "SG06_CONFORMABLE": 1570,
+        "SG07_ROLLING": 1559,
+        "SG08_WBO": 1523,
+        "SG09_GREY_MARKOV": 1482,
+        "SG10_SEASONAL": 518
+      },
+      "validation_parent_count": 408,
+      "weighted_mean_regret": {
+        "SG01_CONT_GM": 1.7847738259185952,
+        "SG02_DISCRETE_POLY": 1.591291935949197,
+        "SG03_FRAC_LINEAR": 1.5928161690628486,
+        "SG04_BERNOULLI": 2.11123643086969,
+        "SG05_CONT_TIME_POLY": 402596191433.7089,
+        "SG06_CONFORMABLE": 188684990.1282601,
+        "SG07_ROLLING": 1.4798131932155631,
+        "SG08_WBO": 1.0227292257529712,
+        "SG09_GREY_MARKOV": 1.2511984767187936,
+        "SG10_SEASONAL": 0.8510966482167776
+      }
+    }
+  ],
+  "full_train_rank": {
+    "identity_to_step5e_frozen_values": true,
+    "rank": [
+      "SG10_SEASONAL",
+      "SG08_WBO",
+      "SG09_GREY_MARKOV",
+      "SG07_ROLLING",
+      "SG02_DISCRETE_POLY",
+      "SG03_FRAC_LINEAR",
+      "SG01_CONT_GM",
+      "SG04_BERNOULLI",
+      "SG06_CONFORMABLE",
+      "SG05_CONT_TIME_POLY"
+    ],
+    "step5e_pretarget_harness_sha256": "aa778bd4eb6b59606711f8e4488a20b598eec87856c7b3d720013069920c0aac",
+    "step5e_pretarget_source_sha256": "81307ebdfaa303bd62fb76800919d39794cd8dc861738d2f6798137055a709c2",
+    "train_parent_support": {
+      "SG01_CONT_GM": 2008,
+      "SG02_DISCRETE_POLY": 1875,
+      "SG03_FRAC_LINEAR": 2006,
+      "SG04_BERNOULLI": 2040,
+      "SG05_CONT_TIME_POLY": 1902,
+      "SG06_CONFORMABLE": 1946,
+      "SG07_ROLLING": 1939,
+      "SG08_WBO": 1897,
+      "SG09_GREY_MARKOV": 1854,
+      "SG10_SEASONAL": 640
+    },
+    "weighted_mean_regret": {
+      "SG01_CONT_GM": 1.7941942131591277,
+      "SG02_DISCRETE_POLY": 1.5979339031708504,
+      "SG03_FRAC_LINEAR": 1.6012151785534425,
+      "SG04_BERNOULLI": 2.0966331261967768,
+      "SG05_CONT_TIME_POLY": 322781614218.7895,
+      "SG06_CONFORMABLE": 152061807.22224998,
+      "SG07_ROLLING": 1.4933136568045198,
+      "SG08_WBO": 1.037106030021602,
+      "SG09_GREY_MARKOV": 1.2835346592059513,
+      "SG10_SEASONAL": 0.8918697477619
+    }
+  },
+  "global_contract": {
+    "features_used": false,
+    "folds": 5,
+    "horizon_specific": false,
+    "parent_supported_iff": "every post-dedup eligible action group has a supported TRAIN-fold mean",
+    "rf_used": false,
+    "score": "weighted mean eligible regret per structural group using action_row_weight from non-held-out TRAIN folds only",
+    "selection": "minimum group mean among the parent eligible action set; exact tie -> frozen lower group index",
+    "support_min_distinct_train_parents": 30
+  },
+  "not_started": [
+    "REALBENCH2_PRETARGET",
+    "REALBENCH2_TARGET_OPENING",
+    "FINAL_SCORING",
+    "BOOTSTRAP"
+  ],
+  "oof_metrics": {
+    "cvar90": 3.8439099258336102,
+    "mean_regret": 1.004871977107336,
+    "median_regret": 0.5997122919995717,
+    "n_supported": 2070,
+    "n_tasks": 2070,
+    "p90_regret": 2.535501640843595,
+    "selection_counts": {
+      "SG02_DISCRETE_POLY": 1,
+      "SG03_FRAC_LINEAR": 15,
+      "SG04_BERNOULLI": 37,
+      "SG06_CONFORMABLE": 2,
+      "SG07_ROLLING": 18,
+      "SG08_WBO": 1281,
+      "SG09_GREY_MARKOV": 76,
+      "SG10_SEASONAL": 640
+    },
+    "support_coverage": 1.0,
+    "zero_regret_rate": 0.17004830917874397
+  },
+  "scientific_design": "FROZEN_UNCHANGED",
+  "train_shape": {
+    "action_rows": 18107,
+    "parents": 2070,
+    "parents_by_fold": [
+      421,
+      417,
+      413,
+      411,
+      408
+    ]
+  }
+}

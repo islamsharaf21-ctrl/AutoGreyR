@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this AutoGrey reproducibility package, please cite the associated AutoGrey study and this software release."
+title: "AutoGreyR: Reproducibility Layer for the Frozen AutoGrey Experiment"
+type: software
+license: MIT
+authors:
+  - family-names: "Sharafeldin"
+    given-names: "Islam Mahmoud"
+version: "1.0.0"
+date-released: 2026-09-13

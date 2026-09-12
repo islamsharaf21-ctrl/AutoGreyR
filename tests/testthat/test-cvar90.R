@@ -1,0 +1,10 @@
+testthat::test_that("CVaR90 uses worst ceiling(10 percent) parent regrets", {
+  root <- normalizePath(file.path(testthat::test_path(), "..", ".."), mustWork = TRUE)
+  source(file.path(root,"R","15_realbench2_target_scoring.R"))
+  d <- utils::read.csv(file.path(root,"reference","frozen_step7f1","AUTOGREY_STEP7F1_DECISIONS_ORACLE.csv"), stringsAsFactors=FALSE, check.names=FALSE)
+  k <- ceiling(.10*nrow(d))
+  v1 <- mean(sort(d$v1_regret,decreasing=TRUE)[seq_len(k)])
+  gl <- mean(sort(d$global_regret,decreasing=TRUE)[seq_len(k)])
+  testthat::expect_equal(ag7f1_cvar90(d$v1_regret), v1, tolerance=0)
+  testthat::expect_equal(ag7f1_cvar90(d$global_regret), gl, tolerance=0)
+})

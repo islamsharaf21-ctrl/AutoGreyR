@@ -1,0 +1,2 @@
+# Optional explicit Python binding. Prefer an exact Python 3.13.5 interpreter.
+# AUTOGREY_PYTHON=C:/Users/<user>/AppData/Local/Programs/Python/Python313/python.exe

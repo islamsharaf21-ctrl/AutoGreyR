@@ -1,0 +1,987 @@
+{
+  "checkpoint": "STEP7B5",
+  "canonical_python_engine_version": "AG_ENGINE_4FB_1R1",
+  "canonical_python_engine_sha256": "01c745d8a627748748f82916a576efbee231a2f87d66c314d57947dbede67974",
+  "scientific_design_changed": false,
+  "primary_source_numerical_fixture_frozen_in_b1": false,
+  "primary_source_caveat": "AG_ENGINE_4FB_1R1 B1 specification explicitly states that a primary GM(1,1,t^alpha)/FOTP numerical source fixture remained pending. Step7B5 does not add one after the freeze; it locks the frozen engine, affine-equivalence ownership, deterministic quadrature, polynomial response, registry, selection, and failure semantics.",
+  "tolerances": {
+    "numeric_abs": 1e-08,
+    "condition_abs": 1e-05,
+    "identity_abs": 1e-08,
+    "score_abs": 1e-08,
+    "score_rel": 1e-09
+  },
+  "gauss_legendre_32": {
+    "x": [
+      -0.9972638618494816,
+      -0.9856115115452684,
+      -0.9647622555875064,
+      -0.9349060759377397,
+      -0.8963211557660521,
+      -0.84936761373257,
+      -0.7944837959679424,
+      -0.7321821187402897,
+      -0.6630442669302152,
+      -0.5877157572407623,
+      -0.5068999089322294,
+      -0.42135127613063533,
+      -0.33186860228212767,
+      -0.23928736225213706,
+      -0.1444719615827965,
+      -0.048307665687738324,
+      0.048307665687738324,
+      0.1444719615827965,
+      0.23928736225213706,
+      0.33186860228212767,
+      0.42135127613063533,
+      0.5068999089322294,
+      0.5877157572407623,
+      0.6630442669302152,
+      0.7321821187402897,
+      0.7944837959679424,
+      0.84936761373257,
+      0.8963211557660521,
+      0.9349060759377397,
+      0.9647622555875064,
+      0.9856115115452684,
+      0.9972638618494816
+    ],
+    "w": [
+      0.007018610009470506,
+      0.016274394730905743,
+      0.025392065309262024,
+      0.034273862913021765,
+      0.042835898022226836,
+      0.05099805926237609,
+      0.058684093478535565,
+      0.06582222277636168,
+      0.07234579410884834,
+      0.07819389578707023,
+      0.08331192422694671,
+      0.08765209300440378,
+      0.09117387869576378,
+      0.09384439908080451,
+      0.09563872007927471,
+      0.09654008851472766,
+      0.09654008851472766,
+      0.09563872007927471,
+      0.09384439908080451,
+      0.09117387869576378,
+      0.08765209300440378,
+      0.08331192422694671,
+      0.07819389578707023,
+      0.07234579410884834,
+      0.06582222277636168,
+      0.058684093478535565,
+      0.05099805926237609,
+      0.042835898022226836,
+      0.034273862913021765,
+      0.025392065309262024,
+      0.016274394730905743,
+      0.007018610009470506
+    ]
+  },
+  "affine_equivalence_fixture": {
+    "x": [
+      10.0,
+      11.0,
+      12.5,
+      14.0,
+      16.0,
+      18.5,
+      21.5,
+      25.0
+    ],
+    "h": 3,
+    "timepower_alpha": 1.0,
+    "fotp_order": 2,
+    "expected": {
+      "timepower": {
+        "fitted": [
+          10.0,
+          11.510712094753188,
+          12.968590248096618,
+          14.736812741616596,
+          16.881443813438032,
+          19.482611059685397,
+          22.637499157619942,
+          26.46398087456778
+        ],
+        "forecast": [
+          31.1050210242079,
+          36.734017910609396,
+          43.56128182677591
+        ],
+        "params": {
+          "a": -0.19299274204961273,
+          "b": -0.8997634595556219,
+          "c": 9.840931605442446,
+          "alpha": 1.0
+        },
+        "diagnostics": {
+          "rank": 3,
+          "condition": 520.9580122824143,
+          "rows": 7,
+          "params": 3,
+          "resid_df": 4
+        }
+      },
+      "fotp": {
+        "fitted": [
+          10.0,
+          11.510712094753185,
+          12.968590248096628,
+          14.736812741616596,
+          16.881443813438025,
+          19.48261105968541,
+          22.63749915761997,
+          26.463980874567795
+        ],
+        "forecast": [
+          31.1050210242079,
+          36.73401791060945,
+          43.56128182677594
+        ],
+        "params": {
+          "a": -0.19299274204961273,
+          "b_desc": [
+            -0.8997634595556219,
+            9.840931605442446
+          ],
+          "p_order": 2
+        },
+        "diagnostics": {
+          "rank": 3,
+          "condition": 520.9580122824143,
+          "rows": 7,
+          "params": 3,
+          "resid_df": 4
+        }
+      },
+      "normalized_forecast_distance": 3.538889890167036e-15
+    }
+  },
+  "timepower_direct_fixture": {
+    "x": [
+      30.97695818256479,
+      34.040015114952666,
+      37.683448744605826,
+      42.6269551670769,
+      46.74344620708624,
+      52.55899850538749,
+      57.75418974458605,
+      63.54292128042075,
+      69.1590278833839,
+      75.59444357726575
+    ],
+    "h": 2,
+    "alpha": 0.75,
+    "expected": {
+      "fitted": [
+        30.97695818256479,
+        32.658624769635,
+        37.03095528444544,
+        41.529536493119124,
+        46.235388840218235,
+        51.19862901699062,
+        56.45867453013983,
+        62.05076057710909,
+        68.0087268742601,
+        74.3664475868431
+      ],
+      "forecast": [
+        81.15867736404829,
+        88.4216174875744
+      ],
+      "params": {
+        "a": -0.07122798620104019,
+        "b": 2.97735176703066,
+        "c": 25.2936498240832,
+        "alpha": 0.75
+      },
+      "diagnostics": {
+        "rank": 3,
+        "condition": 2554.446302467992,
+        "rows": 9,
+        "params": 3,
+        "resid_df": 6
+      }
+    }
+  },
+  "fotp_direct_fixture": {
+    "x": [
+      30.97695818256479,
+      34.040015114952666,
+      37.683448744605826,
+      42.6269551670769,
+      46.74344620708624,
+      52.55899850538749,
+      57.75418974458605,
+      63.54292128042075,
+      69.1590278833839,
+      75.59444357726575
+    ],
+    "h": 2,
+    "p_order": 3,
+    "expected": {
+      "fitted": [
+        30.976958182564786,
+        29.79216225866439,
+        33.824788880979085,
+        38.33325154480805,
+        43.240644914601916,
+        48.482493210624256,
+        54.004741325477426,
+        59.762070619390784,
+        65.71648691920456,
+        71.83613672707719
+      ],
+      "forecast": [
+        78.0943147553204,
+        84.46863186494181
+      ],
+      "params": {
+        "a": 0.17628561174813057,
+        "b_desc": [
+          0.6149516299167563,
+          7.172576135395066,
+          25.629826323434568
+        ],
+        "p_order": 3
+      },
+      "diagnostics": {
+        "rank": 4,
+        "condition": 10160.96526163607,
+        "rows": 9,
+        "params": 4,
+        "resid_df": 5
+      }
+    }
+  },
+  "a_near_zero_response_fixture": {
+    "timepower": {
+      "x1_0": 10.0,
+      "a": 0.0,
+      "b": 2.0,
+      "c": 3.0,
+      "alpha": 0.5,
+      "total": 6,
+      "expected": [
+        10.0,
+        15.43790283299492,
+        21.594869896942175,
+        28.333333333333336,
+        35.573786516665265,
+        43.26258460893209
+      ]
+    },
+    "fotp": {
+      "x1_0": 10.0,
+      "a": 0.0,
+      "c_asc": [
+        3.0,
+        2.0,
+        0.5
+      ],
+      "total": 6,
+      "expected": [
+        10.0,
+        17.166666666666668,
+        28.333333333333332,
+        44.5,
+        66.66666666666666,
+        95.83333333333333
+      ]
+    }
+  },
+  "config_generation": {
+    "n": 10,
+    "h": 2,
+    "expected_config_ids": [
+      "TP_alpha=0.25",
+      "TP_alpha=0.5",
+      "TP_alpha=0.75",
+      "TP_alpha=1.25",
+      "TP_alpha=1.5",
+      "TP_alpha=1.75",
+      "TP_alpha=2",
+      "TP_alpha=2.25",
+      "TP_alpha=2.5",
+      "TP_alpha=2.75",
+      "TP_alpha=3",
+      "FOTP_order=2",
+      "FOTP_order=3"
+    ],
+    "expected_configs": [
+      {
+        "kind": "timepower",
+        "alpha": 0.25
+      },
+      {
+        "kind": "timepower",
+        "alpha": 0.5
+      },
+      {
+        "kind": "timepower",
+        "alpha": 0.75
+      },
+      {
+        "kind": "timepower",
+        "alpha": 1.25
+      },
+      {
+        "kind": "timepower",
+        "alpha": 1.5
+      },
+      {
+        "kind": "timepower",
+        "alpha": 1.75
+      },
+      {
+        "kind": "timepower",
+        "alpha": 2.0
+      },
+      {
+        "kind": "timepower",
+        "alpha": 2.25
+      },
+      {
+        "kind": "timepower",
+        "alpha": 2.5
+      },
+      {
+        "kind": "timepower",
+        "alpha": 2.75
+      },
+      {
+        "kind": "timepower",
+        "alpha": 3.0
+      },
+      {
+        "kind": "fotp",
+        "p_order": 2
+      },
+      {
+        "kind": "fotp",
+        "p_order": 3
+      }
+    ],
+    "timepower_alpha_one_excluded": true,
+    "affine_owner_config_id": "FOTP_order=2"
+  },
+  "sg05_group_tuner": {
+    "x": [
+      30.97695818256479,
+      34.040015114952666,
+      37.683448744605826,
+      42.6269551670769,
+      46.74344620708624,
+      52.55899850538749,
+      57.75418974458605,
+      63.54292128042075,
+      69.1590278833839,
+      75.59444357726575
+    ],
+    "h": 2,
+    "M": null,
+    "expected": {
+      "selected_config_id": "FOTP_order=2",
+      "selected_config": {
+        "kind": "fotp",
+        "p_order": 2
+      },
+      "best_config_id": "TP_alpha=0.75",
+      "common_origins": [
+        6,
+        7,
+        8
+      ],
+      "config_count_registered": 13,
+      "config_count_valid": 13,
+      "Lmin": 0.14626371034042143,
+      "band_size": 2,
+      "band_config_ids": [
+        "TP_alpha=0.75",
+        "FOTP_order=2"
+      ],
+      "selected_inner_mase": 0.15167056802157994,
+      "selected_to_best_ratio": 1.0369665015920513,
+      "fitted": [
+        30.976958182564886,
+        32.61536682855058,
+        36.78966462663948,
+        41.21160755566939,
+        45.89588745456604,
+        50.858067772895765,
+        56.11463528019067,
+        61.683054842995716,
+        67.58182745162185,
+        73.830551689412
+      ],
+      "forecast": [
+        80.44998884873485,
+        87.46213191007246
+      ],
+      "final_params": {
+        "a": -0.05763302412521115,
+        "b_desc": [
+          2.175442241614803,
+          26.64652144742
+        ],
+        "p_order": 2
+      },
+      "final_model_diagnostics": {
+        "rank": 3,
+        "condition": 1842.1355820544707,
+        "rows": 9,
+        "params": 3,
+        "resid_df": 6
+      },
+      "scores": [
+        {
+          "config_id": "TP_alpha=0.25",
+          "kind": "timepower",
+          "mean_inner_mase": 0.2068853468920945,
+          "origin_losses": [
+            0.25555582001290683,
+            0.17982170797113206,
+            0.1852785126922446
+          ],
+          "origin_diagnostics": [
+            {
+              "rank": 3,
+              "condition": 8827.046492759984,
+              "rows": 5,
+              "params": 3,
+              "resid_df": 2
+            },
+            {
+              "rank": 3,
+              "condition": 8360.694087400572,
+              "rows": 6,
+              "params": 3,
+              "resid_df": 3
+            },
+            {
+              "rank": 3,
+              "condition": 8248.11987431534,
+              "rows": 7,
+              "params": 3,
+              "resid_df": 4
+            }
+          ],
+          "alpha": 0.25
+        },
+        {
+          "config_id": "TP_alpha=0.5",
+          "kind": "timepower",
+          "mean_inner_mase": 0.17888114171301583,
+          "origin_losses": [
+            0.25766995537663295,
+            0.14468640948665182,
+            0.13428706027576273
+          ],
+          "origin_diagnostics": [
+            {
+              "rank": 3,
+              "condition": 4265.836940618877,
+              "rows": 5,
+              "params": 3,
+              "resid_df": 2
+            },
+            {
+              "rank": 3,
+              "condition": 3990.7432108278745,
+              "rows": 6,
+              "params": 3,
+              "resid_df": 3
+            },
+            {
+              "rank": 3,
+              "condition": 3903.915539601512,
+              "rows": 7,
+              "params": 3,
+              "resid_df": 4
+            }
+          ],
+          "alpha": 0.5
+        },
+        {
+          "config_id": "TP_alpha=0.75",
+          "kind": "timepower",
+          "mean_inner_mase": 0.14626371034042143,
+          "origin_losses": [
+            0.26218872633756657,
+            0.1192696284154965,
+            0.05733277626820123
+          ],
+          "origin_diagnostics": [
+            {
+              "rank": 3,
+              "condition": 2829.2133385734387,
+              "rows": 5,
+              "params": 3,
+              "resid_df": 2
+            },
+            {
+              "rank": 3,
+              "condition": 2598.308730068951,
+              "rows": 6,
+              "params": 3,
+              "resid_df": 3
+            },
+            {
+              "rank": 3,
+              "condition": 2513.3937592161446,
+              "rows": 7,
+              "params": 3,
+              "resid_df": 4
+            }
+          ],
+          "alpha": 0.75
+        },
+        {
+          "config_id": "TP_alpha=1.25",
+          "kind": "timepower",
+          "mean_inner_mase": 0.34237076386276194,
+          "origin_losses": [
+            0.3533905666872379,
+            0.30071172680171665,
+            0.3730099980993312
+          ],
+          "origin_diagnostics": [
+            {
+              "rank": 3,
+              "condition": 2484.8746587884516,
+              "rows": 5,
+              "params": 3,
+              "resid_df": 2
+            },
+            {
+              "rank": 3,
+              "condition": 1823.50128350224,
+              "rows": 6,
+              "params": 3,
+              "resid_df": 3
+            },
+            {
+              "rank": 3,
+              "condition": 1536.958186821851,
+              "rows": 7,
+              "params": 3,
+              "resid_df": 4
+            }
+          ],
+          "alpha": 1.25
+        },
+        {
+          "config_id": "TP_alpha=1.5",
+          "kind": "timepower",
+          "mean_inner_mase": 0.5993770469389973,
+          "origin_losses": [
+            0.4222396125968239,
+            0.8000880302378617,
+            0.5758034979823065
+          ],
+          "origin_diagnostics": [
+            {
+              "rank": 3,
+              "condition": 3009.474566538309,
+              "rows": 5,
+              "params": 3,
+              "resid_df": 2
+            },
+            {
+              "rank": 3,
+              "condition": 3970.7587558386813,
+              "rows": 6,
+              "params": 3,
+              "resid_df": 3
+            },
+            {
+              "rank": 3,
+              "condition": 4051.063043868114,
+              "rows": 7,
+              "params": 3,
+              "resid_df": 4
+            }
+          ],
+          "alpha": 1.5
+        },
+        {
+          "config_id": "TP_alpha=1.75",
+          "kind": "timepower",
+          "mean_inner_mase": 0.8557909992368106,
+          "origin_losses": [
+            0.2457327841614768,
+            0.8023268657224912,
+            1.5193133478264638
+          ],
+          "origin_diagnostics": [
+            {
+              "rank": 3,
+              "condition": 1233.0602075686227,
+              "rows": 5,
+              "params": 3,
+              "resid_df": 2
+            },
+            {
+              "rank": 3,
+              "condition": 1347.4494154259212,
+              "rows": 6,
+              "params": 3,
+              "resid_df": 3
+            },
+            {
+              "rank": 3,
+              "condition": 1510.8791266776952,
+              "rows": 7,
+              "params": 3,
+              "resid_df": 4
+            }
+          ],
+          "alpha": 1.75
+        },
+        {
+          "config_id": "TP_alpha=2",
+          "kind": "timepower",
+          "mean_inner_mase": 0.5450633866272683,
+          "origin_losses": [
+            0.2439137101489675,
+            0.5402885117937232,
+            0.8509879379391141
+          ],
+          "origin_diagnostics": [
+            {
+              "rank": 3,
+              "condition": 1021.0778346062768,
+              "rows": 5,
+              "params": 3,
+              "resid_df": 2
+            },
+            {
+              "rank": 3,
+              "condition": 1091.5398045306629,
+              "rows": 6,
+              "params": 3,
+              "resid_df": 3
+            },
+            {
+              "rank": 3,
+              "condition": 1190.6075153958539,
+              "rows": 7,
+              "params": 3,
+              "resid_df": 4
+            }
+          ],
+          "alpha": 2.0
+        },
+        {
+          "config_id": "TP_alpha=2.25",
+          "kind": "timepower",
+          "mean_inner_mase": 0.441045333344432,
+          "origin_losses": [
+            0.24560945503300743,
+            0.439123552028859,
+            0.6384029929714297
+          ],
+          "origin_diagnostics": [
+            {
+              "rank": 3,
+              "condition": 921.9984640406956,
+              "rows": 5,
+              "params": 3,
+              "resid_df": 2
+            },
+            {
+              "rank": 3,
+              "condition": 983.1315122391287,
+              "rows": 6,
+              "params": 3,
+              "resid_df": 3
+            },
+            {
+              "rank": 3,
+              "condition": 1069.5517758627395,
+              "rows": 7,
+              "params": 3,
+              "resid_df": 4
+            }
+          ],
+          "alpha": 2.25
+        },
+        {
+          "config_id": "TP_alpha=2.5",
+          "kind": "timepower",
+          "mean_inner_mase": 0.3868197797382787,
+          "origin_losses": [
+            0.2476830325747257,
+            0.38273166344674187,
+            0.5300446431933685
+          ],
+          "origin_diagnostics": [
+            {
+              "rank": 3,
+              "condition": 869.4590999302455,
+              "rows": 5,
+              "params": 3,
+              "resid_df": 2
+            },
+            {
+              "rank": 3,
+              "condition": 936.8955977536212,
+              "rows": 6,
+              "params": 3,
+              "resid_df": 3
+            },
+            {
+              "rank": 3,
+              "condition": 1031.4835000253388,
+              "rows": 7,
+              "params": 3,
+              "resid_df": 4
+            }
+          ],
+          "alpha": 2.5
+        },
+        {
+          "config_id": "TP_alpha=2.75",
+          "kind": "timepower",
+          "mean_inner_mase": 0.3517948909239384,
+          "origin_losses": [
+            0.2499162382175305,
+            0.34463178150825746,
+            0.46083665304602733
+          ],
+          "origin_diagnostics": [
+            {
+              "rank": 3,
+              "condition": 861.6300342888763,
+              "rows": 5,
+              "params": 3,
+              "resid_df": 2
+            },
+            {
+              "rank": 3,
+              "condition": 956.5470879366894,
+              "rows": 6,
+              "params": 3,
+              "resid_df": 3
+            },
+            {
+              "rank": 3,
+              "condition": 1088.4903652516068,
+              "rows": 7,
+              "params": 3,
+              "resid_df": 4
+            }
+          ],
+          "alpha": 2.75
+        },
+        {
+          "config_id": "TP_alpha=3",
+          "kind": "timepower",
+          "mean_inner_mase": 0.32608693596091903,
+          "origin_losses": [
+            0.25234045525914667,
+            0.31561989380909894,
+            0.41030045881451144
+          ],
+          "origin_diagnostics": [
+            {
+              "rank": 3,
+              "condition": 918.5573031035135,
+              "rows": 5,
+              "params": 3,
+              "resid_df": 2
+            },
+            {
+              "rank": 3,
+              "condition": 1080.0002359511243,
+              "rows": 6,
+              "params": 3,
+              "resid_df": 3
+            },
+            {
+              "rank": 3,
+              "condition": 1302.880610226525,
+              "rows": 7,
+              "params": 3,
+              "resid_df": 4
+            }
+          ],
+          "alpha": 3.0
+        },
+        {
+          "config_id": "FOTP_order=2",
+          "kind": "fotp",
+          "mean_inner_mase": 0.15167056802157994,
+          "origin_losses": [
+            0.2746123210048864,
+            0.10400435828083542,
+            0.076395024779018
+          ],
+          "origin_diagnostics": [
+            {
+              "rank": 3,
+              "condition": 2234.4344491101215,
+              "rows": 5,
+              "params": 3,
+              "resid_df": 2
+            },
+            {
+              "rank": 3,
+              "condition": 1965.15390963982,
+              "rows": 6,
+              "params": 3,
+              "resid_df": 3
+            },
+            {
+              "rank": 3,
+              "condition": 1852.1140543664374,
+              "rows": 7,
+              "params": 3,
+              "resid_df": 4
+            }
+          ],
+          "p_order": 2
+        },
+        {
+          "config_id": "FOTP_order=3",
+          "kind": "fotp",
+          "mean_inner_mase": 218.64455114444453,
+          "origin_losses": [
+            654.4059383099126,
+            0.7798100869975059,
+            0.74790503642351
+          ],
+          "origin_diagnostics": [
+            {
+              "rank": 4,
+              "condition": 39240.00039517111,
+              "rows": 5,
+              "params": 4,
+              "resid_df": 1
+            },
+            {
+              "rank": 4,
+              "condition": 19221.255208216247,
+              "rows": 6,
+              "params": 4,
+              "resid_df": 2
+            },
+            {
+              "rank": 4,
+              "condition": 14613.704905770386,
+              "rows": 7,
+              "params": 4,
+              "resid_df": 3
+            }
+          ],
+          "p_order": 3
+        }
+      ]
+    }
+  },
+  "failure_fixtures": [
+    {
+      "kind": "timepower",
+      "x": [
+        10.0,
+        11.0,
+        12.5,
+        14.0,
+        16.0,
+        18.5,
+        21.5,
+        25.0
+      ],
+      "h": 1,
+      "alpha": 0.0,
+      "name": "timepower_alpha_zero",
+      "expected_code": "TIMEPOWER_ALPHA_REDUCTION"
+    },
+    {
+      "kind": "timepower",
+      "x": [
+        10.0,
+        11.0,
+        12.5,
+        14.0,
+        16.0,
+        18.5,
+        21.5,
+        25.0
+      ],
+      "h": 1,
+      "alpha": -0.25,
+      "name": "timepower_alpha_negative",
+      "expected_code": "TIMEPOWER_ALPHA_REDUCTION"
+    },
+    {
+      "kind": "fotp",
+      "x": [
+        10.0,
+        11.0,
+        12.5,
+        14.0,
+        16.0,
+        18.5,
+        21.5,
+        25.0
+      ],
+      "h": 1,
+      "p_order": 1,
+      "name": "fotp_order_below_domain",
+      "expected_code": "FOTP_ORDER_DOMAIN"
+    },
+    {
+      "kind": "fotp",
+      "x": [
+        10.0,
+        11.0,
+        12.5,
+        14.0,
+        16.0,
+        18.5,
+        21.5,
+        25.0
+      ],
+      "h": 1,
+      "p_order": 5,
+      "name": "fotp_order_above_domain",
+      "expected_code": "FOTP_ORDER_DOMAIN"
+    },
+    {
+      "kind": "fotp",
+      "x": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0
+      ],
+      "h": 1,
+      "p_order": 4,
+      "name": "fotp_insufficient_resid_df",
+      "expected_code": "FOTP_RESID_DF"
+    },
+    {
+      "name": "group_history_short",
+      "kind": "group",
+      "x": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        8.0
+      ],
+      "h": 2,
+      "expected_code": "GLOBAL_SELECTION_HISTORY_SHORT"
+    }
+  ]
+}
