@@ -1,0 +1,46 @@
+{
+  "P11_B": "LOCKED",
+  "REALBENCH3_TARGET_SCORING": false,
+  "REALBENCH3_TARGET_VALUES_OPENED": false,
+  "adapter_rule": {
+    "adapted_value": "sign(x) * float32_max",
+    "condition": "finite abs(x) > float32_max",
+    "no_feature_definition_change": true,
+    "no_imputation_change": true,
+    "no_retraining_change": true,
+    "no_target_access": true,
+    "no_training_change": true,
+    "prediction_boundary_only": "TRUE",
+    "required_proof": "for every affected cell and every fitted tree threshold using that feature, raw and adapted values must yield identical <= branch outcome",
+    "safe_rows": "unchanged and passed through frozen sklearn predict API",
+    "scientific_feature_matrix": "UNCHANGED_FLOAT64",
+    "unsafe_rows": "only overrange coordinates adapted after branch-equivalence proof, then passed through same frozen sklearn predict API"
+  },
+  "checkpoint": "V2-P11A2_FINAL_TARGET_FREE_PRODUCTION",
+  "observed_target_free_diagnostic": {
+    "float32_max": "3.4028234663852886e+38",
+    "h": 1,
+    "parent_id": "RB3_CARPARTS_MONTHLY:T1183",
+    "predictor_id": "F19_VALUE",
+    "raw_float64_value": "1.84310261146775e+68",
+    "train_f19_gt_float32_max": 0,
+    "train_f19_max": "10.1153432742106",
+    "train_f19_median": "0.0180648322295529",
+    "train_f19_min": "5.10785026823481e-05",
+    "train_f19_p95": "0.53033468782709",
+    "train_f19_p99": "1.81267427857217"
+  },
+  "r1_evidence_sha256": "F00AD7CEC6236E1DE87980901CD37B1A55B2C3A9E786B711729D16937828061F",
+  "r2_classification": "INCONCLUSIVE_FLOAT32_SELECTOR_INPUT_REPRESENTABILITY_ERROR",
+  "r2_evidence_sha256": "664A00306D57776C7C5D3FB469E14B18B41112025E3A5E3214A8761818FBE3EF",
+  "r2_reuse": {
+    "downstream_reproduction": "R3 recomputes actionability/collision/features and requires exact byte SHA256 equality to corresponding R2 pre-failure artifacts before selector repair",
+    "reuse": "48 committed SG11-SG13 checkpoint chunks",
+    "source": "preserved R2 evidence ZIP only",
+    "validation": "commit schema, row bounds, worker identity, per-file SHA256, key/order/forecast-shape checks"
+  },
+  "repair_scope": "NUMERIC_REPRESENTABILITY_ADAPTER_ONLY",
+  "revision": "R3",
+  "schema": "AUTOGREY_V2_P11A2_FINAL_SELECTOR_REPRESENTABILITY_REPAIR_LOCK_R3",
+  "scientific_lock_r1_sha256": "54D2CA4024510992BF494C82DA6F729423461E3893508524EB439659986E693F"
+}

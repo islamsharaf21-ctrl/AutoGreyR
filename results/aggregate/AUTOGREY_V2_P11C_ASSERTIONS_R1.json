@@ -1,0 +1,97 @@
+{
+  "artifact_sha256": {
+    "AUTOGREY_V2_P11C_CONFIRMATORY_DECISION_R1.txt": "F190698D2653B92F0DCD795578BAC3F7B5E8524189151E56ACFCE4C1A5CBC713",
+    "AUTOGREY_V2_P11C_OVERALL_BOOTSTRAP_R1.csv": "0D95A44C1E23D9F317C448F936DDF70C86797F2E60F8E4E50C303527A0E8DE7C",
+    "AUTOGREY_V2_P11C_OVERALL_RESULTS_R1.json": "7D0EED291FDFC2145D42755A15D97075273ADBEB60F148E90CD4811999359DBD",
+    "AUTOGREY_V2_P11C_PARENT_SCORES_R1.csv": "DC4EDEC16D175D8049553D835267A32F14EE9BC54AD5E765F86567A40E7A0D4C",
+    "AUTOGREY_V2_P11C_SUBGROUP_AUDIT_R1.json": "46781783981EFF2C31555A2A2F68AE3B5427636BD475E5F01EFA8E4FEC089DF1",
+    "AUTOGREY_V2_P11C_SUBGROUP_RESULTS_R1.csv": "F5F7CE9F1C60DB7DED879DC13C57BA856D5F43C8E0C6891C7D3964BA838F47F2"
+  },
+  "claim_discipline": {
+    "allowed_claim_text": "No full-confirmation claim is authorized; preserve and report the frozen partial or negative result.",
+    "equivalence_to_ng10_claim_allowed": false,
+    "every_non_grey_superiority_claim_allowed": false,
+    "full_confirmation_claim_allowed": false,
+    "ng10_superiority_from_noninferiority_allowed": false,
+    "universal_superiority_claim_allowed": false,
+    "unqualified_generalization_claim_allowed": false
+  },
+  "configuration_change_allowed": false,
+  "context_two_sided95": {
+    "context_only": true,
+    "lower": {
+      "A": -0.24907837961572457,
+      "B": 0.09844423591602781,
+      "C1": -1.5945185364491554,
+      "C2": 0.40948176187471597
+    },
+    "upper": {
+      "A": 29942253.35297472,
+      "B": 29942253.716118462,
+      "C1": 299297253.08329004,
+      "C2": 299297255.17203933
+    }
+  },
+  "fixed_sequence": [
+    "A",
+    "B",
+    "C"
+  ],
+  "gate_status": {
+    "A": {
+      "confirmatory": "FAIL",
+      "numerical": "FAIL"
+    },
+    "B": {
+      "confirmatory": "DESCRIPTIVE_NONCONFIRMATORY",
+      "numerical": "FAIL"
+    },
+    "C": {
+      "confirmatory": "DESCRIPTIVE_NONCONFIRMATORY",
+      "numerical": "FAIL"
+    },
+    "C1": {
+      "confirmatory": "DESCRIPTIVE_NONCONFIRMATORY",
+      "numerical": "FAIL"
+    },
+    "C2": {
+      "confirmatory": "DESCRIPTIVE_NONCONFIRMATORY",
+      "numerical": "FAIL"
+    }
+  },
+  "negative_or_partial_result_preserved": true,
+  "one_sided_upper95": {
+    "A": 28928655.48629414,
+    "B": 28928655.842458792,
+    "C1": 289165515.37937695,
+    "C2": 289165517.456237
+  },
+  "overall_status": "FAIL",
+  "p11b_status": "PASS_CLOSED",
+  "p11c0_history": {
+    "R1": "INCONCLUSIVE_HARNESS_ROLE_CLASSIFICATION_BUG",
+    "R2": "INCONCLUSIVE_HARNESS_POPULATION_ASSUMPTION_BUG",
+    "R3": "INCONCLUSIVE_HARNESS_SCHEMA_NAME_MISMATCH",
+    "R4": "PASS_CLOSED"
+  },
+  "p11c0_r4_evidence_zip_sha256": "FF3DE433CF3B09B28A731DCF93DF473C26DF2929567A6A03D37E96E73A916EB9",
+  "p12_locked": true,
+  "point_estimates": {
+    "A": 10318616.913217567,
+    "B": 10318617.265261156,
+    "C1": 103142995.90591535,
+    "C2": 103142997.93507624
+  },
+  "population": {
+    "deployed_scoring_parent_n": 4778,
+    "frozen_nondeployed_clean_parent_n": 3,
+    "full_clean_census_n": 4781
+  },
+  "realbench3_target_state": "PERMANENTLY_OPEN",
+  "schema": "AUTOGREY_V2_P11C_ASSERTIONS_R1",
+  "scientific_lock_changed": false,
+  "strict_gate_inequalities": true,
+  "subgroup_role": "SECONDARY",
+  "subgroups_may_alter_overall_confirmatory_classification": false,
+  "target_binary_numeric_parent_reads": 4778
+}

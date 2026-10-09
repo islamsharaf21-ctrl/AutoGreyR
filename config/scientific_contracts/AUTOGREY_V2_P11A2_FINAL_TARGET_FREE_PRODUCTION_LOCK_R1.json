@@ -1,0 +1,127 @@
+{
+  "P11_B": "LOCKED",
+  "REALBENCH3_TARGET_VALUES_OPENED": false,
+  "after_pass": "Separate hash-ingest verification required before P11-B",
+  "checkpoint": "V2-P11A2_FINAL_TARGET_FREE_PRODUCTION",
+  "chronology": {
+    "P11_A0": "PASS_CLOSED",
+    "P11_A1": "PASS_CLOSED",
+    "P11_A2C2": "PASS_CLOSED",
+    "P11_A2C3": "PASS_CLOSED",
+    "P11_A2C4": "PASS_CLOSED",
+    "P11_A2_FINAL": "PREEXECUTION_LOCKED",
+    "P11_B": "LOCKED",
+    "P11_C": "LOCKED",
+    "REALBENCH3_TARGETS": "UNOPENED"
+  },
+  "classification_rules": {
+    "FAIL": "qualified implementation executes but violates frozen scientific/output semantic gate",
+    "INCONCLUSIVE": "path/runtime/source/serialization/harness failure prevents adjudication",
+    "PASS": "all frozen identity/runtime/output gates pass and targets remain unopened"
+  },
+  "date": "2026-09-23",
+  "frozen_inputs": {
+    "development_binary_sha256": "98648163F9ABE781EAA03EE49FD53D9BE1A33666F0A42BF7016B332F11E536F9",
+    "development_index_sha256": "8EEA756829B7A97F033EA81E5C2783528B68374A7B7549CE2D3EEA4D02D1C58B",
+    "p10_final_freeze_zip_sha256": "35A97B99D62D00E3C5FC44E4611513281B4690DDF1E48105348315FDCEE420E3",
+    "p10a_preregistration_sha256": "BD3BFBC446D48BFEE5A4462474CB538E3913C60A11B8DA0710103E06F23B02C4",
+    "p11a2c4_final_fast_freeze_sha256": "7FCE8B071503D277425685BFA43569219D7AB9DBC8A227467342D7ACA1B0F774",
+    "p1_final_seal_zip_sha256": "04B3E677CA3DC0B0F9E8B6074656E1233769F70E3D76493CEDA83AAAE4EAE882",
+    "p1_refusal_ledger_member_sha256": "606509431D83166E89E9D166FBFEC6B393A896D18B2614F45FCCB9571DD7D795",
+    "p3_harness_sha256": "3CD58049273A796F3C4D8C726528571F17D51F59DC74E6688874F826024FC8B0",
+    "p3_worker_sha256": "243FD64F99F3B0BB69492AE34876B156E2F8ABEDBF9152499EA271DDF789A45A",
+    "p5_feature_schema_sha256": "3ED14225EFC4FA9030BF114A466D1FBF410F47FE8CBE054AF446C4775E099D59",
+    "p5_train_matrix_sha256": "507CEA9A4878ADFD7454E9E80B129006995E7E7A3F30E642AD1CE1A8AE10093B",
+    "p6b_train_labels_sha256": "ECF821876B86C0A2B62A01E49ABBE539CFE616731C9D72EDF1DE6971C51F6435",
+    "p7b_global_rank_sha256": "91137509FD59059530E531E5FA75DB372C565024DF0BAE245C62A1D9373E7933",
+    "p7b_selector_identity_sha256": "825F1DAF2B29EDD31FF4F5449ACEFDBD769EA36084C7224346D0A77FA623E3BB"
+  },
+  "frozen_reference_sources": {
+    "AUTOGREY_V2_P4F3C_ACTION_AUDIT_R2.R": "721DB4CCE58BC287979D2AD3D6B574380FBE146C0BA2A25B18FA026FCFF70687",
+    "AUTOGREY_V2_P4F3D1_LEGACY_NEW_COLLISION_CENSUS_R2.py": "60184A848B4B9918294616ED862CE6171522360969A4FA1BA973DC5DC1ECF92F",
+    "AUTOGREY_V2_P4F3D1_NEW_SELECTED_FORECASTS_R2.R": "7E5EFFB2DC42795D28901E9D9B99AC4E67D064ACE50448C2B408C67DDFBB2FC2",
+    "AUTOGREY_V2_P4F3D2_FINAL_ACTION_SET_RESOLUTION_R1.py": "069D383B62370400201F6A8E83E094B7D79215E0B35E294B16E28148D50A761C",
+    "autogrey_features_step4e.py": "BBBD645CFFAE6462EB50CBB9FF5FB902912E6204DF1AB5A9A316428D58B7A113",
+    "autogrey_v2_p4e1_fan_smgrey_R2.R": "6F7AF041001107E06E444990EC9F7C21D8D0E2A1F360BB6A4DE98C4D23AD848C"
+  },
+  "frozen_runtime_implementations": {
+    "autogrey_engine_step4fb_r1.py": "FC421E18E44C527C38E8DEDD3C30DE42506FA269AAD1498BAA56521DF21AA0F3",
+    "autogrey_v2_p11a2c2_sg12_candidate_R1.R": "8AEE4DFE49DF95DE9E9A15B123B2887A2AD66AF7C5695E837FB3807786E399F0",
+    "autogrey_v2_p11a2c2_sg13_candidate_R1.R": "1E0C5710A82134ED8C08F27D856D560F3F7D2B524F5937BCD2E21F5074A8B618"
+  },
+  "p3_batching": {
+    "max_parents_per_batch": 250,
+    "max_total_D_values_per_batch": 2000000,
+    "order": "P11-A1 index row order",
+    "raw_batch_output_retained": true,
+    "science": "unchanged exact frozen P3 R5D harness",
+    "temporary_input_json_retained": false
+  },
+  "required_outputs": [
+    "clean parent census",
+    "target-free actionability ledger",
+    "target-free 59-coordinate meta-feature matrix",
+    "new-group D-only config selection audit",
+    "collision edge ledger",
+    "13-group action-set ledger",
+    "all retained grey action forecast vectors",
+    "AutoGrey decisions",
+    "GLOBAL decisions",
+    "NG10 forecasts/statuses",
+    "subgroup membership ledger",
+    "technical/structural refusal ledger",
+    "selector identity",
+    "runtime/provenance assertions",
+    "pretarget manifest",
+    "evidence"
+  ],
+  "revision": "R1",
+  "schema": "AUTOGREY_V2_P11A2_FINAL_TARGET_FREE_PRODUCTION_LOCK_R1",
+  "scientific_rules": {
+    "GLOBAL_rule": "first retained action in frozen GLOBAL_RANK_V3_13G_FULL_TRAIN order",
+    "NG10": "equal-weight Theta + auto ETS + auto ARIMA; frozen degradation rule",
+    "SG11_tie_rule": "simplicity first among configurations within 1.05*minimum inner loss; frozen order FAN_P1,FAN_P2,FAN_P3",
+    "SG12_SG13_tie_rule": "minimum mean inner MASE among retained; then registered grid order",
+    "clean_parent_count": 4781,
+    "collision_metric": "max_j |f_j-g_j| / max(mean(abs(D)),1e-12)",
+    "collision_owner_rule": "legacy SG01-SG10 beats new SG11-SG13; otherwise lower SG index",
+    "collision_primary_threshold": 0.001,
+    "collision_sensitivity_thresholds": [
+      0.0001,
+      0.01
+    ],
+    "development_values": 47000025,
+    "grey_groups": [
+      "SG01_CONT_GM",
+      "SG02_DISCRETE_POLY",
+      "SG03_FRAC_LINEAR",
+      "SG04_BERNOULLI",
+      "SG05_CONT_TIME_POLY",
+      "SG06_CONFORMABLE",
+      "SG07_ROLLING",
+      "SG08_WBO",
+      "SG09_GREY_MARKOV",
+      "SG10_SEASONAL",
+      "SG11_SELF_MEMORY",
+      "SG12_FRAC_DYNAMIC",
+      "SG13_FRAC_BERNOULLI"
+    ],
+    "new_group_1p05_retention_rule": true,
+    "new_group_inner_metric": "MASE using D-only validation folds and supplied M; lag 1 when M absent",
+    "new_group_inner_origins": "n-h-2,n-h-1,n-h",
+    "practical_pair_population": "retained_post_collision >= 1 with frozen AutoGrey forecast and NG10 status != NO_FORECAST",
+    "selection_pair_population": "retained_post_collision >= 2 with frozen AutoGrey/GLOBAL forecasts",
+    "selector": "FULL_SELECTOR_RF_D8_L001 / RF_D8_L001 frozen full-TRAIN 13-head regressor",
+    "selector_call_rule": "retained_post_collision >= 2",
+    "selector_no_confidence_abstention": true,
+    "singleton_rule": "retained_post_collision == 1 => deterministic sole grey action; selector not called",
+    "subgroup_min_n": 30,
+    "subgroups": [
+      "h",
+      "source_id",
+      "source_id x h"
+    ],
+    "target_numeric_parse_before_P11B": false,
+    "zero_grey_rule": "retained_post_collision == 0 => structural/technical refusal"
+  }
+}

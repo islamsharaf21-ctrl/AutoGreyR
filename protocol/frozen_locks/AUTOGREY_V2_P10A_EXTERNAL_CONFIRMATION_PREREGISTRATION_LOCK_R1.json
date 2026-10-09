@@ -1,0 +1,212 @@
+{
+  "bootstrap_inference": {
+    "confirmatory_bound": "one-sided 95% percentile upper confidence bound",
+    "generator": "numpy.random.default_rng / PCG64",
+    "paired": true,
+    "quantile_definition": "numpy.quantile(..., q=0.95, method='linear')",
+    "replicates": 4000,
+    "same_resample_indices_for_all_four_overall_gate_statistics_within_each_replicate": true,
+    "seed": 1068199533,
+    "strict_pass_inequality": true,
+    "two_sided_95_interval_role": "reported for effect-size context; not the gate decision rule",
+    "two_sided_quantiles": [
+      0.025,
+      0.975
+    ],
+    "unit": "parent"
+  },
+  "checkpoint": "V2-P10A_IMMUTABLE_PREREGISTRATION_SCIENTIFIC_LOCK",
+  "confirmatory_population": {
+    "no_postopen_population_change": true,
+    "no_target_dependent_cleaning": true,
+    "primary_paired_analysis_rule": "Use exactly the same target-free actionable parent IDs for AutoGrey and the relevant comparator. Actionability, forecast availability, structural refusals, and technical refusals must be frozen before numeric REALBENCH3 target parsing. No parent may be removed from only one side after targets open.",
+    "refusal_rule": "Preserve every frozen structural/technical refusal identity and count. Do not replace refused, short, difficult, failed, or inconvenient reserved parents after target opening.",
+    "reservation": "the immutable REALBENCH3 reservation created before v2 outcome-driven development"
+  },
+  "created_date": "2026-09-21",
+  "effect_definitions": {
+    "gate_A_mean_selection_difference": "mean(AutoGrey eligible regret - GLOBAL eligible regret)",
+    "gate_B_mean_practical_difference": "mean(AutoGrey MASE - NG10 MASE)",
+    "gate_C1_tail_selection_difference": "CVaR90(AutoGrey eligible regret) - CVaR90(GLOBAL eligible regret)",
+    "gate_C2_tail_practical_difference": "CVaR90(AutoGrey MASE) - CVaR90(NG10 MASE)",
+    "sign_convention": "negative favors AutoGrey"
+  },
+  "entry_state": {
+    "locktest_status": "OPENED_ONCE_AND_FROZEN_INTERNAL_DEVELOPMENT_EVIDENCE",
+    "p8_status": "PASS_CLOSED",
+    "p9_final_manifest_sha256": "765576CC5988696C38A01097588BE9E96F4263CDC69F15C8E1D1325D8946E53C",
+    "p9_final_package_sha256": "D3FEF17F58277D9061B220B47864884EFC533AFDCC23D90D23AABAB3F2F13D69",
+    "p9_status": "PASS_CLOSED",
+    "p9c_verification_sha256": "1DB76866F73EFC2D189B7FB7608AB01DB63BD4B61AA19FF8DCC737B8F3AA34D1",
+    "realbench3_opening_allowed_before_p11": false,
+    "realbench3_reserved_parent_n": 4781,
+    "realbench3_target_status": "UNOPENED"
+  },
+  "failure_and_partial_success_interpretation": {
+    "Gate_A_B_pass_Gate_C_fail": "Gate A and Gate B claims may stand. Overall robust confirmation fails.",
+    "Gate_A_fail": "Overall confirmatory sequence stops. Gate B/C outcomes are reportable only as descriptive/nonconfirmatory; no external selector-value confirmation claim.",
+    "Gate_A_pass_Gate_B_fail": "Gate A claim may stand. Overall confirmation fails. Gate C is descriptive/nonconfirmatory.",
+    "negative_result_policy": "Preserve and publish/report the result; no post-REALBENCH3 retuning or margin change."
+  },
+  "fixed_sequence_gatekeeping": {
+    "direction": "one-sided",
+    "familywise_alpha": 0.05,
+    "multiplicity_reason": "The ordered fixed-sequence procedure controls the confirmatory familywise error rate without splitting alpha across A/B/C. Gate C is an intersection-union requirement: both C1 and C2 must pass, so no alpha split is used between its two necessary components.",
+    "rule": "Gate A is tested first at alpha=0.05. Gate B is confirmatory only if Gate A passes. Gate C is confirmatory only if Gates A and B pass. Later-gate statistics may always be reported, but if an earlier gate fails they are descriptive/nonconfirmatory.",
+    "sequence": [
+      "Gate_A",
+      "Gate_B",
+      "Gate_C"
+    ]
+  },
+  "gates": {
+    "Gate_A": {
+      "alternative": "Delta_A < 0",
+      "claim_if_pass": "On REALBENCH3, AutoGrey has lower mean eligible grey-family selection regret than the frozen GLOBAL comparator.",
+      "comparator": "GLOBAL_RANK_V3_13G_FULL_TRAIN",
+      "estimand": "mean eligible regret difference AutoGrey minus GLOBAL",
+      "name": "selector_value",
+      "null": "Delta_A >= 0",
+      "pass_rule": "one-sided 95% bootstrap upper bound < 0",
+      "threshold": 0.0
+    },
+    "Gate_B": {
+      "alternative": "Delta_B < 0.05 MASE",
+      "claim_if_pass": "On REALBENCH3, AutoGrey is noninferior to NG10 in mean MASE within the prespecified 0.05-MASE margin.",
+      "comparator": "NG10_STATCOMB3",
+      "estimand": "mean MASE difference AutoGrey minus NG10",
+      "forbidden_interpretation": [
+        "equivalent to NG10",
+        "superior to NG10 solely because noninferiority passes"
+      ],
+      "name": "practical_mean_noninferiority",
+      "null": "Delta_B >= 0.05 MASE",
+      "pass_rule": "one-sided 95% bootstrap upper bound < 0.05",
+      "threshold": 0.05
+    },
+    "Gate_C": {
+      "C1": {
+        "alternative": "Delta_C1 < 0",
+        "comparator": "GLOBAL_RANK_V3_13G_FULL_TRAIN",
+        "estimand": "CVaR90 eligible regret difference AutoGrey minus GLOBAL",
+        "null": "Delta_C1 >= 0",
+        "pass_rule": "one-sided 95% bootstrap upper bound < 0",
+        "threshold": 0.0
+      },
+      "C2": {
+        "alternative": "Delta_C2 < 0.05 MASE",
+        "comparator": "NG10_STATCOMB3",
+        "estimand": "CVaR90 MASE difference AutoGrey minus NG10",
+        "null": "Delta_C2 >= 0.05 MASE",
+        "pass_rule": "one-sided 95% bootstrap upper bound < 0.05",
+        "threshold": 0.05
+      },
+      "claim_if_pass": "The prespecified tail-robustness requirement is satisfied for both grey-family selection regret and practical MASE.",
+      "name": "joint_tail_robustness",
+      "pass_rule": "both C1 and C2 must pass"
+    }
+  },
+  "immutability_after_p10a": {
+    "implementation_only_repairs_allowed": "Only target-independent implementation/path/runtime repairs that preserve every scientific field in this lock. Failed attempts must be preserved. If repair is needed after REALBENCH3 opening, target access remains OPEN and the repair cannot use target outcomes to alter any scientific choice.",
+    "may_not_change": [
+      "selector",
+      "feature schema",
+      "action universe",
+      "confidence policy",
+      "GLOBAL comparator",
+      "NG10 comparator",
+      "MASE definition",
+      "eligible-regret definition",
+      "CVaR90 definition",
+      "0.05 MASE noninferiority margin",
+      "Gate A/B/C ordering",
+      "alpha=0.05",
+      "bootstrap RNG/seed/B",
+      "confirmatory population rule",
+      "subgroup dimensions/minimum n/Holm families",
+      "claim wording rules"
+    ]
+  },
+  "immutable_scientific_objects": {
+    "action_universe": "P4_FROZEN_13_GROUP_POST_COLLISION_ACTION_UNIVERSE",
+    "confidence_policy": "NOT_ADOPTED",
+    "mean_estimand": "parent-level arithmetic mean",
+    "median_role": "secondary descriptive only",
+    "practical_comparator": "NG10_STATCOMB3",
+    "practical_loss": "MASE of deployed forecast using full-D frozen scale and no epsilon",
+    "selection_comparator": "GLOBAL_RANK_V3_13G_FULL_TRAIN",
+    "selection_loss": "eligible regret relative to same-parent best selectable grey action",
+    "selector": "FULL_SELECTOR_RF_D8_L001",
+    "tail_estimand": "CVaR90 = mean of worst ceil(0.10*N) parent-level losses/regrets"
+  },
+  "noninferiority_margin": {
+    "applies_to": [
+      "Gate B mean practical MASE difference",
+      "Gate C2 CVaR90 practical MASE difference"
+    ],
+    "common_practical_mase_margin": 0.05,
+    "development_result_not_required_to_pass_margin": true,
+    "rationale": "A single fixed 0.05-MASE tolerance is used for both practical mean and tail criteria. It is intentionally small on the MASE scale and avoids choosing separate post-development margins. It is not an equivalence margin and does not permit a superiority claim against NG10.",
+    "units": "MASE"
+  },
+  "overall_confirmatory_success": {
+    "definition": "Gate_A PASS AND Gate_B PASS AND Gate_C PASS",
+    "forbidden_claims_even_if_full_success": [
+      "AutoGrey is universally the best forecasting method",
+      "AutoGrey is equivalent to NG10",
+      "AutoGrey is superior to every non-grey method",
+      "results generalize beyond the reserved REALBENCH3 population without qualification"
+    ],
+    "full_success_claim": "Under the frozen REALBENCH3 protocol, AutoGrey demonstrates external selector-value superiority over GLOBAL together with practical mean noninferiority to NG10 within 0.05 MASE and the prespecified joint tail-robustness criteria."
+  },
+  "p10_exit_rule": {
+    "P10A": "hash-verify this preregistration lock",
+    "P10B": "build and verify the executable pretarget scoring/opening contract against frozen P1-P9 provenance without accessing REALBENCH3 numeric targets",
+    "P10_complete_only_if": [
+      "P10A lock identity PASS",
+      "P10B executable/provenance freeze PASS",
+      "REALBENCH3_TARGETS_OPENED=FALSE"
+    ],
+    "next_after_p10_pass": "V2-P11_SINGLE_UNTOUCHED_REALBENCH3_OPENING"
+  },
+  "p11_chronology": {
+    "P11A_target_free_freeze": "Using REALBENCH3 development prefixes only, produce and hash the target-free actionability ledger, AutoGrey decisions, GLOBAL decisions, grey action forecasts, NG10 forecasts/statuses, subgroup ledger, and refusal ledger. Numeric REALBENCH3 target suffix values remain unopened.",
+    "P11B_irreversible_opening": "Only after P11A passes all identity/runtime/provenance gates may the harness print an irreversible opening marker and parse numeric REALBENCH3 target suffix values exactly once.",
+    "P11C_scoring": "Score only the P11A-frozen decisions/forecasts under this P10 lock. No fitting, retuning, comparator switching, margin change, subgroup change, parent replacement, or cleaning-policy change.",
+    "after_opening": "REALBENCH3 is permanently OPEN regardless of later harness success/failure",
+    "opening_marker": "REALBENCH3_TARGET_VALUES_OPENING_NOW=TRUE"
+  },
+  "purpose": "Freeze the complete confirmatory REALBENCH3 hypothesis hierarchy, alpha, margins, bootstrap inference, populations, multiplicity, and allowable claim wording before any REALBENCH3 numeric target suffix is opened.",
+  "schema": "AUTOGREY_V2_P10A_EXTERNAL_CONFIRMATION_PREREGISTRATION_LOCK_R1",
+  "secondary_subgroup_policy": {
+    "bootstrap": {
+      "dimension_order": [
+        "horizon",
+        "source_class",
+        "source_class_x_horizon"
+      ],
+      "label_order_within_dimension": "lexicographic",
+      "replicates": 4000,
+      "same_generator": "PCG64",
+      "same_resample_indices_for_all_four_statistics_within_subgroup_replicate": true,
+      "same_seed_stream_after_overall_bootstrap": true
+    },
+    "dimensions": [
+      "horizon",
+      "source_class",
+      "source_class_x_horizon"
+    ],
+    "minimum_n_for_inference": 30,
+    "multiplicity": "Holm-Bonferroni step-down at FWER 0.05 separately within four frozen families: selection mean regret, selection CVaR90 regret, practical mean MASE, practical CVaR90 MASE.",
+    "n_below_30": "descriptive point estimates and N only; no inferential claim",
+    "one_sided_improvement_p": "(1 + count(bootstrap difference >= 0)) / (B + 1)",
+    "point_estimands": [
+      "selection mean eligible regret difference",
+      "selection CVaR90 eligible regret difference",
+      "practical mean MASE difference",
+      "practical CVaR90 MASE difference"
+    ],
+    "status": "secondary; cannot rescue or redefine the overall confirmatory result"
+  },
+  "status": "PRETARGET_PREREGISTRATION_LOCK"
+}

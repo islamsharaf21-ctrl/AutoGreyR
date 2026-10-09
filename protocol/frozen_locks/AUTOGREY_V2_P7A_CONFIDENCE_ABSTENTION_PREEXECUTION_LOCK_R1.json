@@ -1,0 +1,150 @@
+{
+  "boundary": {
+    "abstention_never_deletes_parent": true,
+    "cal_outcomes_opened_at_p7a": false,
+    "cal_outcomes_opened_at_p7b": false,
+    "locktest_outcomes_opened_in_p7": false,
+    "p4_p5_p6_immutable": true,
+    "realbench3_forbidden_through_p10": true,
+    "realbench3_targets_opened": false
+  },
+  "checkpoint": "V2-P7A_CONFIDENCE_ABSTENTION_PREEXECUTION_LOCK",
+  "chronology": {
+    "P7A": "protocol lock; no CAL outcomes",
+    "P7B": "target-free CAL confidence/threshold/decision freeze; no CAL outcomes",
+    "P7C": "one-time CAL outcome opening and adjudication",
+    "P7D": "deterministic repeat/freeze; LOCKTEST still unopened",
+    "P8": "robust objectives/subgroups/multiplicity"
+  },
+  "confidence": {
+    "formula": "(mu_g2-mu_g1)/max(sqrt(sd_g1^2+sd_g2^2),1e-12)",
+    "g1": "lowest mu_g; tie lower SG index",
+    "g2": "second-lowest mu_g; tie lower SG index",
+    "higher_is_more_confident": true,
+    "mu_g": "RF ensemble mean prediction for group g",
+    "name": "RF_STANDARDIZED_TOP2_GAP",
+    "raw_top2_gap": "diagnostic only, never an alternative policy",
+    "sd_g": "sample SD (ddof=1) of 500 tree predictions for group g",
+    "single_selectable_group": "bypass confidence and use sole group",
+    "uses_target_values": false
+  },
+  "created_date": "2026-09-21",
+  "fallback": {
+    "abstained_parent_is_scored": true,
+    "choice": "first ranked group in parent's final selectable action set",
+    "fit_data": "all actionable V2_TRAIN labels only",
+    "group_min_train_parents": 30,
+    "name": "GLOBAL_RANK_V3_13G_FULL_TRAIN",
+    "statistic": "action-row-weighted mean eligible regret by group",
+    "tie_break": "lower SG index"
+  },
+  "forbidden_after_cal_outcomes": [
+    "change confidence formula",
+    "add confidence candidates",
+    "change 90% primary operating point",
+    "choose a sensitivity point because it looks better",
+    "change fallback",
+    "change selector/features/preprocessing",
+    "drop abstained parents from deployment metrics",
+    "open LOCKTEST in P7",
+    "open REALBENCH3 before P11"
+  ],
+  "next_checkpoint_after_identity": "V2-P7B_TARGET_FREE_CAL_CONFIDENCE_AND_THRESHOLD_FREEZE",
+  "p7c_cal_gate": {
+    "adopt_if": [
+      "policy mean_regret <= control mean_regret + 1e-12",
+      "policy CVaR90 <= control CVaR90 + 1e-12",
+      "at least one of mean_regret or CVaR90 improves by >1e-12",
+      "every actionable CAL parent receives selector, fallback, or explicit technical-refusal status"
+    ],
+    "cal_opening": "one-time only after P7B scores, thresholds, selector choices and fallback choices are hashed",
+    "control": "full-coverage RF_D8_L001 on identical actionable CAL parents",
+    "cvar90": "mean worst ceil(0.10*N) parent regrets",
+    "if_fail": "confidence NOT_ADOPTED; canonical selector remains full-coverage RF_D8_L001",
+    "metrics": [
+      "mean_regret",
+      "CVaR90",
+      "selector_use_rate",
+      "fallback_rate"
+    ],
+    "other_coverage_points": "report-only sensitivities; cannot replace the frozen 90% primary point",
+    "primary_policy": "90% target selector coverage + GLOBAL_RANK_V3_13G fallback"
+  },
+  "provenance": {
+    "p6_final_manifest_sha256": "7D26C6AE73B00FB658CAD83395D9427EF148E19F9F279E9789AE9FA74FB7DCD1",
+    "p6_final_package_sha256": "A7694B7FC17A5BC3A27656B7CB7741C279F13007C1BEFFFF3115566E542E29F4",
+    "p6_status": "PASS_CLOSED",
+    "p6d_verification_sha256": "3D017E811DF64635C03E41E4B864F6A9DEDDE1FAEDE7EF0E91A56FD52794E04D",
+    "selected_J": 0.6631150196822938,
+    "selected_candidate": "RF_D8_L001",
+    "selected_candidate_sha256": "56E95F69D6A05399DDF7B4E698D4302DAF959B7794933F0F66288ED850CC913E",
+    "selected_rho_mean": 0.6631150196822938,
+    "selected_rho_tail": 0.6565641093528258
+  },
+  "runtime": {
+    "joblib": "1.6.0",
+    "n_jobs": 1,
+    "numpy": "2.3.5",
+    "python": "/home/<user>/.autogrey_p6_selector/venv-py3135/bin/python",
+    "python_version": "3.13.5",
+    "random_seed": 62291,
+    "runtime_freeze_sha256": "6C5A703CB5C9C0C46C67333C7D6FD360D6573B80359C4869E8427EE90AD5BF8D",
+    "scikit_learn": "1.8.0",
+    "scipy": "1.18.1",
+    "threadpoolctl": "3.7.0"
+  },
+  "selector_refit": {
+    "choice": "minimum raw predicted log1p(regret), tie lower SG index",
+    "clip_predictions": false,
+    "features": "frozen P5 59-coordinate schema",
+    "fit_data": "all actionable V2_TRAIN label rows only",
+    "group_min_train_parents": 20,
+    "heads": 13,
+    "model": "RF_D8_L001",
+    "preprocess": "per-group TRAIN finite unweighted median; all-invalid=0; no scaling; no winsorization",
+    "rf": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 8,
+      "max_features": "sqrt",
+      "max_samples": null,
+      "min_samples_leaf": 0.01,
+      "min_samples_split": 2,
+      "n_estimators": 500,
+      "n_jobs": 1,
+      "oob_score": false,
+      "random_state": 62291
+    },
+    "target": "log1p(regret)"
+  },
+  "status": "PREEXECUTION_LOCK",
+  "threshold_freeze_p7b": {
+    "accept_rule": "selector if score >= threshold else fallback",
+    "coverage_targets": [
+      1.0,
+      0.95,
+      0.9,
+      0.8,
+      0.7
+    ],
+    "data": "actionable V2_CAL confidence scores only; CAL target values forbidden",
+    "no_postoutcome_operating_point_selection": true,
+    "primary_operating_point": 0.9,
+    "quantile_method": "numpy.quantile(method='linear')",
+    "sensitivities": [
+      1.0,
+      0.95,
+      0.8,
+      0.7
+    ],
+    "threshold_quantiles": {
+      "0.70": 0.3,
+      "0.80": 0.2,
+      "0.90": 0.1,
+      "0.95": 0.05,
+      "1.00": "-Infinity"
+    }
+  },
+  "version": "AUTOGREY_V2_P7A_CONFIDENCE_ABSTENTION_PREEXECUTION_LOCK_R1"
+}

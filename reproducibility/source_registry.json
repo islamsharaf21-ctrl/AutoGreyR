@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-09",
+  "policy": {
+    "frozen_identity_rule": "Downloaded archive SHA-256 must match the P1 frozen archive SHA-256 before it is accepted.",
+    "record_level_license_status": "UNRESOLVED_CAPTURE_AT_ACQUISITION_TIME",
+    "redistribution_authorized_by_autogrey": false,
+    "repository_distribution": "DO_NOT_BUNDLE_SOURCE_ARCHIVES",
+    "target_value_parsing": "FORBIDDEN_IN_ACQUISITION_LAYER"
+  },
+  "schema": "AUTOGREY_V2_R5B2_REALBENCH3_SOURCE_REGISTRY_R1",
+  "sources": [
+    {
+      "dataset": "Car Parts Dataset (without missing values)",
+      "doi": "10.5281/zenodo.4656021",
+      "expected_tsf_member": "car_parts_dataset_without_missing_values.tsf",
+      "filename": "car_parts_dataset_without_missing_values.zip",
+      "frozen_sha256": "a0b1e87e2329098837e5cfd020e16a36e30efa9a29a1fae8d1bd3603dfefcfea",
+      "redistribution_authorized": false,
+      "source_id": "RB3_CARPARTS_MONTHLY",
+      "zenodo_md5_verification_date": "2026-10-09",
+      "zenodo_md5_verified": "59849a426b797fd5b89f7890fa35ae18",
+      "zenodo_record_id": 4656021
+    },
+    {
+      "dataset": "Electricity Hourly Dataset",
+      "doi": "10.5281/zenodo.4656140",
+      "expected_tsf_member": "electricity_hourly_dataset.tsf",
+      "filename": "electricity_hourly_dataset.zip",
+      "frozen_sha256": "eff447075dde68dca0105ab7e2851c5637967ae3bb21556fd8b931f196d5968c",
+      "redistribution_authorized": false,
+      "source_id": "RB3_ELECTRICITY_HOURLY",
+      "zenodo_md5_verification_date": "2026-10-09",
+      "zenodo_md5_verified": "18096614662b02640d265ad2a6a416bd",
+      "zenodo_record_id": 4656140
+    },
+    {
+      "dataset": "Hospital Dataset",
+      "doi": "10.5281/zenodo.4656014",
+      "expected_tsf_member": "hospital_dataset.tsf",
+      "filename": "hospital_dataset.zip",
+      "frozen_sha256": "8fd4085efb4517508e30fc69247eee9b74b300765bc6e94482c5d250efba66e5",
+      "redistribution_authorized": false,
+      "source_id": "RB3_HOSPITAL_MONTHLY",
+      "zenodo_md5_verification_date": null,
+      "zenodo_md5_verified": null,
+      "zenodo_record_id": 4656014
+    },
+    {
+      "dataset": "Traffic Hourly Dataset",
+      "doi": "10.5281/zenodo.4656132",
+      "expected_tsf_member": "traffic_hourly_dataset.tsf",
+      "filename": "traffic_hourly_dataset.zip",
+      "frozen_sha256": "3db12ba866a9c9d3c8109b7b6d189a990c38d0e5002fa2617022157358d08299",
+      "redistribution_authorized": false,
+      "source_id": "RB3_TRAFFIC_HOURLY",
+      "zenodo_md5_verification_date": "2026-10-09",
+      "zenodo_md5_verified": "1cf694f99f95700217845078b467fb24",
+      "zenodo_record_id": 4656132
+    },
+    {
+      "dataset": "Weather Dataset",
+      "doi": "10.5281/zenodo.4654822",
+      "expected_tsf_member": "weather_dataset.tsf",
+      "filename": "weather_dataset.zip",
+      "frozen_sha256": "adc9195b4b842673892fec1ba22cced9c42d5c4cba9a261f455ffbe96db7847b",
+      "redistribution_authorized": false,
+      "source_id": "RB3_WEATHER_DAILY",
+      "zenodo_md5_verification_date": "2026-10-09",
+      "zenodo_md5_verified": "57155594af0883ccd5e63a5948976796",
+      "zenodo_record_id": 4654822
+    }
+  ]
+}

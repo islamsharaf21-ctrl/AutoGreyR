@@ -1,0 +1,14 @@
+component,version,source,integrity_or_resolution,role
+R,4.6.1,R Project,"exact version; 64-bit little-endian",canonical runtime
+forecast,9.0.2,CRAN,"forecast_9.0.2.tar.gz; CRAN release 2026-03-18; Debian-origin MD5 0a7c84e9792cfd6307e25ba1f7ba0f44",benchmark implementation
+renv,1.2.3,CRAN,"exact version",environment restore and inventory
+jsonlite,2.0.0,CRAN,"exact version",input/output JSON
+digest,0.6.39,CRAN,"exact version",SHA-256 forecast and input commitments
+callr,3.8.0,CRAN,"exact version",isolated subprocess supervision
+processx,3.9.0,CRAN,"exact version",hard timeout process control
+withr,3.0.3,CRAN,"exact version",controlled environment
+testthat,3.3.2,CRAN,"exact version",runtime assertions
+forecast_transitive_closure,FROZEN_BY_SNAPSHOT,Posit CRAN snapshot 2026-03-18,"full installed inventory must be emitted and hash-sealed by canonical validation before protected execution",forecast dependency closure
+BLAS,OpenBLAS_0.3.30_ILP64,system image,"single thread; final image digest frozen at P10",canonical numerical backend
+OS,Linux_x86_64_glibc,system image,"final image digest frozen at P10",canonical platform
+

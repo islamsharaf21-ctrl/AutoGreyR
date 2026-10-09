@@ -1,10 +1,23 @@
 cff-version: 1.2.0
-message: "If you use this AutoGrey reproducibility package, please cite the associated AutoGrey study and this software release."
-title: "AutoGreyR: Reproducibility Layer for the Frozen AutoGrey Experiment"
+message: "If you use AutoGrey V2, cite the associated research article and the v2.0.0-rc1 software release. Add a repository DOI only after one is actually assigned."
+title: "AutoGrey V2: Cross-Task Selection over Governed Grey Forecasting Families"
 type: software
-license: MIT
+version: "2.0.0-rc1"
+license: "Apache-2.0"
 authors:
   - family-names: "Sharafeldin"
     given-names: "Islam Mahmoud"
-version: "1.0.0"
-date-released: 2026-09-13
+  - family-names: "Xie"
+    given-names: "Naiming"
+abstract: >-
+  Research software and reproducibility framework for governed cross-task
+  selection over heterogeneous grey forecasting-family actions. The protected
+  REALBENCH3 primary confirmation criterion failed and that negative result is
+  preserved. This candidate is not presented as an externally validated
+  performance improvement over AutoGreyR v1.0.0.
+keywords:
+  - grey systems
+  - time-series forecasting
+  - algorithm selection
+  - meta-learning
+  - reproducibility

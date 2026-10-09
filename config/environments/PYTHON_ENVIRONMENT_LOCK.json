@@ -1,0 +1,23 @@
+{
+  "schema": "AUTOGREY_V2_R5B2_PYTHON_ENVIRONMENT_LOCK_R1",
+  "date": "2026-10-09",
+  "python_version": "3.13.5",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.8.0",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.7.0"
+  },
+  "selector_random_seed": 62291,
+  "selector_n_jobs": 1,
+  "historical_runtime_freeze_sha256": "6C5A703CB5C9C0C46C67333C7D6FD360D6573B80359C4869E8427EE90AD5BF8D",
+  "p6_runtime_pip_freeze_expected_sha256": "869EB91027517E4F2949ABE720BEDC28B56269140EF3E9D57754999515EC3882",
+  "p6_runtime_pip_freeze_bytes_status": "NOT_RECOVERED_IN_CONTROLLED_PUBLIC_EVIDENCE",
+  "p6_runtime_wheel_manifest_expected_sha256": "70C81B18FA7CC9925E79D9656943E651010FF957F1BF7B0211094E8FDF19B383",
+  "p6_runtime_wheel_manifest_bytes_status": "NOT_RECOVERED_IN_CONTROLLED_PUBLIC_EVIDENCE",
+  "historical_statsmodels_version": null,
+  "historical_statsmodels_status": "UNRESOLVED_DO_NOT_INVENT",
+  "statsmodels_usage": "Conditionally imported only for the non-selectable Python reference-tier Theta forecast in autogrey_engine_step4fb_r1.py; the final P3 NG10 implementation was R/forecast-based.",
+  "scientific_settings_changed": false
+}

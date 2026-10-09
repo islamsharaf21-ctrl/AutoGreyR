@@ -1,0 +1,19 @@
+public_path,change_class,details
+.gitignore,R5B2_CACHE_EXCLUSION,External acquisition caches and .part downloads excluded from Git.
+CHANGELOG.md,DOCUMENTATION_REWRITE,Current-state public candidate text; no scientific result changed.
+README.md,R5B2_STATUS_UPDATE,Candidate state advanced from R5-B1 to R5-B2; scientific status unchanged.
+RELEASE_STATUS.md,R5B2_STATUS_UPDATE,Release blockers/status updated; P11-C failure preserved.
+VERSION,DOCUMENTATION_REWRITE,Current-state public candidate text; no scientific result changed.
+config/environments/R_ENVIRONMENT_LOCK.json,EXECUTED_RUNTIME_RECONSTRUCTION,Public reproduction uses final executed P3 R5D LP64 OpenBLAS evidence; earlier ILP64 preexecution label retained as superseded history.
+protocol/frozen_locks/AUTOGREY_V2_P6A_SELECTOR_ALTERNATIVES_PREEXECUTION_LOCK_R1.json,PRIVACY_PATH_SANITIZATION,Personal WSL username replaced with <user>; scientific fields unchanged.
+protocol/frozen_locks/AUTOGREY_V2_P6C_RUNTIME_AMENDMENT_R1.json,PRIVACY_PATH_SANITIZATION,Personal WSL username replaced with <user>; scientific fields unchanged.
+protocol/frozen_locks/AUTOGREY_V2_P7A_CONFIDENCE_ABSTENTION_PREEXECUTION_LOCK_R1.json,PRIVACY_PATH_SANITIZATION,Personal WSL username replaced with <user>; scientific fields unchanged.
+reproducibility/README.md,R5B2_REPRODUCIBILITY_UPDATE,"Acquisition, verification and environment preflight commands added."
+results/aggregate/AUTOGREY_V2_P11C_FINAL_CLOSURE_REPORT_2026-10-06.md,EDITORIAL_TERMINOLOGY_CORRECTION,Replaced preregistration wording with approved internal pretarget-freeze terminology; numbers/status unchanged.
+results/frozen_history/AUTOGREY_V2_P11A2_FINAL_TARGET_FREE_PRODUCTION_R3.txt,PRIVACY_PATH_SANITIZATION,Historical runtime path privacy-sanitized only.
+src/execution_qualified/target_free_production/AUTOGREY_V2_P11A2_FINAL_TARGET_FREE_PRODUCTION_R3.py,PORTABILITY_PARAMETERIZATION,Only machine/home/runtime-path handling parameterized; version/thread/scientific gates unchanged.
+src/execution_qualified/target_free_production/RUN_AUTOGREY_V2_P11A2_FINAL_R3.ps1,PORTABILITY_PARAMETERIZATION,User-specific paths parameterized; repository-relative source/lock layout wired; harness integrity hash synchronized to transformed public copy. Scientific settings/calculations unchanged.
+src/scoring_inference/AUTOGREY_V2_P11C_PACKAGE_MANIFEST_R1.sha256,PORTABILITY_MANIFEST_REWRITE,Regenerated manifest hashes for public portability copies; no scientific computation changed.
+src/scoring_inference/AUTOGREY_V2_P11C_PACKAGE_README_R1.md,PORTABILITY_DOCUMENTATION,Machine-specific path examples replaced with environment-variable placeholders.
+src/scoring_inference/RUN_AUTOGREY_V2_P11C_PREFLIGHT_R1.ps1,PORTABILITY_PARAMETERIZATION,User-specific launcher paths replaced by environment-configurable defaults; score/preflight logic unchanged.
+src/scoring_inference/RUN_AUTOGREY_V2_P11C_SCORING_R1.ps1,PORTABILITY_PARAMETERIZATION,User-specific launcher paths replaced by environment-configurable defaults; score/preflight logic unchanged.

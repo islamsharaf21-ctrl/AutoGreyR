@@ -1,10 +1,29 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-renv/library/
-renv/staging/
-outputs/tmp/
-*.pyc
+# Runtime/generated data
+data/
+external-data/
+controlled-data/
+evidence-private/
+outputs/
+results/generated/
+*.bin
+*.npy
+*.npz
+*.parquet
+*.feather
+*.rds
+*.RData
+# caches
 __pycache__/
-outputs/logs/
+.pytest_cache/
+.Rproj.user/
+.renv/
+venv/
+.venv/
+# local settings
+.env
+.env.*
+*.local
+# R5-B2 external acquisition caches / partial downloads
+autogrey-cache/
+source-cache/
+*.part

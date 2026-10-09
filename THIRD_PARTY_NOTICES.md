@@ -1,87 +1,38 @@
-# Third-Party Notices
+# THIRD-PARTY NOTICES
 
-AutoGreyR contains third-party benchmark datasets used solely to reproduce the
-frozen AutoGrey REALBENCH2 experiment.
+This file records third-party components and data sources referenced by the AutoGreyR V2 public-source candidate. It is not a substitute for the upstream licenses or terms.
 
-The MIT License in the repository LICENSE file applies to AutoGreyR-owned
-software and associated original documentation. It does not relicense
-third-party datasets.
+## REALBENCH3 source data
 
-## Monash Time Series Forecasting Repository datasets
+See `DATA_NOTICE.md` and `docs/REALBENCH3_RIGHTS_REGISTER.csv`.
 
-The following six upstream datasets are distributed by the Monash Time Series
-Forecasting Repository under the Creative Commons Attribution 4.0
-International license (CC BY 4.0).
+### Monash Time Series Forecasting Repository
+Creators include Rakshitha Godahewa, Christoph Bergmeir, Geoff Webb, Rob J. Hyndman and Pablo Montero-Manso.
 
-Creators for these dataset records:
+The Monash distribution is labeled CC BY 4.0. AutoGrey does not bundle its data archives.
 
-- Rakshitha Godahewa
-- Christoph Bergmeir
-- Geoff Webb
-- Rob J. Hyndman
-- Pablo Montero-Manso
+### Car Parts / Hospital
+Source lineage: R package `expsmooth`, version 2.3 lineage. CRAN package metadata states GPL (>=2). AutoGrey cites and acquires externally; it does not redistribute those source archives.
 
-### M4 Yearly Dataset
+### Electricity
+Source lineage includes UCI ElectricityLoadDiagrams20112014 and Lai et al. The current UCI dataset page states CC BY 4.0.
 
-DOI: 10.5281/zenodo.4656379
+### Traffic
+Source lineage includes Caltrans Performance Measurement System (PeMS) and Lai et al. AutoGrey does not republish the source traffic archive.
 
-Embedded upstream file:
-`m4_yearly_dataset.zip`
+### Weather
+Source lineage includes the Australian Bureau of Meteorology, accessed by the source archive through the `bomrang` lineage. Bureau data can carry content-specific terms; AutoGrey does not republish the source weather archive.
 
-### M4 Quarterly Dataset
+## Runtime dependencies
 
-DOI: 10.5281/zenodo.4656410
+AutoGreyR depends on third-party Python and R packages. Those packages retain their own upstream licenses and are not relicensed by AutoGreyR.
 
-Embedded upstream file:
-`m4_quarterly_dataset.zip`
+The public environment files pin or document versions for reproduction. They do not vendor third-party wheels/packages in this source tree.
 
-### M4 Monthly Dataset
+## OpenBLAS
 
-DOI: 10.5281/zenodo.4656480
+The R environment reconstruction uses OpenBLAS 0.3.30 LP64 in the frozen executed configuration. OpenBLAS retains its upstream license.
 
-Embedded upstream file:
-`m4_monthly_dataset.zip`
+## No endorsement
 
-### Tourism Yearly Dataset
-
-DOI: 10.5281/zenodo.4656103
-
-Embedded upstream file:
-`tourism_yearly_dataset.zip`
-
-### Tourism Quarterly Dataset
-
-DOI: 10.5281/zenodo.4656093
-
-Embedded upstream file:
-`tourism_quarterly_dataset.zip`
-
-### Tourism Monthly Dataset
-
-DOI: 10.5281/zenodo.4656096
-
-Embedded upstream file:
-`tourism_monthly_dataset.zip`
-
-## AutoGreyR raw reservation bundle
-
-For exact scientific reproduction, the six upstream files above are preserved
-byte-for-byte inside:
-
-`reference/raw/AUTOGREY_REALBENCH2_RAW_RESERVATION_BUNDLE_STEP5B.zip`
-
-The outer AutoGreyR reservation bundle also contains AutoGrey-created metadata,
-hash ledgers, reservation identifiers, and assertions.
-
-The upstream dataset files remain subject to their CC BY 4.0 license and are
-not relicensed under the AutoGreyR MIT License.
-
-AutoGreyR records the original dataset identifiers and cryptographic hashes to
-support provenance and exact reproducibility. No authorship or ownership of
-the upstream M4 or Tourism datasets is claimed by AutoGreyR.
-
-## Attribution
-
-Users redistributing the bundled upstream datasets should retain this notice
-and provide appropriate attribution to the original dataset creators and the
-corresponding Zenodo records listed above.
+Reference to third-party names, repositories, packages or datasets does not imply endorsement of AutoGreyR by those parties.

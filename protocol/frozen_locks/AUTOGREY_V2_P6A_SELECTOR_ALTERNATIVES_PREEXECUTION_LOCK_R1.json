@@ -1,0 +1,252 @@
+{
+  "candidate_count": 12,
+  "candidate_families": {
+    "ET_GROUP_REGRET": {
+      "bootstrap": false,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "description": "13 separate ExtraTreesRegressor heads using the same frozen 59-coordinate schema",
+      "grid": [
+        {
+          "id": "ET_D8_L003",
+          "max_depth": 8,
+          "min_samples_leaf": 0.03
+        },
+        {
+          "id": "ET_D8_L001",
+          "max_depth": 8,
+          "min_samples_leaf": 0.01
+        },
+        {
+          "id": "ET_DNONE_L003",
+          "max_depth": null,
+          "min_samples_leaf": 0.03
+        },
+        {
+          "id": "ET_DNONE_L001",
+          "max_depth": null,
+          "min_samples_leaf": 0.01
+        }
+      ],
+      "max_features": "sqrt",
+      "min_samples_split": 2,
+      "n_estimators": 500,
+      "n_jobs": 1,
+      "random_state": 62291
+    },
+    "HGB_GROUP_REGRET": {
+      "description": "13 separate HistGradientBoostingRegressor heads using the same frozen 59-coordinate schema",
+      "early_stopping": false,
+      "grid": [
+        {
+          "id": "HGB_L15_L2_1",
+          "l2_regularization": 1.0,
+          "max_leaf_nodes": 15
+        },
+        {
+          "id": "HGB_L15_L2_0",
+          "l2_regularization": 0.0,
+          "max_leaf_nodes": 15
+        },
+        {
+          "id": "HGB_L31_L2_1",
+          "l2_regularization": 1.0,
+          "max_leaf_nodes": 31
+        },
+        {
+          "id": "HGB_L31_L2_0",
+          "l2_regularization": 0.0,
+          "max_leaf_nodes": 31
+        }
+      ],
+      "learning_rate": 0.05,
+      "loss": "squared_error",
+      "max_bins": 255,
+      "max_iter": 300,
+      "min_samples_leaf": 20,
+      "random_state": 62291
+    },
+    "RF_GROUP_REGRET": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "description": "13 separate RandomForestRegressor heads; direct V1-style generalization to the frozen 59-coordinate V2 schema",
+      "grid": [
+        {
+          "id": "RF_D8_L003",
+          "max_depth": 8,
+          "min_samples_leaf": 0.03
+        },
+        {
+          "id": "RF_D8_L001",
+          "max_depth": 8,
+          "min_samples_leaf": 0.01
+        },
+        {
+          "id": "RF_DNONE_L003",
+          "max_depth": null,
+          "min_samples_leaf": 0.03
+        },
+        {
+          "continuity_anchor": true,
+          "id": "RF_DNONE_L001",
+          "max_depth": null,
+          "min_samples_leaf": 0.01
+        }
+      ],
+      "max_features": "sqrt",
+      "max_samples": null,
+      "min_samples_split": 2,
+      "n_estimators": 500,
+      "n_jobs": 1,
+      "oob_score": false,
+      "random_state": 62291
+    }
+  },
+  "checkpoint": "V2-P6A_SELECTOR_ALTERNATIVES_PREEXECUTION_LOCK",
+  "created_date": "2026-09-21",
+  "cv_contract": {
+    "action_tie_break": "lower frozen SG index",
+    "fold_source": "frozen train_cv_fold / parent-grouped split ledger",
+    "folds": 5,
+    "group_head_min_distinct_train_parents": 20,
+    "horizon_pooling": "POOLED; horizon information is already in the frozen 59-coordinate schema",
+    "no_parent_crosses_folds": true,
+    "preprocessing": {
+      "all_invalid_training_column_fallback": 0.0,
+      "fit_scope": "within each candidate/group/training-fold only",
+      "imputation": "unweighted finite-value median from training subset only",
+      "invalid_raw_value": "NA",
+      "scaling": "NONE",
+      "winsorization": "NONE"
+    },
+    "unit": "parent",
+    "unsupported_group_prediction": "UNAVAILABLE",
+    "unsupported_parent": "candidate abstains for that parent",
+    "validation_choice": "minimum predicted log1p regret among final selectable groups with fitted heads"
+  },
+  "forbidden_post_result_changes": [
+    "adding/removing candidate families",
+    "changing candidate grids",
+    "changing coverage floor",
+    "changing J or near-set threshold",
+    "changing preprocessing",
+    "adding source identity",
+    "adding target-derived predictors",
+    "changing group support thresholds",
+    "changing action-set collision policy",
+    "opening CAL, LOCKTEST, or REALBENCH3 outcomes",
+    "retuning after viewing P6 OOF results"
+  ],
+  "global_comparator": {
+    "fit_scope": "training fold only",
+    "minimum_distinct_train_parents_per_group": 30,
+    "name": "GLOBAL_RANK_V3_13G",
+    "prediction": "first ranked group present in parent's final selectable action set",
+    "ranking_statistic": "weighted mean eligible regret by group",
+    "tie_break": "lower frozen SG index"
+  },
+  "groups": [
+    "SG01_CONT_GM",
+    "SG02_DISCRETE_POLY",
+    "SG03_FRAC_LINEAR",
+    "SG04_BERNOULLI",
+    "SG05_CONT_TIME_POLY",
+    "SG06_CONFORMABLE",
+    "SG07_ROLLING",
+    "SG08_WBO",
+    "SG09_GREY_MARKOV",
+    "SG10_SEASONAL",
+    "SG11_SELF_MEMORY",
+    "SG12_FRAC_DYNAMIC",
+    "SG13_FRAC_BERNOULLI"
+  ],
+  "label_contract": {
+    "action_row_weight": "1 / number_of_final_selectable_groups_for_parent",
+    "action_set": "P4 final post-collision selectable groups only",
+    "cal_locktest_realbench3_labels_forbidden": true,
+    "mase_scale_source": "development prefix D only",
+    "oracle_loss": "minimum frozen MASE across the same parent's final selectable action set",
+    "outer_loss": "frozen MASE",
+    "parent_weight_sum": 1.0,
+    "population": "V2_TRAIN actionable parents only",
+    "regression_target": "log1p(regret)",
+    "regret": "max(0, group_loss - oracle_loss)",
+    "target_values_as_predictors": false
+  },
+  "metrics": {
+    "J": "max(rho_mean, rho_tail)",
+    "coverage": "supported validation parents / actionable validation parents",
+    "cvar90": "arithmetic mean of worst ceil(0.10*N) supported-parent regrets",
+    "mean_regret": "arithmetic mean across supported validation parents",
+    "parent_regret": "selected group eligible regret",
+    "relative_metrics": "candidate mean_regret and CVaR90 divided by GLOBAL_RANK_V3_13G on the identical candidate-supported parent IDs",
+    "rho_mean": "candidate_mean / global_mean",
+    "rho_tail": "candidate_CVaR90 / global_CVaR90"
+  },
+  "next_checkpoint_after_lock": "V2-P6B_TRAIN_LABEL_CONSTRUCTION_AND_IDENTITY_AUDIT",
+  "post_run_requirement": "Run the exact frozen P6 harness twice in clean output directories and require byte-identical canonical outputs before P6 can close.",
+  "provenance": {
+    "p4_final_action_set_summary_sha256": "38B15F852418D161FB663E4EEE635B9C2F5FCB8277F82716456BC2AA05BE5A1B",
+    "p4_group_ledger_sha256": "41E77F0F247C24E1CA41CAC4BE1697D42CC317ACD1A9B5029F8CFD81C552BA7F",
+    "p4_parent_action_sets_sha256": "DA8A5A5BD398DED3130F27AF38AEACFB25A55F760408BFC3D85AEE62C07A5442",
+    "p5_final_freeze_txt_sha256": "20C727C9179EF7B8E0E8C622456030DF7C0A8843C0A9EAF46C1BEC846659559E",
+    "p5_final_manifest_sha256": "1B1425A2A354BF7E9E1CAA842DC9AD2152C65A9764E3D3E0176B2BFDA8C4903C",
+    "p5_final_package_sha256": "5A8DE3CA510E9DD0771CA3CA302975749898EE8E938CF75FEE55F3030ED5BCCF",
+    "p5_final_schema_csv_sha256": "3ED14225EFC4FA9030BF114A466D1FBF410F47FE8CBE054AF446C4775E099D59",
+    "p5d_raw_matrix_sha256": "507CEA9A4878ADFD7454E9E80B129006995E7E7A3F30E642AD1CE1A8AE10093B"
+  },
+  "required_outputs": [
+    "P6 TRAIN label/action ledger for 13 groups",
+    "candidate OOF parent decisions",
+    "candidate metrics table",
+    "GLOBAL_RANK_V3_13G OOF decisions",
+    "selected candidate object",
+    "assertions",
+    "deterministic repeat verification",
+    "manifest"
+  ],
+  "runtime": {
+    "canonical_python": "/home/<user>/.autogrey_p4_userlocal/venv-py3135/bin/python",
+    "deterministic_repeat_required": true,
+    "n_jobs": 1,
+    "numpy": "2.3.5",
+    "python": "3.13.5",
+    "random_seed": 62291,
+    "scikit_learn": "1.8.0"
+  },
+  "scientific_boundary": {
+    "cal_outcomes_opened_in_p6": false,
+    "feature_source": "FROZEN_P5_59_COORDINATE_SCHEMA_ONLY",
+    "locktest_outcomes_opened_in_p6": false,
+    "p4_immutable": true,
+    "p5_final_schema_composition": "23 raw values + 23 validity bits + 13 post-collision selectability bits",
+    "p5_final_schema_width": 59,
+    "p5_immutable": true,
+    "p5_status": "PASS_CLOSED",
+    "realbench3_targets_opened": false,
+    "reason_codes_as_predictors": false,
+    "source_identity_as_predictor": false,
+    "target_or_loss_as_predictor": false,
+    "train_target_suffix_use": "PERMITTED_ONLY_FOR_V2_TRAIN_LABEL_CONSTRUCTION_AND_OOF_SELECTOR_COMPARISON"
+  },
+  "selection_rule": {
+    "candidate_eligibility": "coverage >= 0.995",
+    "coverage_floor": 0.995,
+    "gate_failure_action": "P6_NO_GO_SELECTOR; do not proceed to P7 without explicit protocol amendment",
+    "near_set": "J <= min(J) + 0.01",
+    "numeric_tie_tolerance": 1e-12,
+    "primary": "minimum J",
+    "secondary": "minimum rho_mean within near set",
+    "simplicity_tie_order": [
+      "RF_GROUP_REGRET before ET_GROUP_REGRET before HGB_GROUP_REGRET",
+      "within RF/ET: max_depth=8 before None",
+      "within RF/ET: min_samples_leaf=0.03 before 0.01",
+      "within HGB: max_leaf_nodes=15 before 31",
+      "within HGB: l2_regularization=1 before 0"
+    ],
+    "train_gate": "selected candidate must satisfy rho_mean < 1 AND rho_tail <= 1"
+  },
+  "status": "PREEXECUTION_LOCK",
+  "version": "AUTOGREY_V2_P6A_SELECTOR_ALTERNATIVES_PREEXECUTION_LOCK_R1"
+}

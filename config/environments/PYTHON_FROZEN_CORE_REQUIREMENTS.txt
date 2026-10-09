@@ -1,0 +1,7 @@
+# Exact selector/runtime package versions evidenced by frozen P6/P7 records.
+# statsmodels is deliberately absent: its historical version is unresolved.
+numpy==2.3.5
+scipy==1.18.1
+scikit-learn==1.8.0
+joblib==1.6.0
+threadpoolctl==3.7.0

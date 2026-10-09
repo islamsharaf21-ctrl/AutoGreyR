@@ -1,0 +1,14 @@
+path,change_class,details,scientific_logic_changed
+VERSION,VERSION_PROMOTION,development-candidate version promoted to 2.0.0-rc1,FALSE
+README.md,RC1_RELEASE_METADATA,R5-B4 clean-room and rc1 identity/status incorporated,FALSE
+RELEASE_STATUS.md,RC1_RELEASE_METADATA,GO tag decision; stable release remains unauthorized,FALSE
+CHANGELOG.md,RC1_RELEASE_METADATA,R5-B4 and R5-B5 entries appended,FALSE
+CITATION.cff,RC1_RELEASE_METADATA,version promoted to 2.0.0-rc1; no DOI invented,FALSE
+reproducibility/README.md,RC1_RELEASE_METADATA,version label promoted to rc1,FALSE
+docs/R5B4_CLEANROOM_SUMMARY.md,GENERATED_R5B5_DOCUMENTATION,summary derived from closed R5-B4 evidence,FALSE
+docs/RC1_RELEASE_BOUNDARY.md,GENERATED_R5B5_DOCUMENTATION,final rc1 public/reproducibility boundary,FALSE
+RELEASE_NOTES_v2.0.0-rc1.md,GENERATED_R5B5_DOCUMENTATION,rc1 research-release notes,FALSE
+manifests/README.md,GENERATED_R5B5_DOCUMENTATION,clarifies lineage vs rc1 authoritative manifests,FALSE
+manifests/RC1_RELEASE_INVENTORY.csv,GENERATED_R5B5_MANIFEST,final rc1 inventory,FALSE
+manifests/RC1_TAG_CONTENT_MANIFEST.sha256,GENERATED_R5B5_MANIFEST,tag content identity,FALSE
+manifests/PUBLIC_RELEASE_MANIFEST.sha256,REGENERATED_R5B5_MANIFEST,authoritative exhaustive release manifest,FALSE

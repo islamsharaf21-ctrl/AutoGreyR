@@ -1,0 +1,115 @@
+{
+  "cal_parent_count": 251,
+  "cal_targets_opened": false,
+  "groups": {
+    "SG01_CONT_GM": {
+      "api_vs_tree_mean_max_abs_diff": 0.0,
+      "distinct_train_parents": 2008,
+      "forest_fingerprint_sha256": "D8D20006CD56BFC4A1B812E04435EDBCFD3DD5CFB114A06D4503C4AECFC53EA3",
+      "median_sha256": "55DA07164D9AA974894D77EA61140FD2DBBC4D3339848483D13F0F8F626027A9",
+      "train_rows": 2008,
+      "tree_count": 500
+    },
+    "SG02_DISCRETE_POLY": {
+      "api_vs_tree_mean_max_abs_diff": 0.0,
+      "distinct_train_parents": 1875,
+      "forest_fingerprint_sha256": "A53FFEFEFD54641E010E15D09D617C306244156B2B88333A62659B623635ED6F",
+      "median_sha256": "4214BB60FA66AEDFF98BAC01FC4FAD23F1D18C53F4E8E63475823BD9AAAB4B4A",
+      "train_rows": 1875,
+      "tree_count": 500
+    },
+    "SG03_FRAC_LINEAR": {
+      "api_vs_tree_mean_max_abs_diff": 0.0,
+      "distinct_train_parents": 2006,
+      "forest_fingerprint_sha256": "578FE08AC19B8C0A0FBE32B3B0DAF914D96AD010A65806F590041E01602892A3",
+      "median_sha256": "D3001650E7807154608B8FE3865EDE4F9D01F845A97FAB8113BD07DD3735A81B",
+      "train_rows": 2006,
+      "tree_count": 500
+    },
+    "SG04_BERNOULLI": {
+      "api_vs_tree_mean_max_abs_diff": 0.0,
+      "distinct_train_parents": 2040,
+      "forest_fingerprint_sha256": "F573AFFC7FE4D719304A4EBE141EEE78C850CE1DEBAD35CEAC5136A54F7BE46B",
+      "median_sha256": "AD8C0E83648EEB089B727F999688778A9B22793BC62B2359D100620875DACD05",
+      "train_rows": 2040,
+      "tree_count": 500
+    },
+    "SG05_CONT_TIME_POLY": {
+      "api_vs_tree_mean_max_abs_diff": 0.0,
+      "distinct_train_parents": 1899,
+      "forest_fingerprint_sha256": "59D4AD9ECBB8D741D8938282520081DF3C6DE7DE10ACA6A87161BB8350D8EFC8",
+      "median_sha256": "27C65499D1843D8E9E054EE5AB2E741CCE9877ABE4C67C76AC6CC04D20DA9442",
+      "train_rows": 1899,
+      "tree_count": 500
+    },
+    "SG06_CONFORMABLE": {
+      "api_vs_tree_mean_max_abs_diff": 0.0,
+      "distinct_train_parents": 1944,
+      "forest_fingerprint_sha256": "456576ACA239559F8F0A95FF24E8D58AC636F1D6A0DE8648C1D88E74277CD36D",
+      "median_sha256": "276BDCD9F83ACB19D5A351ACE1AB84EAD7D4EE94F144236FCD57A115051BBA40",
+      "train_rows": 1944,
+      "tree_count": 500
+    },
+    "SG07_ROLLING": {
+      "api_vs_tree_mean_max_abs_diff": 0.0,
+      "distinct_train_parents": 1938,
+      "forest_fingerprint_sha256": "0EF3CE72C35F99B19F48079A1D7F38124C91930B0DF7CCCFBDBA2F9D4AA97BB2",
+      "median_sha256": "982C758506192ABDB5808CED986E6F5A948FF4BC0C53D7E1338A4C7706A7801F",
+      "train_rows": 1938,
+      "tree_count": 500
+    },
+    "SG08_WBO": {
+      "api_vs_tree_mean_max_abs_diff": 0.0,
+      "distinct_train_parents": 1897,
+      "forest_fingerprint_sha256": "5023591E7C9BAB2DD383612628FA1D6A9764C8D03E4D437D281D0CDECCC9A332",
+      "median_sha256": "023A30AF7658ADF78F9DFE85DC62900A24278B41632D4F97967A0038F55BAE16",
+      "train_rows": 1897,
+      "tree_count": 500
+    },
+    "SG09_GREY_MARKOV": {
+      "api_vs_tree_mean_max_abs_diff": 0.0,
+      "distinct_train_parents": 1850,
+      "forest_fingerprint_sha256": "A4FECFC4D7AB7ED259E6499F23C6EB5B911B63EEBA48263F16EC952C86447AEB",
+      "median_sha256": "05AD3F245AB062EDAAE578CA31D2ED58C478A16FA012835977E8AD5FCD559BAB",
+      "train_rows": 1850,
+      "tree_count": 500
+    },
+    "SG10_SEASONAL": {
+      "api_vs_tree_mean_max_abs_diff": 0.0,
+      "distinct_train_parents": 639,
+      "forest_fingerprint_sha256": "9B1C47605A756F74F2E32BA15E53729F2FF5CE60AE19484D6C73F876DA3CD914",
+      "median_sha256": "936762612B0E604FA78D3C6752FFEAF71859276B882EE931EB21D6860232FAFC",
+      "train_rows": 639,
+      "tree_count": 500
+    },
+    "SG11_SELF_MEMORY": {
+      "api_vs_tree_mean_max_abs_diff": 0.0,
+      "distinct_train_parents": 1839,
+      "forest_fingerprint_sha256": "7D35A3E8C7A8B6C416A58CB0AB9630408E21A6251566E710706A9F92B2198658",
+      "median_sha256": "8932B2A54ADFA485F05290564ADEF9BE25900ED66012EA2D33ED18B78BBCC2F7",
+      "train_rows": 1839,
+      "tree_count": 500
+    },
+    "SG12_FRAC_DYNAMIC": {
+      "api_vs_tree_mean_max_abs_diff": 0.0,
+      "distinct_train_parents": 1800,
+      "forest_fingerprint_sha256": "B77FECA4B18C4D7B5DD6F4275C92A59BFF19E67921232CCAD39725CF2AF77C4B",
+      "median_sha256": "37EDDC2E76FFFCECDF1F6D6369B2584A2FC242DACD07FD6266497FCD49930D38",
+      "train_rows": 1800,
+      "tree_count": 500
+    },
+    "SG13_FRAC_BERNOULLI": {
+      "api_vs_tree_mean_max_abs_diff": 0.0,
+      "distinct_train_parents": 1912,
+      "forest_fingerprint_sha256": "ECA9A5CBD9C3F75AF27E49278E0F89C2561D8FB93DEB0F9CBA26E2A90836B7CF",
+      "median_sha256": "DF214B2B2205B7C8D9C39B9C2BFEC0A907184452BE65F8CC162D16DE4D31B778",
+      "train_rows": 1912,
+      "tree_count": 500
+    }
+  },
+  "locktest_targets_opened": false,
+  "realbench3_targets_opened": false,
+  "schema": "AUTOGREY_V2_P7B_FULLTRAIN_SELECTOR_IDENTITY_R2",
+  "selector": "RF_D8_L001",
+  "train_parent_count": 2070
+}

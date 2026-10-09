@@ -1,0 +1,63 @@
+=== callr_3.8.0.tar.gz ===
+Package: callr
+Version: 3.8.0
+Depends: R (>= 3.4)
+Imports: otel (>= 0.2.0), processx (>= 3.6.1), R6, utils
+LinkingTo: <none>
+
+=== digest_0.6.39.tar.gz ===
+Package: digest
+Version: 0.6.39
+Depends: R (>= 3.3.0)
+Imports: utils
+LinkingTo: <none>
+
+=== forecast_9.0.2.tar.gz ===
+Package: forecast
+Version: 9.0.2
+Depends: R (>= 4.1.0)
+Imports: colorspace, fracdiff, generics (>= 0.1.2), ggplot2 (>= 3.4.0),
+graphics, lmtest, magrittr, nnet, parallel, Rcpp (>= 0.12.4),
+stats, timeDate, urca, withr, zoo
+LinkingTo: Rcpp (>= 0.12.4), RcppArmadillo (>= 0.2.35)
+
+=== jsonlite_2.0.0.tar.gz ===
+Package: jsonlite
+Version: 2.0.0
+Depends: methods
+Imports: <none>
+LinkingTo: <none>
+
+=== processx_3.9.0.tar.gz ===
+Package: processx
+Version: 3.9.0
+Depends: R (>= 3.4.0)
+Imports: ps (>= 1.9.3), R6, utils
+LinkingTo: <none>
+
+=== renv_1.2.3.tar.gz ===
+Package: renv
+Version: 1.2.3
+Depends: <none>
+Imports: utils
+LinkingTo: <none>
+
+=== testthat_3.3.2.tar.gz ===
+Package: testthat
+Version: 3.3.2
+Depends: R (>= 4.1.0)
+Imports: brio (>= 1.1.5), callr (>= 3.7.6), cli (>= 3.6.5), desc (>=
+1.4.3), evaluate (>= 1.0.4), jsonlite (>= 2.0.0), lifecycle (>=
+1.0.4), magrittr (>= 2.0.3), methods, pkgload (>= 1.4.0),
+praise (>= 1.0.0), processx (>= 3.8.6), ps (>= 1.9.1), R6 (>=
+2.6.1), rlang (>= 1.1.6), utils, waldo (>= 0.6.2), withr (>=
+3.0.2)
+LinkingTo: <none>
+
+=== withr_3.0.3.tar.gz ===
+Package: withr
+Version: 3.0.3
+Depends: R (>= 3.6.0)
+Imports: graphics, grDevices
+LinkingTo: <none>
+

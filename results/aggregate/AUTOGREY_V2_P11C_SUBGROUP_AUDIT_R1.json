@@ -1,0 +1,69 @@
+{
+  "bootstrap_B": 4000,
+  "descriptive_only_subgroup_n": 0,
+  "dimension_order": [
+    "horizon",
+    "source",
+    "source_x_h"
+  ],
+  "holm_family_labels": {
+    "A": "selection_mean_regret",
+    "B": "practical_mean_mase",
+    "C1": "selection_cvar90_regret",
+    "C2": "practical_cvar90_mase"
+  },
+  "holm_family_order": [
+    "A",
+    "C1",
+    "B",
+    "C2"
+  ],
+  "holm_fwer": 0.05,
+  "inferential_min_n": 30,
+  "inferential_subgroup_n": 23,
+  "labels_by_dimension": {
+    "horizon": [
+      "1",
+      "3",
+      "5"
+    ],
+    "source": [
+      "RB3_CARPARTS_MONTHLY",
+      "RB3_ELECTRICITY_HOURLY",
+      "RB3_HOSPITAL_MONTHLY",
+      "RB3_TRAFFIC_HOURLY",
+      "RB3_WEATHER_DAILY"
+    ],
+    "source_x_h": [
+      "RB3_CARPARTS_MONTHLY|1",
+      "RB3_CARPARTS_MONTHLY|3",
+      "RB3_CARPARTS_MONTHLY|5",
+      "RB3_ELECTRICITY_HOURLY|1",
+      "RB3_ELECTRICITY_HOURLY|3",
+      "RB3_ELECTRICITY_HOURLY|5",
+      "RB3_HOSPITAL_MONTHLY|1",
+      "RB3_HOSPITAL_MONTHLY|3",
+      "RB3_HOSPITAL_MONTHLY|5",
+      "RB3_TRAFFIC_HOURLY|1",
+      "RB3_TRAFFIC_HOURLY|3",
+      "RB3_TRAFFIC_HOURLY|5",
+      "RB3_WEATHER_DAILY|1",
+      "RB3_WEATHER_DAILY|3",
+      "RB3_WEATHER_DAILY|5"
+    ]
+  },
+  "labels_processed_lexicographically": true,
+  "may_alter_overall_confirmatory_classification": false,
+  "n_below_threshold_descriptive_only": true,
+  "one_sided_p_formula": "(1 + count(diff >= 0)) / (B + 1)",
+  "rng_bit_generator": "PCG64",
+  "rng_state_after_sha256": "0208F2978524FB0FDA91D21804DF39E8D51A4A389B252878817022F1333A7C3F",
+  "rng_state_before_sha256": "5FD22183AC60A0C7B7C66FF0FC11EB89AEA2FBC270D918A74FA8E8B1728D8670",
+  "rng_stream_policy": "CONTINUE_CALLER_SUPPLIED_PCG64_AFTER_OVERALL_BOOTSTRAP",
+  "same_sampled_indices_for_all_four_stats": true,
+  "schema": "AUTOGREY_V2_P11C_SUBGROUP_AUDIT_R1",
+  "scientific_lock_changed": false,
+  "subgroup_n": 23,
+  "subgroup_resample_index_sha256": "B7D1CEF008D9AA501CCB305E24F867D364C82F8ED6E8A3D0A9B08C6A8FB5C70A",
+  "subgroup_role": "SECONDARY"
+}

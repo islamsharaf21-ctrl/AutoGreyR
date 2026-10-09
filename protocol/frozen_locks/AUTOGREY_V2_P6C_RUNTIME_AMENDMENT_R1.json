@@ -1,0 +1,63 @@
+{
+  "checkpoint": "V2-P6C_PRE_FIRST_FIT_RUNTIME_RECOVERY",
+  "date": "2026-09-21",
+  "next_after_runtime_freeze": "Create P6-C R2 harness locked to this amendment and the frozen runtime manifest; then execute OOF RUN1.",
+  "protected_state": {
+    "cal_targets_opened": false,
+    "locktest_targets_opened": false,
+    "p4_changed": false,
+    "p5_changed": false,
+    "p6a_scientific_search_contract_changed": false,
+    "realbench3_targets_opened": false
+  },
+  "reason": "The P6-A lock required Python 3.13.5, NumPy 2.3.5 and scikit-learn 1.8.0, but the previously reused P4 Python environment contains NumPy only and has no pip/sklearn. Because no P6 selector fit has occurred, runtime repair may be frozen before first fit without changing the scientific candidate space, CV, metrics, gates, or selection hierarchy.",
+  "required_runtime_freeze_outputs_before_first_fit": [
+    "P6 Python executable and version",
+    "NumPy version",
+    "scikit-learn version",
+    "SciPy version",
+    "joblib version",
+    "threadpoolctl version",
+    "pip freeze",
+    "SHA-256 for every wheel in the P6 wheelhouse"
+  ],
+  "runtime_policy": {
+    "do_not_modify_p4_python_environment": true,
+    "network_after_freeze": "NOT_REQUIRED_FOR_P6_EXECUTION",
+    "new_dedicated_p6_environment": "/home/<user>/.autogrey_p6_selector/venv-py3135",
+    "new_p6_python": "/home/<user>/.autogrey_p6_selector/venv-py3135/bin/python",
+    "numpy_required": "2.3.5",
+    "p4_python": "/home/<user>/.autogrey_p4_userlocal/venv-py3135/bin/python",
+    "python_required": "3.13.5",
+    "scikit_learn_required": "1.8.0",
+    "thread_limits": {
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "VECLIB_MAXIMUM_THREADS": "1"
+    },
+    "wheel_policy": "Before first selector fit, build an isolated P6 venv from the frozen Python 3.13.5 interpreter; bootstrap pip only inside that new environment; download binary wheels into a dedicated wheelhouse with NumPy==2.3.5 and scikit-learn==1.8.0 explicitly pinned; install only from that wheelhouse; record wheel SHA-256 values and exact installed package versions."
+  },
+  "status": "PRE_FIRST_FIT_AMENDMENT",
+  "trigger": {
+    "observed_error": "ModuleNotFoundError: No module named 'sklearn'",
+    "p6c_run1_harness_sha256": "99044ACC6AC13049A669805CFA2011DB7CFBAEF9938F9BE3492B4612770B580D",
+    "scientific_result_seen": false,
+    "selector_fit_started": false
+  },
+  "unchanged_science": [
+    "frozen 59-coordinate P5 schema",
+    "12 pre-locked P6 selector candidates",
+    "5-fold parent-grouped OOF protocol",
+    "fold-local median imputation",
+    "GLOBAL_RANK_V3_13G comparator",
+    "coverage floor 0.995",
+    "J=max(rho_mean,rho_tail)",
+    "near-set threshold +0.01",
+    "secondary minimum rho_mean",
+    "frozen simplicity tie order",
+    "train gate rho_mean<1 and rho_tail<=1"
+  ],
+  "version": "AUTOGREY_V2_P6C_RUNTIME_AMENDMENT_R1"
+}

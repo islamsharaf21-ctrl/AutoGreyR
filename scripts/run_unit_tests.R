@@ -1,5 +1,0 @@
-options(warn = 1)
-if (!requireNamespace("testthat", quietly = TRUE)) stop("testthat is required", call. = FALSE)
-if (!requireNamespace("jsonlite", quietly = TRUE) || !requireNamespace("digest", quietly = TRUE)) stop("jsonlite and digest are required", call. = FALSE)
-res <- testthat::test_dir("tests/testthat", reporter = "summary", stop_on_failure = TRUE, stop_on_warning = FALSE)
-cat("AUTOGREY_UNIT_TESTS: PASS\n")

@@ -1,0 +1,82 @@
+{
+  "claim_discipline": {
+    "allowed_claim_text": "No full-confirmation claim is authorized; preserve and report the frozen partial or negative result.",
+    "equivalence_to_ng10_claim_allowed": false,
+    "every_non_grey_superiority_claim_allowed": false,
+    "full_confirmation_claim_allowed": false,
+    "ng10_superiority_from_noninferiority_allowed": false,
+    "universal_superiority_claim_allowed": false,
+    "unqualified_generalization_claim_allowed": false
+  },
+  "configuration_change_allowed": false,
+  "context_two_sided95": {
+    "context_only": true,
+    "lower": {
+      "A": -0.24907837961572457,
+      "B": 0.09844423591602781,
+      "C1": -1.5945185364491554,
+      "C2": 0.40948176187471597
+    },
+    "upper": {
+      "A": 29942253.35297472,
+      "B": 29942253.716118462,
+      "C1": 299297253.08329004,
+      "C2": 299297255.17203933
+    }
+  },
+  "fixed_sequence": [
+    "A",
+    "B",
+    "C"
+  ],
+  "gate_a_claim_may_stand": false,
+  "gate_status": {
+    "A": {
+      "confirmatory": "FAIL",
+      "numerical": "FAIL"
+    },
+    "B": {
+      "confirmatory": "DESCRIPTIVE_NONCONFIRMATORY",
+      "numerical": "FAIL"
+    },
+    "C": {
+      "confirmatory": "DESCRIPTIVE_NONCONFIRMATORY",
+      "numerical": "FAIL"
+    },
+    "C1": {
+      "confirmatory": "DESCRIPTIVE_NONCONFIRMATORY",
+      "numerical": "FAIL"
+    },
+    "C2": {
+      "confirmatory": "DESCRIPTIVE_NONCONFIRMATORY",
+      "numerical": "FAIL"
+    }
+  },
+  "negative_or_partial_result_preserved": true,
+  "one_sided_upper95": {
+    "A": 28928655.48629414,
+    "B": 28928655.842458792,
+    "C1": 289165515.37937695,
+    "C2": 289165517.456237
+  },
+  "overall_status": "FAIL",
+  "point_estimates": {
+    "A": 10318616.913217567,
+    "B": 10318617.265261156,
+    "C1": 103142995.90591535,
+    "C2": 103142997.93507624
+  },
+  "quantile": {
+    "method": "linear",
+    "one_sided_q": 0.95
+  },
+  "schema": "AUTOGREY_V2_P11C_OVERALL_RESULTS_R1",
+  "scientific_lock_changed": false,
+  "strict_gate_inequalities": true,
+  "thresholds": {
+    "A": 0.0,
+    "B": 0.05,
+    "C1": 0.0,
+    "C2": 0.05
+  }
+}

@@ -1,0 +1,59 @@
+=== INSTALLED PACKAGE COUNT ===
+29 
+
+=== INSTALLED PACKAGES ===
+             Package        Version   
+brio         "brio"         "1.1.5"   
+callr        "callr"        "3.8.0"   
+colorspace   "colorspace"   "2.1-2"   
+cpp11        "cpp11"        "0.5.3"   
+crayon       "crayon"       "1.5.3"   
+diffobj      "diffobj"      "0.3.6"   
+digest       "digest"       "0.6.39"  
+evaluate     "evaluate"     "1.0.5"   
+farver       "farver"       "2.1.2"   
+fracdiff     "fracdiff"     "1.5-3"   
+fs           "fs"           "1.6.7"   
+generics     "generics"     "0.1.4"   
+glue         "glue"         "1.8.0"   
+jsonlite     "jsonlite"     "2.0.0"   
+labeling     "labeling"     "0.4.3"   
+lmtest       "lmtest"       "0.9-40"  
+otel         "otel"         "0.2.0"   
+praise       "praise"       "1.0.0"   
+processx     "processx"     "3.9.0"   
+ps           "ps"           "1.9.3"   
+R6           "R6"           "2.6.1"   
+RColorBrewer "RColorBrewer" "1.1-3"   
+renv         "renv"         "1.2.3"   
+rprojroot    "rprojroot"    "2.1.1"   
+timeDate     "timeDate"     "4052.112"
+urca         "urca"         "1.3-4"   
+viridisLite  "viridisLite"  "0.4.3"   
+withr        "withr"        "3.0.3"   
+zoo          "zoo"          "1.8-15"  
+
+=== EXACT PIN CHECK ===
+  package expected installed  pass
+ forecast    9.0.2 <MISSING> FALSE
+     renv    1.2.3     1.2.3  TRUE
+ jsonlite    2.0.0     2.0.0  TRUE
+   digest   0.6.39    0.6.39  TRUE
+    callr    3.8.0     3.8.0  TRUE
+ processx    3.9.0     3.9.0  TRUE
+    withr    3.0.3     3.0.3  TRUE
+ testthat    3.3.2 <MISSING> FALSE
+       ps    1.9.3     1.9.3  TRUE
+
+TOTAL: 9 
+PASS : 7 
+FAIL : 2 
+
+=== FAILURES ===
+  package expected installed  pass
+ forecast    9.0.2 <MISSING> FALSE
+ testthat    3.3.2 <MISSING> FALSE
+
+=== BLAS/LAPACK ===
+[1] "/opt/autogrey-openblas-0.3.30-lp64-skylakex/lib/libopenblas_skylakex-r0.3.30.so"
+[1] "/opt/autogrey-openblas-0.3.30-lp64-skylakex/lib/libopenblas_skylakex-r0.3.30.so"

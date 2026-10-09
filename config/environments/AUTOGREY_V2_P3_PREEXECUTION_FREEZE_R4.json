@@ -1,0 +1,68 @@
+{
+  "protocol": "AUTOGREY_V2_P3_PREEXECUTION_FREEZE_R4",
+  "date": "2026-09-16",
+  "status": "IMPLEMENTATION_FROZEN_R4__CANONICAL_RUNTIME_VALIDATION_REQUIRED",
+  "canonical_boundary": {
+    "AutoGreyR_v1_0_0_immutable": true,
+    "P0_complete": true,
+    "P1_complete": true,
+    "P2_complete": true,
+    "P3_current": true,
+    "P4_authorized": false
+  },
+  "REALBENCH3": {
+    "clean_parents": 4781,
+    "target_numeric_parsed_in_P3": false,
+    "target_scored_in_P3": false,
+    "protected_forecasts_executed_in_P3": false,
+    "raw_bundle_read_by_harness": false
+  },
+  "primary_practical_comparator": {
+    "id": "NG10_STATCOMB3",
+    "components": ["NG07_THETA", "NG08_ETS_AUTO", "NG09_ARIMA_AUTO"],
+    "weights": "equal among successful components",
+    "hidden_refits": false,
+    "degradation_policy": "P2_FROZEN"
+  },
+  "environment": {
+    "R": "4.6.1",
+    "forecast": "9.0.2",
+    "threads_per_fit": 1,
+    "RNGkind": ["L'Ecuyer-CMRG", "Inversion", "Rejection"],
+    "seed": 46073,
+    "canonical_OS": "Linux_x86_64_glibc",
+    "canonical_BLAS": "OpenBLAS_0.3.30_ILP64"
+  },
+  "automatic_search": {
+    "ETS": "ZZZ_AICc_likelihood_bounds_both_restrict_true_no_multiplicative_trend",
+    "ARIMA_stepwise": false,
+    "ARIMA_approximation_rule": "n_D > 150 || M > 12",
+    "ARIMA_max_order": 5,
+    "ARIMA_unit_root_test": "kpss",
+    "ARIMA_seasonal_test": "seas",
+    "ARIMA_information_criterion": "aicc"
+  },
+  "budgets_seconds": {
+    "NG01_NG03_each": 5,
+    "NG04_NG06_each": 30,
+    "NG07_NG09_each": 120,
+    "NG10_deployment_envelope": 360,
+    "AutoGrey_v2_future_deployment_envelope": 360
+  },
+  "validation": {
+    "static_audit": "PASS_9_OF_9",
+    "runtime_audit": "PENDING_CANONICAL_R_4_6_1_EXECUTION",
+    "runtime_data": "INCLUDED_TOY_DEVELOPMENT_SERIES_ONLY",
+    "closure_rule": "P3 cannot close until runtime PASS and full installed dependency inventory hash are attached."
+  },
+  "engineering_correction": {
+    "from": "R3",
+    "to": "R4",
+    "trigger": "R3 Windows Run 1 classified NG01 and NG03 as TIMEOUT_BUDGET although both processes completed successfully; Run 2 had no method failures.",
+    "correction": "Retain total worker and supervisor timing for audit, but enforce unchanged 5/30/120-second scientific budgets only against elapsed_method_seconds measured immediately around fit_forecast().",
+    "scientific_change": false,
+    "REALBENCH3_access": false
+  },
+  "next_action": "Run Rscript --vanilla AUTOGREY_V2_P3_FREEZE_R4/harness/run_toy_validation.R under the locked environment; return the generated validation JSON files.",
+  "next_checkpoint": "P4_BLOCKED_PENDING_P3_CLOSURE_AND_EXPLICIT_USER_APPROVAL"
+}

@@ -1,0 +1,234 @@
+{
+  "canonical_identities": {
+    "p8_final_manifest": {
+      "filename": "AUTOGREY_V2_P8_FINAL_MANIFEST_R1.sha256",
+      "sha256": "7A49C909E448006EF1BAC6920D1A6F0D04DEDCD17CCE5E4862E7D44CD6109C07"
+    },
+    "p8_final_package": {
+      "filename": "AUTOGREY_V2_P8_FINAL_FREEZE_R1.zip",
+      "sha256": "3E15522FECC3DCF0B5A2E1BC026BFA34164C60982BEF86F09A19FA37CB8F2D86",
+      "size_bytes": 700794
+    },
+    "p8a_lock": {
+      "filename": "AUTOGREY_V2_P8A_ROBUST_OBJECTIVES_SUBGROUP_MULTIPLICITY_PREEXECUTION_LOCK_R1.json",
+      "sha256": "AC5802EE5452FA5624F3FFF746F2F75A8C6E602A50C7411F3CAE47BF80108E4C"
+    },
+    "p8b_r3": {
+      "assertions_sha256": "270404C0A566A1631CC08CA28DE51B159241B84BC991D69093D155F1667AD8DA",
+      "autogrey_decisions_sha256": "C74FB0BCD212E8951619B3CD455E821ADE5B1E9F5A4677C7DA9F264D6EA127EB",
+      "evidence_sha256": "46D26B943C3953B0396E1B47B3869591052A880D5FB623DF10E0795D0819F61D",
+      "global_decisions_sha256": "6E3FBAA41C9309159CA8B511479DAD40BDFDC584CA3BECBEB0423570F01C85C4",
+      "grey_action_forecasts_sha256": "063A672EB43568758E68625241402DCC3074074451BDB83CBF39A01BC779DBDA",
+      "manifest_sha256": "F9047F4C1587757A13A8602069F697536FD2C502ECC8E7E3E7B46D6546DCB64D",
+      "ng10_forecasts_sha256": "989E0118EB2899BDF1969342FF4A25226E171A0A4DE6CAC5AC4FADF00E6B50F0",
+      "p3_input_sha256": "5F686DD1FAA123F705CC0573E4847CF63813C9DE0802380AB073BC380F31F63C",
+      "p3_raw_sha256": "7B66FCE3DC2AA3AD1461F7572911260E0CDB5EE9D6033AD5DF9FDA3571ABEFC7",
+      "selector_identity_sha256": "36A4A0FC6D3AEB62082866DDE3780D3C5D5BF7D3F1E72F0D0E8EA45B69118D0F",
+      "subgroup_ledger_sha256": "B0F05EF574C3562E38DDF50C128EAA8E2A9605A2EE240A4BA5CCD948A4D7A979",
+      "technical_refusals_sha256": "F2CD0797331191BC9956EC12EE21C127426B0889CEF6DDE5A2AB7A8C9066725D"
+    },
+    "p8c": {
+      "assertions_sha256": "FAF09C6FDB588EDB44E13937C55B477B801120FC714326BFD0B24632129D9878",
+      "evidence_sha256": "F7D18DF9725892295AF529F425AD2B54F4E3BE1FAB5E0AD0740D6A5D104947B1",
+      "harness_sha256": "A577924BC6865B7EF20BBFE566E98EE45CC627D875E86885591922BD9725B4B8",
+      "holm_sha256": "21B1923023B81180B1C5010A5AE6230791F57C9A9E799791A8884DECB8EF7E96",
+      "manifest_sha256": "B53AA0DD60F137A42990FCE547853AEAE0834354C8C9950014651BBD00973E59",
+      "overall_sha256": "22B2EA52E6FD208F1E5687D95D7DE447946F5ADD033E342FFE3A38A8E87D97CE",
+      "scores_sha256": "6ACF20A8F58E1200663DEA487FCBB286347DF70D24AD351FC3782134DD00D8DB",
+      "subgroups_sha256": "5E39EF10C2B7A227D9086CD265FC1F0ACAF73DA132019CFB7AA1E567FDDC4FFB"
+    },
+    "p8d_verification": {
+      "filename": "AUTOGREY_V2_P8D_DETERMINISTIC_REPEAT_AND_FINAL_FREEZE_R1.txt",
+      "sha256": "C53D5C11D5597A1954F8300383EEEB2D9DBA87F233A21C6C956B66FF54A424FF"
+    }
+  },
+  "checkpoint": "V2-P9A_RED_TEAM_PREEXECUTION_LOCK",
+  "created_date": "2026-09-21",
+  "entry_state": {
+    "locktest_status": "OPENED_ONCE_IN_P8C_AND_FROZEN",
+    "p8_status": "PASS_CLOSED",
+    "p8d_byte_exact_repeat": true,
+    "p8d_repeat_a_exit_code": 0,
+    "p8d_repeat_b_exit_code": 0,
+    "realbench3_status": "UNOPENED"
+  },
+  "execution_rules": {
+    "all_mandatory_attacks_pass": "PASS",
+    "canonical_inputs_read_only": true,
+    "failed_p8b_r1_r2_evidence_must_remain_preserved": true,
+    "locktest_reuse_role": "audit replay only; not a new blind test",
+    "no_confidence_policy_resurrection": true,
+    "no_new_model_or_comparator": true,
+    "no_subgroup_creation_or_deletion": true,
+    "no_threshold_relaxation_after_result": true,
+    "realbench3_target_opening_forbidden": true,
+    "runtime_or_harness_failure_before_an_attack_conclusion": "INCONCLUSIVE_HARNESS_ERROR",
+    "scientific_or_identity_mismatch": "FAIL",
+    "tamper_tests_must_use_isolated_copies_only": true
+  },
+  "frozen_scientific_contract": {
+    "bootstrap": {
+      "generator": "numpy.random.default_rng / PCG64",
+      "overall_ci": "two-sided 95% percentile interval",
+      "paired": true,
+      "replicates": 4000,
+      "secondary_subgroup_one_sided_p": "(1 + count(bootstrap_difference >= 0)) / (B + 1)",
+      "seed": 1068199533,
+      "unit": "parent"
+    },
+    "canonical_selector": "FULL_SELECTOR_RF_D8_L001",
+    "cvar90_definition": "mean of worst ceil(0.10*N) parent-level losses/regrets",
+    "overall_metrics": [
+      "mean",
+      "CVaR90"
+    ],
+    "practical_comparator": "NG10_STATCOMB3",
+    "practical_estimand": "MASE of deployed forecast",
+    "secondary_descriptive_metric": "median",
+    "selection_comparator": "GLOBAL_RANK_V3_13G_FULL_TRAIN",
+    "selection_estimand": "eligible regret relative to same-parent best selectable grey action",
+    "subgroups": {
+      "familywise_alpha": 0.05,
+      "minimum_n_for_inference": 30,
+      "multiplicity": "Holm-Bonferroni step-down within four separate secondary families",
+      "prespecified_dimensions": [
+        "horizon",
+        "source_class",
+        "source_class_x_horizon"
+      ]
+    }
+  },
+  "p9_closure_rule": {
+    "mandatory_attack_ids": [
+      "RT01_ARCHIVE_MANIFEST_INTEGRITY",
+      "RT02_CANONICAL_LINEAGE_HASH_CHAIN",
+      "RT03_CHRONOLOGY_AND_TARGET_BOUNDARY",
+      "RT04_DECISION_FORECAST_LINKAGE",
+      "RT05_PARENT_SCORE_RECOMPUTATION",
+      "RT06_OVERALL_METRIC_RECOMPUTATION",
+      "RT07_BOOTSTRAP_REPLAY",
+      "RT08_SUBGROUP_AND_HOLM_RECOMPUTATION",
+      "RT09_REFUSAL_COVERAGE_ACCOUNTING",
+      "RT10_TAMPER_NEGATIVE_CONTROLS",
+      "RT11_NO_RETUNING_NO_REALBENCH3"
+    ],
+    "next_if_fail": "freeze failure evidence and adjudicate without retuning; P10 blocked",
+    "next_if_inconclusive": "repair audit implementation only under this same frozen P9-A lock; P10 blocked",
+    "next_if_pass": "V2-P10_PREREGISTRATION_AND_PRETARGET_EXTERNAL_CONFIRMATION_LOCK",
+    "pass_requires": [
+      "all mandatory attacks PASS",
+      "zero unresolved CRITICAL or HIGH findings",
+      "canonical P8 inputs unchanged",
+      "REALBENCH3 targets unopened"
+    ]
+  },
+  "purpose": "Adversarially audit the frozen P8 evidence and chronology without changing the scientific protocol, retuning any component, or opening REALBENCH3.",
+  "red_team_attack_registry": [
+    {
+      "class": "provenance",
+      "id": "RT01_ARCHIVE_MANIFEST_INTEGRITY",
+      "pass": "ZIP identity exact; every manifest entry exact; no unresolved canonical-file mismatch.",
+      "severity": "CRITICAL",
+      "test": "Verify P8 final ZIP SHA-256 and size; extract to an isolated directory; verify every manifest entry and reject unexpected/missing canonical entries."
+    },
+    {
+      "class": "provenance",
+      "id": "RT02_CANONICAL_LINEAGE_HASH_CHAIN",
+      "pass": "All frozen SHA-256 identities match exactly.",
+      "severity": "CRITICAL",
+      "test": "Cross-check P8-A, P8-B R3, P8-C and P8-D identities against the final package and frozen external identities."
+    },
+    {
+      "class": "leakage",
+      "id": "RT03_CHRONOLOGY_AND_TARGET_BOUNDARY",
+      "pass": "No target-dependent decision path found; chronology consistent; REALBENCH3 access absent.",
+      "severity": "CRITICAL",
+      "test": "Audit P8-B target-free evidence/harness semantics and P8-C opening evidence; verify P8-B decisions/forecasts were committed before numeric LOCKTEST target parsing and REALBENCH3 remained unopened."
+    },
+    {
+      "class": "identity",
+      "id": "RT04_DECISION_FORECAST_LINKAGE",
+      "pass": "275/275 AutoGrey, 275/275 GLOBAL, 275/275 NG10 linkages exact; zero unexplained forecast substitution.",
+      "severity": "CRITICAL",
+      "test": "Independently confirm every frozen AutoGrey/GLOBAL decision points to a valid frozen grey forecast and every NG10 parent forecast matches its frozen forecast hash/status."
+    },
+    {
+      "class": "numerical",
+      "id": "RT05_PARENT_SCORE_RECOMPUTATION",
+      "pass": "All 275 parent rows reconcile within tolerance; zero missing/extra parents; no epsilon denominator.",
+      "severity": "CRITICAL",
+      "test": "Independently recompute MASE scale, all selectable grey losses, oracle eligible loss, AutoGrey regret, GLOBAL regret and NG10 MASE from development data, frozen forecasts and opened LOCKTEST targets.",
+      "tolerance": {
+        "absolute": 1e-12,
+        "relative": 1e-12
+      }
+    },
+    {
+      "class": "numerical",
+      "id": "RT06_OVERALL_METRIC_RECOMPUTATION",
+      "pass": "All frozen P8-C overall point estimates reconcile within tolerance.",
+      "severity": "CRITICAL",
+      "test": "Independently recompute overall mean/CVaR90/median quantities and AutoGrey-minus-comparator contrasts.",
+      "tolerance": {
+        "absolute": 1e-12,
+        "relative": 1e-12
+      }
+    },
+    {
+      "class": "inference",
+      "id": "RT07_BOOTSTRAP_REPLAY",
+      "pass": "Overall CIs and all inferential subgroup raw p-values reconcile within tolerance.",
+      "severity": "CRITICAL",
+      "test": "Recreate the frozen PCG64 seed-1068199533, B=4000 paired bootstrap and compare overall 95% percentile intervals plus subgroup one-sided bootstrap p-values.",
+      "tolerance": {
+        "absolute": 1e-12,
+        "relative": 1e-12
+      }
+    },
+    {
+      "class": "inference",
+      "id": "RT08_SUBGROUP_AND_HOLM_RECOMPUTATION",
+      "pass": "Counts, eligibility, family sizes, raw p-values, Holm adjusted p-values and reject flags reconcile.",
+      "severity": "CRITICAL",
+      "test": "Rebuild prespecified subgroup membership from frozen metadata, enforce n>=30, independently recompute subgroup statistics and Holm-Bonferroni within the four frozen families.",
+      "tolerance": {
+        "absolute": 1e-12,
+        "relative": 1e-12
+      }
+    },
+    {
+      "class": "accounting",
+      "id": "RT09_REFUSAL_COVERAGE_ACCOUNTING",
+      "pass": "Population/accounting identities exact; no silent deletion or fallback substitution.",
+      "severity": "CRITICAL",
+      "test": "Verify same-parent paired population, 275 actionable parents, NG10 OK_3OF3 for all 275, technical refusal count zero, and no one-sided parent deletion."
+    },
+    {
+      "class": "gate_strength",
+      "id": "RT10_TAMPER_NEGATIVE_CONTROLS",
+      "pass": "Both deliberate corruptions are rejected; canonical files remain byte-unchanged.",
+      "severity": "HIGH",
+      "test": "On isolated copies only, mutate one byte in a canonical artifact and separately alter one decision/forecast identity; verify integrity/linkage gates detect both mutations."
+    },
+    {
+      "class": "governance",
+      "id": "RT11_NO_RETUNING_NO_REALBENCH3",
+      "pass": "No scientific parameter/model/subgroup/comparator changes; REALBENCH3 target access count zero.",
+      "severity": "CRITICAL",
+      "test": "Verify P9 execution performs no model fitting/retuning that changes the frozen policy and does not parse/open REALBENCH3 targets."
+    }
+  ],
+  "required_p9b_outputs": [
+    "red-team attack ledger with PASS/FAIL/INCONCLUSIVE per attack",
+    "independent parent-score recomputation ledger",
+    "overall metric/bootstrap recomputation evidence",
+    "subgroup/Holm recomputation evidence",
+    "refusal/population accounting evidence",
+    "tamper-negative-control evidence",
+    "assertions",
+    "manifest",
+    "human-readable evidence summary"
+  ],
+  "status": "PREEXECUTION_LOCK",
+  "version": "AUTOGREY_V2_P9A_RED_TEAM_PREEXECUTION_LOCK_R1"
+}

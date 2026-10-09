@@ -1,0 +1,173 @@
+{
+  "bootstrap": {
+    "difference_orientation": "AutoGrey minus comparator; negative favors AutoGrey",
+    "generator": "numpy.random.default_rng / PCG64",
+    "holm_adjustment_uses": "the frozen one-sided bootstrap p-values within each secondary family",
+    "one_sided_bootstrap_p": "(1 + count(bootstrap_difference >= 0)) / (B + 1) for improvement-oriented secondary subgroup tests",
+    "overall": "sample N parent indices with replacement",
+    "paired_resampling": true,
+    "percentile_ci": "two-sided 95% percentile interval for development evidence",
+    "replicates": 4000,
+    "seed": 1068199533,
+    "seed_source_string": "AUTOGREY_V2_P8_ROBUST_OBJECTIVES_SUBGROUP_MULTIPLICITY",
+    "statistics": [
+      "mean difference",
+      "CVaR90 difference"
+    ],
+    "subgroup": "sample within the fixed subgroup parent set with replacement",
+    "unit": "parent"
+  },
+  "boundary": {
+    "cal_targets_already_opened_in_p7": true,
+    "locktest_one_time_open_allowed_only_at_p8c_after_target_freeze": true,
+    "locktest_targets_opened_at_p8a": false,
+    "locktest_targets_opened_at_p8b": false,
+    "no_confidence_policy_resurrection": true,
+    "no_feature_retuning_after_p7": true,
+    "no_selector_retuning_after_p7": true,
+    "p4_through_p7_immutable": true,
+    "realbench3_forbidden_through_p10": true,
+    "realbench3_targets_opened": false,
+    "report_only_p7_0p95_sensitivity_cannot_be_adopted": true
+  },
+  "canonical_policy": {
+    "deployment": "full-coverage grey selector; no confidence abstention",
+    "feature_schema": "frozen P5 59-coordinate schema",
+    "grey_action_universe": "frozen P4 post-collision SG01-SG13",
+    "selector": "RF_D8_L001",
+    "selector_target": "log1p(eligible regret)",
+    "selector_training": "full actionable V2_TRAIN only",
+    "technical_refusal_rule": "preserve and report; never silently replace or delete"
+  },
+  "checkpoint": "V2-P8A_ROBUST_OBJECTIVES_SUBGROUP_MULTIPLICITY_PREEXECUTION_LOCK",
+  "comparators": {
+    "practical_forecasting_primary": {
+      "definition": "equal-weight Theta + auto ETS + auto ARIMA with frozen degradation/fallback",
+      "implementation_source": "frozen P2/P3 benchmark suite; exact implementation/runtime hashes must be verified in P8-B before LOCKTEST forecasting",
+      "name": "NG10_STATCOMB3",
+      "post_target_switching_forbidden": true,
+      "role": "frozen strong non-grey practical comparator"
+    },
+    "selection_quality_primary": {
+      "choice": "first ranked group in parent's final selectable action set",
+      "minimum_distinct_train_parents_per_group": 30,
+      "name": "GLOBAL_RANK_V3_13G_FULL_TRAIN",
+      "ranking_statistic": "action-row-weighted mean eligible regret by group",
+      "role": "feature-free grey-family selection comparator",
+      "tie_break": "lower frozen SG index",
+      "training": "all actionable V2_TRAIN labels only"
+    }
+  },
+  "created_date": "2026-09-21",
+  "estimand_separation": {
+    "do_not_conflate": true,
+    "practical_forecast_accuracy": "frozen MASE on each method's deployed forecast; compare AutoGrey selected grey forecast vs NG10_STATCOMB3",
+    "selection_quality": "eligible regret relative to same-parent best selectable grey action; compare AutoGrey vs GLOBAL_RANK_V3_13G"
+  },
+  "forbidden_after_locktest_opening": [
+    "change RF_D8_L001 selector or its hyperparameters",
+    "adopt the P7 0.95 sensitivity confidence policy",
+    "change the 59-coordinate feature schema or preprocessing",
+    "change P4 action/collision ownership",
+    "change GLOBAL_RANK_V3_13G definition",
+    "change NG10_STATCOMB3 identity or implementation",
+    "create/delete subgroups because of observed performance",
+    "change CVaR90 definition",
+    "switch multiplicity method",
+    "open REALBENCH3 before P11"
+  ],
+  "multiplicity": {
+    "additional_non-grey_methods": "report-only exploratory or MCS/MCB; cannot replace NG10 as primary comparator after target opening",
+    "families": [
+      "selection-quality mean-regret AutoGrey vs GLOBAL across eligible subgroups",
+      "selection-quality CVaR90-regret AutoGrey vs GLOBAL across eligible subgroups",
+      "practical mean-MASE AutoGrey vs NG10 across eligible subgroups",
+      "practical CVaR90-MASE AutoGrey vs NG10 across eligible subgroups"
+    ],
+    "familywise_alpha": 0.05,
+    "overall_primary_comparisons": "kept separate from secondary subgroup families",
+    "secondary_subgroup_method": "Holm-Bonferroni step-down FWER control"
+  },
+  "next_checkpoint_after_identity": "V2-P8B_TARGET_FREE_LOCKTEST_DECISION_FORECAST_FREEZE",
+  "overall_robust_metrics": {
+    "cvar90_definition": "mean of worst ceil(0.10*N) parent-level losses/regrets",
+    "paired_population_rule": "comparator contrasts use exactly the same actionable parent IDs for both policies",
+    "practical_forecast_accuracy": [
+      "mean MASE",
+      "CVaR90 MASE",
+      "median MASE (secondary descriptive)"
+    ],
+    "refusals": "report counts and identities separately; never delete a parent from only one side post hoc",
+    "selection_quality": [
+      "mean eligible regret",
+      "CVaR90 eligible regret",
+      "median eligible regret (secondary descriptive)"
+    ]
+  },
+  "p10_handoff_constraints": {
+    "may_be_frozen_in_p10_using_only_pre-REALBENCH3_evidence": [
+      "exact confirmatory alpha allocation across Gate A/B/C",
+      "exact external noninferiority margin if used",
+      "exact hierarchical testing sequence",
+      "final claim wording"
+    ],
+    "must_carry_forward_unchanged": [
+      "FULL_SELECTOR_RF_D8_L001",
+      "GLOBAL_RANK_V3_13G_FULL_TRAIN",
+      "NG10_STATCOMB3",
+      "overall mean and CVaR90 estimand definitions",
+      "prespecified subgroup dimensions",
+      "Holm-Bonferroni secondary subgroup correction"
+    ]
+  },
+  "p8_locktest_chronology": {
+    "P8A": "freeze objectives, subgroup definitions, multiplicity and inference mechanics; no LOCKTEST outcomes",
+    "P8B": "create/hash all target-free LOCKTEST AutoGrey decisions, GLOBAL decisions, NG10 forecasts, action sets and refusal states; no numeric LOCKTEST target parse",
+    "P8C": "one-time numeric LOCKTEST target opening; score only frozen P8B decisions/forecasts; no retuning",
+    "P8D": "deterministic repeat and final P8 freeze",
+    "after_P8C": "no selector, feature, action-universe, confidence, comparator or subgroup-policy changes"
+  },
+  "p8c_development_interpretation": {
+    "locktest_role": "internal development robustness evidence only",
+    "negative_results_preserved": true,
+    "p8c_can_inform_p10": "only the final inferential margins/alpha hierarchy and claim scope, not model/comparator/subgroup definitions",
+    "p8c_cannot_trigger_retuning": true,
+    "performance_result_changes_canonical_model": false,
+    "realbench3_claims_forbidden": true
+  },
+  "provenance": {
+    "canonical_downstream_policy": "FULL_SELECTOR_RF_D8_L001",
+    "p6_final_package_sha256": "A7694B7FC17A5BC3A27656B7CB7741C279F13007C1BEFFFF3115566E542E29F4",
+    "p6_selected_candidate": "RF_D8_L001",
+    "p7_confidence_policy_adopted": false,
+    "p7_final_manifest_sha256": "DAC9F2D09767E4F5BDAF71361C35157595C0E7545494968A1B65B59431CBB6B6",
+    "p7_final_package_sha256": "0F893F356075B757C600026EAF423ADE2FF7D5A69561A93EEC4AF3438C5DB0DB",
+    "p7_status": "PASS_CLOSED",
+    "p7d_verification_sha256": "26CC25641B7A3627A2E69F5927D621781AAF31F45DB390FB3877E2754E102EB0"
+  },
+  "required_p8b_pretarget_outputs": [
+    "LOCKTEST parent/action identity ledger",
+    "frozen AutoGrey target-free selector decisions",
+    "frozen GLOBAL_RANK_V3_13G decisions",
+    "frozen NG10_STATCOMB3 forecasts and fallback states",
+    "prespecified subgroup-membership ledger",
+    "technical-refusal ledger",
+    "assertions and manifest"
+  ],
+  "status": "PREEXECUTION_LOCK",
+  "subgroup_policy": {
+    "membership_source": "frozen target-free metadata only",
+    "minimum_n_for_inferential_subgroup": 30,
+    "n_below_30_rule": "report N and descriptive point estimates only; no inferential claim",
+    "no_outcome_based_subgroup_creation": true,
+    "no_outcome_based_subgroup_deletion": true,
+    "prespecified_dimensions": [
+      "horizon h in {1,3,5}",
+      "source_class",
+      "source_class x horizon"
+    ],
+    "subgroup_status": "secondary unless P10 explicitly promotes a predeclared subgroup endpoint before REALBENCH3 opening",
+    "worst_subgroup_diagnostic": "maximum AutoGrey/comparator ratio across all prespecified inferentially eligible source_class x horizon subgroups"
+  },
+  "version": "AUTOGREY_V2_P8A_ROBUST_OBJECTIVES_SUBGROUP_MULTIPLICITY_PREEXECUTION_LOCK_R1"
+}

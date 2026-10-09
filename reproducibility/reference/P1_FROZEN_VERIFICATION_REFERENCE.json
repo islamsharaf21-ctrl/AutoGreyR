@@ -1,0 +1,23 @@
+{
+  "clean_parents": 4781,
+  "clean_set_sha256": "C496055A807B9D37692A6756A137E8EF93D75E962001B42B93A9A13823DBDB7B",
+  "horizon_counts": {
+    "1": 1595,
+    "3": 1595,
+    "5": 1591
+  },
+  "numeric_target_values_parsed": false,
+  "p1_population_note": "P1 clean set has 4,781 parents; later P11-A deployment froze 3 clean parents as nondeployed, yielding 4,778 scored parents. This verifier does not add/remove parents.",
+  "refusal_ledger_sha256": "606509431D83166E89E9D166FBFEC6B393A896D18B2614F45FCCB9571DD7D795",
+  "refusals": 19,
+  "reservation_algorithm_recreated": false,
+  "schema": "AUTOGREY_V2_R5B2_P1_REBUILD_VERIFICATION_R1",
+  "source_counts": {
+    "RB3_CARPARTS_MONTHLY": 1192,
+    "RB3_ELECTRICITY_HOURLY": 300,
+    "RB3_HOSPITAL_MONTHLY": 750,
+    "RB3_TRAFFIC_HOURLY": 750,
+    "RB3_WEATHER_DAILY": 1789
+  },
+  "status": "PASS"
+}

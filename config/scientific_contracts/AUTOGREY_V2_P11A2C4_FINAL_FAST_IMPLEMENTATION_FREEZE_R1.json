@@ -1,0 +1,32 @@
+{
+  "checkpoint": "V2-P11A2C4_DETERMINISTIC_REPEAT_AND_FAST_IMPLEMENTATION_FREEZE",
+  "classification": "PASS",
+  "determinism": {
+    "forecast_hex_difference_count": 0,
+    "repeat_A_semantic_sha256": "140314DA18C990F03BDBB2ACB42FD7A4813E3367E85AB031DD2508E4F4664332",
+    "repeat_B_semantic_sha256": "140314DA18C990F03BDBB2ACB42FD7A4813E3367E85AB031DD2508E4F4664332",
+    "semantic_csv_byte_identical": true,
+    "semantic_field_difference_count": 0,
+    "semantic_rows_each": 441
+  },
+  "frozen_implementation_identities": {
+    "engine_sg03_sha256": "FC421E18E44C527C38E8DEDD3C30DE42506FA269AAD1498BAA56521DF21AA0F3",
+    "repeat_r_worker_sha256": "876008B8BF1C9B4FA7C1A7E6F96533479A14862DDE2D85F280041AAAE68761D1",
+    "sg12_candidate_sha256": "8AEE4DFE49DF95DE9E9A15B123B2887A2AD66AF7C5695E837FB3807786E399F0",
+    "sg13_candidate_sha256": "1E0C5710A82134ED8C08F27D856D560F3F7D2B524F5937BCD2E21F5074A8B618",
+    "single_repeat_runner_sha256": "CB26275CEAD7E3F1860D2B9C2C7D73678344A6E118175CE62756A2068585929D"
+  },
+  "input_identities": {
+    "development_binary_sha256": "98648163F9ABE781EAA03EE49FD53D9BE1A33666F0A42BF7016B332F11E536F9",
+    "development_index_sha256": "8EEA756829B7A97F033EA81E5C2783528B68374A7B7549CE2D3EEA4D02D1C58B"
+  },
+  "next_if_pass": "P11-A2 final target-free production",
+  "revision": "R1",
+  "safety": {
+    "REALBENCH3_TARGETS_OPENED": false,
+    "target_file_argument_exists": false,
+    "target_numeric_parse": false,
+    "target_scoring": false
+  },
+  "scientific_lock_sha256": "D444267CF335DF074DA96C09BBD0AE1EC53B7FDD196490B3933DB532FD91645A"
+}
