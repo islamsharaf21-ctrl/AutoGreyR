@@ -1,0 +1,21 @@
+{
+  "final_no_model_unit_tests": 17,
+  "frozen_nn5_r3_positive_gate_met": false,
+  "independent_source_review": "NOT_DONE; self-assessment alone does not pass G3",
+  "initial_red_errors": 3,
+  "initial_red_failures": 6,
+  "limitations": [
+    "Internal engines remain directly executable; documented STOP control only",
+    "Only direct dependencies are pinned; transitive lock not available",
+    "CLI receipt self-hash is not independently authenticated",
+    "Windows execution and numerical reference parity not tested in this pass"
+  ],
+  "original_v1_science_unchanged": true,
+  "planned_acceptance_runs_executed": 0,
+  "python_patch_version_for_tests": "3.13.5",
+  "scope": "G3R CORRECTION PASS ONLY \u2014 no acceptance RUN-01..RUN-10 or model-fitting",
+  "tdd_initial_red_tests": 12,
+  "test_subprocess_execution": "subprocess.run replaced by unittest.mock; no real observer or predictor executed",
+  "tests": "python -m unittest discover -s tests -v",
+  "unit_test_failures": 0
+}

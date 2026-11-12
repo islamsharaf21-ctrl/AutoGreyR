@@ -1,0 +1,26 @@
+test_bad_row_refusal_is_before_observer_or_output_creation (test_agv1_cli.CLIControlTests.test_bad_row_refusal_is_before_observer_or_output_creation) ... ok
+test_bom_valid_input_is_accepted (test_agv1_cli.CLIControlTests.test_bom_valid_input_is_accepted) ... ok
+test_doctor_includes_launcher_identity_and_does_not_launch_models (test_agv1_cli.CLIControlTests.test_doctor_includes_launcher_identity_and_does_not_launch_models) ... ok
+test_empty_cells_are_refused (test_agv1_cli.CLIControlTests.test_empty_cells_are_refused) ... ok
+test_exact_one_column_rejects_blank_physical_row (test_agv1_cli.CLIControlTests.test_exact_one_column_rejects_blank_physical_row) ... ok
+test_exact_one_column_rejects_extra_row_cell (test_agv1_cli.CLIControlTests.test_exact_one_column_rejects_extra_row_cell) ... ok
+test_existing_output_is_not_modified_or_launched (test_agv1_cli.CLIControlTests.test_existing_output_is_not_modified_or_launched) ... ok
+test_forecast_makes_exactly_one_mocked_observer_call_and_writes_receipt (test_agv1_cli.CLIControlTests.test_forecast_makes_exactly_one_mocked_observer_call_and_writes_receipt) ... ok
+test_input_changed_during_observer_causes_stop_receipt (test_agv1_cli.CLIControlTests.test_input_changed_during_observer_causes_stop_receipt) ... STOP_AGV1_CLI: STOP_INPUT_CHANGED_DURING_EXECUTION
+ok
+test_mismatched_original_archive_refused_before_launch (test_agv1_cli.CLIControlTests.test_mismatched_original_archive_refused_before_launch) ... ok
+test_nonfinite_value_is_refused (test_agv1_cli.CLIControlTests.test_nonfinite_value_is_refused) ... ok
+test_observer_missing_receipt_is_stop_not_success (test_agv1_cli.CLIControlTests.test_observer_missing_receipt_is_stop_not_success) ... STOP_AGV1_CLI: STOP_OBSERVER_RECEIPT_MISSING_OR_INVALID
+ok
+test_observer_reports_failure_causes_stop (test_agv1_cli.CLIControlTests.test_observer_reports_failure_causes_stop) ... STOP_AGV1_CLI: STOP_OBSERVER_EXIT_2
+ok
+test_runbook_and_readme_warn_against_direct_script_execution (test_agv1_cli.CLIControlTests.test_runbook_and_readme_warn_against_direct_script_execution) ... ok
+test_short_series_refused_before_launch (test_agv1_cli.CLIControlTests.test_short_series_refused_before_launch) ... ok
+test_source_changed_during_observer_causes_stop_receipt (test_agv1_cli.CLIControlTests.test_source_changed_during_observer_causes_stop_receipt) ... STOP_AGV1_CLI: STOP_SOURCE_CHANGED_DURING_EXECUTION
+ok
+test_wrong_horizon_refused_before_launch (test_agv1_cli.CLIControlTests.test_wrong_horizon_refused_before_launch) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.044s
+
+OK
