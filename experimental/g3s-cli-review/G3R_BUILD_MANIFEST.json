@@ -1,0 +1,131 @@
+{
+  "G3_independent_review_pass": false,
+  "G4_G5_actual_acceptance_invocations": 0,
+  "NN5_R3_precommitted_success": false,
+  "distribution": "AutoGreyR V1 Experimental CLI G3R corrected candidate",
+  "experimental_engine_sha256": {
+    "run_demo_bounded.py": "b9df6ad83626f9fcb6baaa19917c161d5d187e264b039f356b1bd5e0c0068a37",
+    "v1_new_series_prototype.py": "2c4f6d7f1ca9a981afdb618a9a62f0e64e612f208382cac666ede577e1ad1028"
+  },
+  "files_excluding_manifests": [
+    {
+      "path": "ACCEPTANCE_FIXTURES/bad_header.csv",
+      "sha256": "0ee7978442cef55aeb17b5e77052d70f2f0a30c23b9ece9baf6d27939ff1a7f0",
+      "size_bytes": 61
+    },
+    {
+      "path": "ACCEPTANCE_FIXTURES/extra_cell.csv",
+      "sha256": "32ad162324b42c3d1b702d4f2ee7942b862977d51cb272fc48129e76a1306545",
+      "size_bytes": 18
+    },
+    {
+      "path": "ACCEPTANCE_FIXTURES/nonfinite.csv",
+      "sha256": "6f735b9c8acb83a8b0b33f13db1ceb2b530e7d90b68dcf01bbe13f5fb35e03d2",
+      "size_bytes": 54
+    },
+    {
+      "path": "ACCEPTANCE_FIXTURES/short_9.csv",
+      "sha256": "00b39e5a3d54f1017dc964083dd09b7de4e7a49afbd360c44aa689683664cb4f",
+      "size_bytes": 42
+    },
+    {
+      "path": "ACCEPTANCE_RUNBOOK.md",
+      "sha256": "c2f459b3e2ac1b67dad837ab771959ce8fda3eb02f8c0e5833eb74d35191fdc5",
+      "size_bytes": 9112
+    },
+    {
+      "path": "G1_CLI_CONTRACT.md",
+      "sha256": "8f78c311c76f2bf1085486ab972c5f7227bbbc9261f50e3cf9398d33cc976d83",
+      "size_bytes": 6498
+    },
+    {
+      "path": "G3R_REVIEW_DISPOSITION.md",
+      "sha256": "aceb22b87cdbc81c5b9b9ba694eb0f7781fa216a3116e28c3f1ef4d7213deadd",
+      "size_bytes": 2697
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "90feb644c8df544d0224b181b19fadde76ee1a8a36dba08fb7494e353b1376e8",
+      "size_bytes": 1081
+    },
+    {
+      "path": "README.md",
+      "sha256": "0a76f7e9ee57a48eea9f3b29bac21e99a33ce2063ce0896fba40ff2368eb226b",
+      "size_bytes": 5718
+    },
+    {
+      "path": "REFERENCE_OUTPUT/CANDIDATE_SCORES.csv",
+      "sha256": "598645d02f3ae190ee3810121eac0332bf171a06113bc03ac73cb0da0ba1708c",
+      "size_bytes": 1069
+    },
+    {
+      "path": "REFERENCE_OUTPUT/RUN_RECEIPT.json",
+      "sha256": "bd90effd6a0d4595d1f6558cfee8c6499d4fa91af8e25b671d8d032b4ec472d2",
+      "size_bytes": 1451
+    },
+    {
+      "path": "REFERENCE_OUTPUT/SELECTED_FORECAST.csv",
+      "sha256": "8bc08d067a80b83029617ed32fbd8b0183a2baf710345de04c82787905a863ac",
+      "size_bytes": 286
+    },
+    {
+      "path": "RELEASE_STATUS.md",
+      "sha256": "802987551fbf197ae665940a1bfcfd5f8a6455cbd44e0187eca3c8a2c54e7143",
+      "size_bytes": 1676
+    },
+    {
+      "path": "TEST_EVIDENCE/G3R_FINAL_GREEN.log",
+      "sha256": "401c9f9c4ce3b57c4095f8a0659973125ca734e036b5bb87ace9733b1de727ae",
+      "size_bytes": 2625
+    },
+    {
+      "path": "TEST_EVIDENCE/G3R_NO_MODEL_TEST_EVIDENCE.json",
+      "sha256": "b0d14fddef1650d1270c945af24891b62e72167a8b622f1241fcb72f30be6063",
+      "size_bytes": 990
+    },
+    {
+      "path": "TEST_EVIDENCE/G3R_RED.log",
+      "sha256": "545d0f793b78cb1ae1a60d4eda5bd106df25f91ca8d3c2e8f7adb65cf5dce1d6",
+      "size_bytes": 13448
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "491084472504de230c95db8ce0af7b592538f7791c699dbe76f5ed27d8accf12",
+      "size_bytes": 2428
+    },
+    {
+      "path": "agv1_cli.py",
+      "sha256": "6f63819e58e560a28db1c080b6b65c124c9ff3506f5c54ea513b01cb858d2cd2",
+      "size_bytes": 11598
+    },
+    {
+      "path": "example_synthetic_12.csv",
+      "sha256": "e3707a05c16cd185568657f041fc6fa54782e09c7eb501243eca225a69baf521",
+      "size_bytes": 54
+    },
+    {
+      "path": "requirements-pinned.txt",
+      "sha256": "cfa889a8d30e9997012f953793fae40cb3bed01d74c29f5dea7b986387bdeea2",
+      "size_bytes": 47
+    },
+    {
+      "path": "run_demo_bounded.py",
+      "sha256": "b9df6ad83626f9fcb6baaa19917c161d5d187e264b039f356b1bd5e0c0068a37",
+      "size_bytes": 7373
+    },
+    {
+      "path": "tests/test_agv1_cli.py",
+      "sha256": "8916687e4d42194a4fddaf744396c1a6464672b782aeff8ee1cfecb02a899d0a",
+      "size_bytes": 10128
+    },
+    {
+      "path": "v1_new_series_prototype.py",
+      "sha256": "2c4f6d7f1ca9a981afdb618a9a62f0e64e612f208382cac666ede577e1ad1028",
+      "size_bytes": 14084
+    }
+  ],
+  "mocked_unit_tests_passed": 17,
+  "original_v1_source_sha256": "e3e78ecdb670c9ed29af875d0b41b5aaf7506eb04844d8d193d62b890307720f",
+  "status": "NOT_RELEASED_INDEPENDENT_G3_REVIEW_AND_G4_G5_UNDONE",
+  "version": "0.1.0-g3r-candidate"
+}

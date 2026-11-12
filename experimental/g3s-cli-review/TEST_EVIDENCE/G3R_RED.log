@@ -1,0 +1,120 @@
+test_bad_row_refusal_is_before_observer_or_output_creation (test_agv1_cli.CLIControlTests.test_bad_row_refusal_is_before_observer_or_output_creation) ... FAIL
+test_bom_valid_input_is_accepted (test_agv1_cli.CLIControlTests.test_bom_valid_input_is_accepted) ... ok
+test_doctor_includes_launcher_identity_and_does_not_launch_models (test_agv1_cli.CLIControlTests.test_doctor_includes_launcher_identity_and_does_not_launch_models) ... ERROR
+test_exact_one_column_rejects_blank_physical_row (test_agv1_cli.CLIControlTests.test_exact_one_column_rejects_blank_physical_row) ... FAIL
+test_exact_one_column_rejects_extra_row_cell (test_agv1_cli.CLIControlTests.test_exact_one_column_rejects_extra_row_cell) ... FAIL
+test_existing_output_is_not_modified_or_launched (test_agv1_cli.CLIControlTests.test_existing_output_is_not_modified_or_launched) ... ok
+test_forecast_makes_exactly_one_mocked_observer_call_and_writes_receipt (test_agv1_cli.CLIControlTests.test_forecast_makes_exactly_one_mocked_observer_call_and_writes_receipt) ... ERROR
+test_input_changed_during_observer_causes_stop_receipt (test_agv1_cli.CLIControlTests.test_input_changed_during_observer_causes_stop_receipt) ... FAIL
+test_nonfinite_value_is_refused (test_agv1_cli.CLIControlTests.test_nonfinite_value_is_refused) ... ok
+test_observer_reports_failure_causes_stop (test_agv1_cli.CLIControlTests.test_observer_reports_failure_causes_stop) ... ERROR
+test_runbook_and_readme_warn_against_direct_script_execution (test_agv1_cli.CLIControlTests.test_runbook_and_readme_warn_against_direct_script_execution) ... FAIL
+test_source_changed_during_observer_causes_stop_receipt (test_agv1_cli.CLIControlTests.test_source_changed_during_observer_causes_stop_receipt) ... FAIL
+
+======================================================================
+ERROR: test_doctor_includes_launcher_identity_and_does_not_launch_models (test_agv1_cli.CLIControlTests.test_doctor_includes_launcher_identity_and_does_not_launch_models)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/autogreyr_v1_work/G3R_correction_candidate/tests/test_agv1_cli.py", line 91, in test_doctor_includes_launcher_identity_and_does_not_launch_models
+    self.assertEqual(receipt['launcher_sha256'], sha(cli.PKG_DIR / 'agv1_cli.py'))
+                     ~~~~~~~^^^^^^^^^^^^^^^^^^^
+KeyError: 'launcher_sha256'
+
+======================================================================
+ERROR: test_forecast_makes_exactly_one_mocked_observer_call_and_writes_receipt (test_agv1_cli.CLIControlTests.test_forecast_makes_exactly_one_mocked_observer_call_and_writes_receipt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/autogreyr_v1_work/G3R_correction_candidate/tests/test_agv1_cli.py", line 115, in test_forecast_makes_exactly_one_mocked_observer_call_and_writes_receipt
+    receipt = json.loads((self.out / 'CLI_RECEIPT.json').read_text(encoding='utf-8'))
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_local.py", line 548, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmpfvcu2pic/fresh-output/CLI_RECEIPT.json'
+
+======================================================================
+ERROR: test_observer_reports_failure_causes_stop (test_agv1_cli.CLIControlTests.test_observer_reports_failure_causes_stop)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/autogreyr_v1_work/G3R_correction_candidate/tests/test_agv1_cli.py", line 150, in test_observer_reports_failure_causes_stop
+    self.assertIn('STOP_OBSERVER_EXIT_2', (self.out/'CLI_RECEIPT.json').read_text(encoding='utf-8'))
+                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_local.py", line 548, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/tmpwl1kbosy/fresh-output/CLI_RECEIPT.json'
+
+======================================================================
+FAIL: test_bad_row_refusal_is_before_observer_or_output_creation (test_agv1_cli.CLIControlTests.test_bad_row_refusal_is_before_observer_or_output_creation)
+----------------------------------------------------------------------
+agv1_cli.ControlledStop: STOP_SERIES_TOO_SHORT_FOR_FROZEN_ELIGIBILITY
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/data/autogreyr_v1_work/G3R_correction_candidate/tests/test_agv1_cli.py", line 69, in test_bad_row_refusal_is_before_observer_or_output_creation
+    with self.assertRaisesRegex(cli.ControlledStop, 'STOP_INPUT_SCHEMA'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "STOP_INPUT_SCHEMA" does not match "STOP_SERIES_TOO_SHORT_FOR_FROZEN_ELIGIBILITY"
+
+======================================================================
+FAIL: test_exact_one_column_rejects_blank_physical_row (test_agv1_cli.CLIControlTests.test_exact_one_column_rejects_blank_physical_row)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/autogreyr_v1_work/G3R_correction_candidate/tests/test_agv1_cli.py", line 54, in test_exact_one_column_rejects_blank_physical_row
+    with self.assertRaises(cli.ControlledStop):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+AssertionError: ControlledStop not raised
+
+======================================================================
+FAIL: test_exact_one_column_rejects_extra_row_cell (test_agv1_cli.CLIControlTests.test_exact_one_column_rejects_extra_row_cell)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/autogreyr_v1_work/G3R_correction_candidate/tests/test_agv1_cli.py", line 49, in test_exact_one_column_rejects_extra_row_cell
+    with self.assertRaisesRegex(cli.ControlledStop, 'STOP_INPUT_SCHEMA_EXPECTED_ONE_VALUE_COLUMN'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ControlledStop not raised
+
+======================================================================
+FAIL: test_input_changed_during_observer_causes_stop_receipt (test_agv1_cli.CLIControlTests.test_input_changed_during_observer_causes_stop_receipt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/autogreyr_v1_work/G3R_correction_candidate/tests/test_agv1_cli.py", line 127, in test_input_changed_during_observer_causes_stop_receipt
+    self.assertEqual(cli.forecast(self.forecast_args()), 2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2
+
+======================================================================
+FAIL: test_runbook_and_readme_warn_against_direct_script_execution (test_agv1_cli.CLIControlTests.test_runbook_and_readme_warn_against_direct_script_execution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/autogreyr_v1_work/G3R_correction_candidate/tests/test_agv1_cli.py", line 155, in test_runbook_and_readme_warn_against_direct_script_execution
+    self.assertIn('do not invoke run_demo_bounded.py directly', content)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'do not invoke run_demo_bounded.py directly' not found in '# autogreyr v1 — experimental portable cli (g2 candidate only)\n\n**status: not released / unqualified g2 candidate. no forecast-superiority claim.**\n\nthis is a new command-line facade for the archived experimental v1 full-train new-series selector. it is **not** the original frozen autogreyr v1.0.0 release, not formal autogrey v2, not v3 safeselect, and not greymodellabr. the nn5 r3 completed external pilot **did not meet its prespecified superiority criterion**.\n\n## included files\n\n- `agv1_cli.py`: new stdlib-only preflight and delegation facade (`doctor` / `forecast`)\n- `run_demo_bounded.py`, `v1_new_series_prototype.py`: byte-for-byte copies of **unchanged** 2026-11-10 experimental scripts\n- `example_synthetic_12.csv`: existing harmless 12-row synthetic example\n- `reference_output/`: saved already-observed reference, not fresh validation\n- `g1_cli_contract.md`, `acceptance_runbook.md`, `requirements-pinned.txt`, `license`, `third_party_notices.md`, `release_contents_sha256.txt`: interface, evidence and provenance\n\n## windows setup (manual, not run by this package)\n\na separate untouched `autogreyr-1.0.0.zip` is required. its sha-256 is:\n\n`e3e78ecdb670c9ed29af875d0b41b5aaf7506eb04844d8d193d62b890307720f`\n\nuse python **3.13.5**. dependencies are pinned to numpy **2.3.5**, scipy **1.17.0**, scikit-learn **1.8.0**. installing them is a user-controlled operation; this package will never install packages automatically.\n\n```powershell\n# commands are instructions only; they are not evidence of successful execution.\npy -3.13 --version\npy -3.13 -m pip install -r .\\requirements-pinned.txt\npy -3.13 .\\agv1_cli.py doctor --source "$env:userprofile\\downloads\\autogreyr-1.0.0.zip"\n```\n\n**stop after the first acceptance block:** do not launch any of the runbook\'s numerical forecasting commands until the run plan and evidence-capture process are approved. do not perform r1/r2/r3 again or use nn5 targets to change outputs.\n\n## exact standalone commands\n\n```powershell\npy -3.13 .\\agv1_cli.py doctor --source "$env:userprofile\\downloads\\autogreyr-1.0.0.zip"\npy -3.13 .\\agv1_cli.py forecast --source "$env:userprofile\\downloads\\autogreyr-1.0.0.zip" --series .\\example_synthetic_12.csv --h 3 --out-root "$env:localappdata\\autogrey\\v1_cli_acceptance_run02"\n```\n\na successful **forecast** launches a bounded observer and one child predictor, refits group-specific rfs from the original frozen train data and records resulting forecasts under a fresh output root. **a successful `doctor` does no model fitting.** a controlled refusal exits `2` and should not create an output root.\n\n`doctor` checks original archive crc/hash and pinned library metadata but does not prove that the predictor executes correctly. forecast accuracy is not guaranteed. the original observer enforces 600 seconds, not a strict memory limit.\n\n## why no original v1 zip is embedded\n\nthe original 50 mb archive is provided **separately**, exactly as previously frozen; it contains historical third-party datasets and accompanying attribution notices. this candidate includes a copy of the original mit license and third-party notice but does not repackage those datasets or claim authorship of them. always inspect the source license/notice when redistributing the original archive.\n\n## current evidence\n\narchived 12-row synthetic result: `sg09_grey_markov`, `s=2_eqw`, forecasts **191.78061952188762, 201.61437976145692, 213.53111696175176** (archived, not freshly rerun). the nn5 pilot\'s observed mase 1.9000 is worse on average than its precommitted cv-selected baseline 1.5557; its 95% paired bootstrap interval spans zero. **primary superiority gate not met**. do not relabel a packaging pass as statistical validation.\n\nno planned g4/g5 acceptance invocations have been made in producing this candidate. status: **g1 documented; g2 files assembled; g3 independent review pending; 0/10 acceptance runs.**\n'
+
+======================================================================
+FAIL: test_source_changed_during_observer_causes_stop_receipt (test_agv1_cli.CLIControlTests.test_source_changed_during_observer_causes_stop_receipt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/data/autogreyr_v1_work/G3R_correction_candidate/tests/test_agv1_cli.py", line 135, in test_source_changed_during_observer_causes_stop_receipt
+    self.assertEqual(cli.forecast(self.forecast_args()), 2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 2
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.033s
+
+FAILED (failures=6, errors=3)

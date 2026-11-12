@@ -1,0 +1,38 @@
+{
+  "experiment_id": "AG_V1_NEW_SERIES_FULL_TRAIN_PROTOTYPE_01",
+  "status": "PASS_FUNCTIONAL_PROTOTYPE_UNVALIDATED",
+  "scientific_status": "EXPERIMENTAL_FULL_TRAIN_FINAL_FIT_NOT_ORIGINAL_OOF_NOT_EXTERNAL_VALIDATION",
+  "source_archive_sha256": "e3e78ecdb670c9ed29af875d0b41b5aaf7506eb04844d8d193d62b890307720f",
+  "original_train_rows": 18107,
+  "original_train_parents": 2070,
+  "train_only": true,
+  "new_series_sha256": "e3707a05c16cd185568657f041fc6fa54782e09c7eb501243eca225a69baf521",
+  "n": 12,
+  "h": 3,
+  "M": null,
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "scikit_learn": "1.8.0"
+  },
+  "feature_version": "AG_FEAT_4E_1",
+  "feature_hash": "f6cc9672c87331bc2d987aaa48047937facaf1a95500a6767f9d6bb5a1372cac",
+  "eligible_distinct_groups": [
+    "SG01_CONT_GM",
+    "SG02_DISCRETE_POLY",
+    "SG03_FRAC_LINEAR",
+    "SG04_BERNOULLI",
+    "SG05_CONT_TIME_POLY",
+    "SG06_CONFORMABLE",
+    "SG08_WBO",
+    "SG09_GREY_MARKOV"
+  ],
+  "selected_group": "SG09_GREY_MARKOV",
+  "selected_config_id": "S=2_EQW",
+  "selected_predicted_log1p_regret": 0.38117630360855825,
+  "candidate_count": 8,
+  "fitting_policy": "One RF per eligible structural group, all frozen TRAIN action rows in group; group median imputation; sklearn 500 trees; seed 62291; min_samples_leaf=0.01; max_features=sqrt; sample weights frozen",
+  "outputs_are_tested_forecasts": false,
+  "external_performance_assessed": false
+}

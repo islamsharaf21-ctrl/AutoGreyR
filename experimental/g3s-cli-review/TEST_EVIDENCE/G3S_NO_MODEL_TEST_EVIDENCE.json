@@ -1,0 +1,21 @@
+{
+  "scope": "FACADE_AND_DOCS_G3S_ONLY",
+  "date": "2026-11-12",
+  "version": "0.1.0-g3s-candidate",
+  "mock_test_count": 24,
+  "mock_tests_passed": 24,
+  "red_failures": 6,
+  "red_exit": 1,
+  "green_exit": 0,
+  "forecast_or_model_fit_executed": false,
+  "g4_runs_executed": 0,
+  "g5_runs_executed": 0,
+  "g3_independent_reviewer_status": "NOT_DONE",
+  "release_status": "NOT_RELEASED",
+  "frozen_original_v1_sha256": "e3e78ecdb670c9ed29af875d0b41b5aaf7506eb04844d8d193d62b890307720f",
+  "observer_sha256": "b9df6ad83626f9fcb6baaa19917c161d5d187e264b039f356b1bd5e0c0068a37",
+  "predictor_sha256": "2c4f6d7f1ca9a981afdb618a9a62f0e64e612f208382cac666ede577e1ad1028",
+  "new_cli_sha256": "71a6199ec36a4718c0c5590891e50c94a7adf8b9ccfec16868dcb40710976f16",
+  "current_scientific_gate": "NN5_R3_SUPERIORITY_NOT_MET",
+  "unit_test_command": "python -m unittest discover -s tests -v (mocked observer)"
+}

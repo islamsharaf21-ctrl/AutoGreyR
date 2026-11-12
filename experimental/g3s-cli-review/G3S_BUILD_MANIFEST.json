@@ -1,0 +1,15 @@
+{
+  "version": "0.1.0-g3s-candidate",
+  "date": "2026-11-12",
+  "status": "CANDIDATE_NOT_RELEASED",
+  "full_archive_sha256_reference": "e3e78ecdb670c9ed29af875d0b41b5aaf7506eb04844d8d193d62b890307720f",
+  "g3r_predecessor_sha256": "589b242ddff0343baa4ebd2360040d844416d387e4a92f63a758b2771e1114a4",
+  "engine_hashes": {
+    "v1_new_series_prototype.py": "2c4f6d7f1ca9a981afdb618a9a62f0e64e612f208382cac666ede577e1ad1028",
+    "run_demo_bounded.py": "b9df6ad83626f9fcb6baaa19917c161d5d187e264b039f356b1bd5e0c0068a37"
+  },
+  "no_model_unit_tests": 24,
+  "new_acceptance_run_count": 0,
+  "g3_independent_signoff": "NOT_DONE",
+  "scientific_gate": "NN5_R3_POSITIVE_GATE_NOT_MET"
+}
